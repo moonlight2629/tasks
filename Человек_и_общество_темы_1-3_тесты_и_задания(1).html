@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Человек и общество. Темы 1–3. Тесты и задания для 7 класса</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FFFFFF;
+  --ink:#1B2340;
+  --ink-soft:#4C5470;
+  --rule:#D8DCE8;
+  --pen:#2F55B8;
+  --pen-bg:#EEF2FB;
+  --marker:#FFE86A;
+  --ok:#2A8552;
+  --ok-bg:#E6F4EB;
+  --bad:#C4402C;
+  --bad-bg:#FBE8E4;
+  --field:#F5F6FA;
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+  --sans:"Onest","Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{transition:none!important}}
+body{margin:0;overflow-wrap:anywhere;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55}
+a{color:var(--pen)}
+mark{background:linear-gradient(transparent 20%,var(--marker) 20%,var(--marker) 88%,transparent 88%);padding:0 .15em;color:inherit}
+
+/* шапка */
+.top{border-bottom:2px solid var(--ink);padding:26px 32px 22px}
+.top-in{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 28px}
+.top h1{font-family:var(--serif);font-weight:700;font-size:30px;line-height:1.15;margin:0}
+.top .sub{color:var(--ink-soft);font-size:15px;margin:6px 0 0}
+.tools{display:flex;gap:10px;flex-wrap:wrap}
+.btn{font:inherit;font-size:15px;font-weight:500;padding:9px 16px;border-radius:6px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);cursor:pointer}
+.btn:hover{background:var(--pen-bg)}
+.btn:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,.nav button:focus-visible{outline:3px solid var(--marker);outline-offset:2px}
+.btn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn.primary:hover{background:#2C3660}
+.btn.ghost{border-color:var(--rule);color:var(--ink-soft)}
+body.teacher .btn.teach{background:var(--marker);border-color:var(--ink)}
+
+/* каркас */
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:230px minmax(0,1fr);gap:0 48px;padding:0 32px 80px}
+.nav{position:sticky;top:0;align-self:start;padding:28px 0 0}
+.nav button{display:block;width:100%;text-align:left;font:inherit;font-size:16px;padding:9px 12px 9px 14px;border:0;border-left:3px solid transparent;background:none;color:var(--ink-soft);cursor:pointer;border-radius:0 6px 6px 0}
+.nav button:hover{color:var(--ink);background:var(--field)}
+.nav button.on{color:var(--ink);border-left-color:var(--ink);font-weight:600}
+.nav .score{margin:18px 0 0;padding:14px;border:1.5px dashed var(--rule);border-radius:8px;font-size:14px;color:var(--ink-soft)}
+.nav .score b{display:block;color:var(--ink);font-weight:600;margin-bottom:6px}
+.nav .score span{display:block;padding:2px 0}
+.nav .score em{font-style:normal;color:var(--ink);font-weight:600}
+.content{padding-top:28px;max-width:780px}
+section.topic{display:none}
+section.topic.on{display:block}
+
+/* заголовки */
+h2{font-family:var(--serif);font-weight:700;font-size:28px;line-height:1.2;margin:0 0 6px}
+.lead{color:var(--ink-soft);margin:0 0 30px;font-size:16px}
+h3{font-family:var(--serif);font-weight:700;font-size:22px;margin:44px 0 14px;padding-top:22px;border-top:1.5px solid var(--ink)}
+h3 small{display:block;font-family:var(--sans);font-weight:400;font-size:15px;color:var(--ink-soft);margin-top:4px}
+h4{font-family:var(--serif);font-weight:700;font-size:19px;margin:0 0 4px;line-height:1.3}
+.task{margin:0 0 40px;padding:0 0 0 18px;border-left:3px solid var(--rule)}
+.task .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px}
+.lvl{font-size:13px;font-weight:500;padding:2px 9px;border-radius:99px;border:1.5px solid var(--rule);color:var(--ink-soft)}
+.lvl.l2{border-color:var(--pen);color:var(--pen)}
+.lvl.l3{border-color:var(--ink);color:var(--ink);background:var(--marker)}
+.task p{margin:0 0 10px}
+.task ol,.task ul{margin:0 0 12px;padding-left:22px}
+.task li{margin:4px 0}
+.quote{background:var(--field);border-left:3px solid var(--pen);padding:12px 16px;margin:12px 0 14px;font-family:var(--serif);font-size:16.5px;line-height:1.6}
+.quote p{margin:0 0 6px}
+.quote p:last-child{margin:0}
+textarea{width:100%;min-height:110px;font:inherit;font-size:16px;line-height:1.5;padding:12px 14px;border:1.5px solid var(--rule);border-radius:6px;background:var(--paper);color:var(--ink);resize:vertical;margin:8px 0 10px;background-image:repeating-linear-gradient(transparent,transparent 27px,var(--rule) 27px,var(--rule) 28px);background-attachment:local;background-position:0 12px}
+details{margin:6px 0;border:1.5px solid var(--rule);border-radius:6px;background:var(--paper)}
+details summary{cursor:pointer;padding:9px 14px;font-weight:500;color:var(--pen);list-style:none;display:flex;gap:8px;align-items:center}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .15s}
+details[open] summary::before{transform:rotate(45deg)}
+details .d-body{padding:2px 16px 14px;color:var(--ink);font-size:16px}
+details .d-body p{margin:0 0 8px}
+details .d-body ul,details .d-body ol{margin:0 0 8px;padding-left:20px}
+details.key{border-color:var(--ok);background:var(--ok-bg)}
+details.key summary{color:var(--ok)}
+
+/* тест */
+.quiz .q{padding:16px 0 14px;border-bottom:1px solid var(--rule)}
+.quiz .q:last-of-type{border-bottom:0}
+.q-text{margin:0 0 10px;font-weight:500;display:flex;gap:12px}
+.q-num{flex:0 0 auto;font-family:var(--serif);font-weight:700;color:var(--pen);min-width:22px}
+.q label{display:flex;gap:10px;align-items:flex-start;padding:6px 10px 6px 34px;margin:2px 0;border-radius:6px;cursor:pointer;position:relative}
+.q label:hover{background:var(--field)}
+.q input[type=radio]{position:absolute;left:10px;top:9px;accent-color:var(--pen);width:17px;height:17px;margin:0}
+.q .expl{display:none;margin:10px 0 0 34px;padding:10px 14px;border-radius:6px;background:var(--field);font-size:15px;color:var(--ink-soft)}
+.q.done .expl{display:block}
+.q.done label.right{background:var(--ok-bg);color:var(--ok);font-weight:500}
+.q.done label.wrong{background:var(--bad-bg);color:var(--bad)}
+.q.done label.wrong::after{content:"✗ неверно";font-size:13px;margin-left:auto;white-space:nowrap;padding-left:10px}
+.q.done label.right::after{content:"✓ верно";font-size:13px;margin-left:auto;white-space:nowrap;padding-left:10px}
+body.teacher .q label.answer{background:var(--ok-bg)}
+body.teacher .q .expl{display:block}
+.quiz-foot{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:18px 0 0}
+.result{font-weight:600;font-size:17px}
+.result.good{color:var(--ok)}
+.result.mid{color:var(--pen)}
+.result.low{color:var(--bad)}
+
+/* распредели */
+.sort{margin:8px 0 12px}
+.s-item{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between;padding:10px 12px;border-bottom:1px solid var(--rule)}
+.s-item span{flex:1 1 300px}
+select{font:inherit;font-size:15px;padding:6px 32px 6px 10px;border:1.5px solid var(--rule);border-radius:6px;background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231B2340' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 10px center;color:var(--ink);appearance:none;-webkit-appearance:none;cursor:pointer}
+.s-item.right{background:var(--ok-bg)}
+.s-item.wrong{background:var(--bad-bg)}
+.s-item.wrong::after,.frag.wrong::after{content:attr(data-answer);font-size:13px;color:var(--bad);padding:2px 8px;border:1px solid var(--bad);border-radius:99px;white-space:nowrap}
+.s-item.wrong::after{content:"верно: " attr(data-answer)}
+body.teacher .s-item::after{content:"верно: " attr(data-answer);font-size:13px;color:var(--ok);padding:2px 8px;border:1px solid var(--ok);border-radius:99px}
+.story{font-family:var(--serif);font-size:17px;line-height:2.05;background:var(--field);padding:16px 20px;border-radius:8px;margin:10px 0 14px}
+.frag{background:var(--paper);box-shadow:inset 0 -2px 0 var(--pen);padding:2px 4px;border-radius:3px}
+.frag select{margin:0 2px 0 6px;font-size:14px;padding:3px 26px 3px 8px;vertical-align:baseline}
+.frag.right{background:var(--ok-bg);box-shadow:inset 0 -2px 0 var(--ok)}
+.frag.wrong{background:var(--bad-bg);box-shadow:inset 0 -2px 0 var(--bad)}
+.frag.wrong::after{content:"верно: " attr(data-answer);margin-left:6px}
+body.teacher .frag::after{content:"верно: " attr(data-answer);font-size:13px;color:var(--ok);padding:2px 8px;border:1px solid var(--ok);border-radius:99px;margin-left:6px}
+.sort-foot{display:flex;gap:14px;align-items:center;flex-wrap:wrap;padding:10px 0 0}
+
+/* таблица */
+table{border-collapse:collapse;width:100%;margin:10px 0 14px;font-size:15.5px}
+th,td{text-align:left;vertical-align:top;padding:8px 12px;border-bottom:1px solid var(--rule)}
+th{font-weight:600;border-bottom:1.5px solid var(--ink)}
+td:first-child{width:38%}
+
+/* ключ в режиме учителя */
+body.teacher details{open:true}
+
+@media print{
+  .top .tools,.nav,.btn,textarea:placeholder-shown{display:none}
+  .wrap{display:block;padding:0}
+  section.topic{display:block;page-break-before:always}
+  section.topic:first-of-type{page-break-before:auto}
+  details{border:0}
+  details summary{display:none}
+  details .d-body{display:block}
+  details:not([open]) .d-body{display:none}
+  body.teacher details .d-body{display:block}
+  .q .expl{display:none}
+  body.teacher .q .expl{display:block}
+  h3{page-break-after:avoid}
+  .task{page-break-inside:avoid}
+  textarea{min-height:140px;background:none;border:1px solid var(--rule)}
+}
+@media (max-width:900px){
+  .top{padding:20px 18px}
+  .top h1{font-size:24px}
+  .wrap{grid-template-columns:minmax(0,1fr);padding:0 18px 60px}
+  .content{max-width:100%}
+  .q .expl{margin-left:0}
+  body{font-size:16px}
+  .nav{position:static;padding:16px 0 0;display:flex;flex-wrap:wrap;gap:6px}
+  .nav button{width:auto;border-left:0;border-bottom:3px solid transparent;border-radius:6px 6px 0 0;padding:8px 10px}
+  .nav button.on{border-bottom-color:var(--ink)}
+  .nav .score{width:100%;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:4px 18px}
+  .nav .score b{width:100%}
+  .content{padding-top:18px}
+  .story{line-height:2.2}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div>
+      <h1>Человек и общество. Темы 1–3</h1>
+      <p class="sub">Тесты и задания на размышление для одарённых учеников 7 класса</p>
+    </div>
+    <div class="tools">
+      <button class="btn teach" onclick="toggleTeacher()" id="teachBtn">Режим учителя: выкл</button>
+      <button class="btn ghost" onclick="window.print()">Распечатать</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+<nav class="nav" aria-label="Разделы">
+  <button class="on" onclick="show('t0',this)">Как работать</button>
+  <button onclick="show('t1',this)">Тема 1. Природное и общественное в человеке</button>
+  <button onclick="show('t2',this)">Тема 2. Мировоззрение</button>
+  <button onclick="show('t3',this)">Тема 3. Виды знаний</button>
+  <button onclick="show('t4',this)">Итог. Три темы вместе</button>
+  <div class="score" id="scoreBox">
+    <b>Результаты тестов</b>
+    <span>Тема 1: <em id="sc1">—</em></span>
+    <span>Тема 2: <em id="sc2">—</em></span>
+    <span>Тема 3: <em id="sc3">—</em></span>
+    <span>Итог: <em id="sc4">—</em></span>
+  </div>
+</nav>
+
+<main class="content">
+
+<!-- ================= КАК РАБОТАТЬ ================= -->
+<section class="topic on" id="t0">
+  <h2>Как работать с тетрадью</h2>
+  <p class="lead">Три темы, в каждой — тест и задания на размышление. Тест проверяется сам, задания проверяешь ты (или учитель) по ключу.</p>
+
+  <p>В каждой теме тебя ждут две части.</p>
+  <table>
+    <tr><th>Часть</th><th>Что делать</th></tr>
+    <tr><td><b>Тест</b></td><td>Выбери ответ в каждом вопросе и нажми «Проверить». Ты сразу увидишь, где ошибся, и объяснение. Вопросы не про «выучил ли ты определение», а про «понял ли, как понятие работает».</td></tr>
+    <tr><td><b>Задания на размышление</b></td><td>Здесь нет одного верного ответа — есть хорошо и плохо аргументированные. Пиши прямо в поле. Если застрял — открой подсказку. Когда закончишь — сверься с ключом: там не «эталон», а то, что точно должно быть в сильном ответе.</td></tr>
+  </table>
+
+  <p>Задания помечены по сложности:</p>
+  <p><span class="lvl">разминка</span> — на точность понятий. <span class="lvl l2">подумать</span> — нужно применить понятия к ситуации. <span class="lvl l3">вызов</span> — нужно самому построить рассуждение, где справочник уже не поможет.</p>
+
+  <h3>Для учителя<small>Как оценивать задания на размышление</small></h3>
+  <p>Кнопка «Режим учителя» наверху открывает все ключи, подсказки и правильные ответы тестов. Для открытых заданий подойдёт такая шкала (максимум 10 баллов):</p>
+  <table>
+    <tr><th>Критерий</th><th>Баллы</th></tr>
+    <tr><td>Понятия из тем использованы точно и по делу (не «для галочки»)</td><td>0–3</td></tr>
+    <tr><td>Каждое утверждение обосновано: есть «потому что», есть пример</td><td>0–3</td></tr>
+    <tr><td>Учтена и противоположная точка зрения или трудный случай</td><td>0–2</td></tr>
+    <tr><td>Есть собственная мысль, которой нет в справочнике</td><td>0–2</td></tr>
+  </table>
+  <p>Хорошая практика для одарённых детей — обсуждать задания «вызов» в парах: один защищает позицию, второй ищет в ней слабое место, потом меняются.</p>
+</section>
+
+<!-- ================= ТЕМА 1 ================= -->
+<section class="topic" id="t1">
+  <h2>Тема 1. Природное и общественное в человеке</h2>
+  <p class="lead">Биосоциальная сущность человека, индивид — личность — индивидуальность, отличия от животных, способности, сознание.</p>
+
+  <h3>Тест<small>11 вопросов. Внимательно читай ситуации: правильный ответ часто прячется в деталях.</small></h3>
+  <div class="quiz" id="quiz1">
+
+    <div class="q" data-answer="2">
+      <p class="q-text"><span class="q-num">1</span>Учёные называют человека биосоциальным существом. Что из перечисленного относится к <mark>социальной</mark>, а не к биологической стороне человека?</p>
+      <label><input type="radio" name="t1q1" value="0">инстинкт самосохранения</label>
+      <label><input type="radio" name="t1q1" value="1">набор генов, унаследованный от родителей</label>
+      <label><input type="radio" name="t1q1" value="2">чувство ответственности за свои поступки</label>
+      <label><input type="radio" name="t1q1" value="3">строение нервной системы</label>
+      <p class="expl">Ответственность формируется только в обществе, в отношениях с другими людьми. Инстинкты, гены и строение органов человек получает от природы.</p>
+    </div>
+
+    <div class="q" data-answer="1">
+      <p class="q-text"><span class="q-num">2</span>Известна история двух девочек из Индии, которых, по рассказам, воспитали волки. Их нашли в 1920 году: девочки ходили на четвереньках, не говорили, боялись людей, и научить их речи почти не удалось. Какое положение обществознания подтверждает эта история?</p>
+      <label><input type="radio" name="t1q2" value="0">биологическое в человеке всегда сильнее социального</label>
+      <label><input type="radio" name="t1q2" value="1">социальные качества не даны от рождения, а формируются только в обществе</label>
+      <label><input type="radio" name="t1q2" value="2">человек и животное ничем не отличаются друг от друга</label>
+      <label><input type="radio" name="t1q2" value="3">речь — врождённый инстинкт, как и умение ходить</label>
+      <p class="expl">Задатки к речи и мышлению у девочек были, как у любого человека. Но без общества они так и не стали человеческими качествами. Человек раскрывает свою социальную природу только среди людей.</p>
+    </div>
+
+    <div class="q" data-answer="1">
+      <p class="q-text"><span class="q-num">3</span>«Единичный представитель человечества» — это определение понятия:</p>
+      <label><input type="radio" name="t1q3" value="0">личность</label>
+      <label><input type="radio" name="t1q3" value="1">индивид</label>
+      <label><input type="radio" name="t1q3" value="2">индивидуальность</label>
+      <label><input type="radio" name="t1q3" value="3">гений</label>
+      <p class="expl">Индивид — просто один человек из всех людей. Личность — носитель сознания и социальных качеств, индивидуальность — то неповторимое, что отличает одного от всех остальных.</p>
+    </div>
+
+    <div class="q" data-answer="2">
+      <p class="q-text"><span class="q-num">4</span>Какое утверждение о личности верно?</p>
+      <label><input type="radio" name="t1q4" value="0">личностью человек рождается</label>
+      <label><input type="radio" name="t1q4" value="1">личностью можно назвать только знаменитого человека</label>
+      <label><input type="radio" name="t1q4" value="2">личность развивается на протяжении всей жизни</label>
+      <label><input type="radio" name="t1q4" value="3">личность формируется независимо от общества</label>
+      <p class="expl">Личностью не рождаются, а становятся — в общении, труде, учёбе. И становятся не только знаменитости: любой человек с самосознанием, совестью и принципами — личность.</p>
+    </div>
+
+    <div class="q" data-answer="1">
+      <p class="q-text"><span class="q-num">5</span>Маша — единственная в классе, кто пишет левой рукой, обожает химию и коллекционирует старинные карты. Друзья узнают её смех из соседнего кабинета. Какое понятие лучше всего описывает этот пример?</p>
+      <label><input type="radio" name="t1q5" value="0">индивид</label>
+      <label><input type="radio" name="t1q5" value="1">индивидуальность</label>
+      <label><input type="radio" name="t1q5" value="2">одарённость</label>
+      <label><input type="radio" name="t1q5" value="3">сознание</label>
+      <p class="expl">Здесь описано уникальное сочетание биологических (леворукость, смех) и социальных (увлечения) качеств, отличающее Машу от всех — это индивидуальность.</p>
+    </div>
+
+    <div class="q" data-answer="1">
+      <p class="q-text"><span class="q-num">6</span>Бобры строят плотины из веток, а инженеры проектируют гидроэлектростанции, используя чертежи, станки и расчёты. Какое отличие человека от животного здесь показано?</p>
+      <label><input type="radio" name="t1q6" value="0">наличие инстинктов</label>
+      <label><input type="radio" name="t1q6" value="1">способность изготавливать сложные орудия труда и использовать их в производстве</label>
+      <label><input type="radio" name="t1q6" value="2">забота о потомстве</label>
+      <label><input type="radio" name="t1q6" value="3">умение приспосабливаться к среде</label>
+      <p class="expl">Бобр строит по инстинкту и всегда одинаково. Инженер создаёт орудия (станки, чертежи) с помощью других орудий и сознательно проектирует новое.</p>
+    </div>
+
+    <div class="q" data-answer="1">
+      <p class="q-text"><span class="q-num">7</span>Природная основа развития способностей — это:</p>
+      <label><input type="radio" name="t1q7" value="0">талант</label>
+      <label><input type="radio" name="t1q7" value="1">задатки</label>
+      <label><input type="radio" name="t1q7" value="2">гениальность</label>
+      <label><input type="radio" name="t1q7" value="3">знания</label>
+      <p class="expl">Задатки — врождённые особенности строения мозга, нервной системы, органов чувств. Они лишь основа: разовьются ли они в способности, зависит от деятельности человека.</p>
+    </div>
+
+    <div class="q" data-answer="1">
+      <p class="q-text"><span class="q-num">8</span>Хорошая зрительная память помогает Пете и в математике, и в истории, и в шахматах. Это пример:</p>
+      <label><input type="radio" name="t1q8" value="0">специальных способностей</label>
+      <label><input type="radio" name="t1q8" value="1">общих способностей</label>
+      <label><input type="radio" name="t1q8" value="2">задатков</label>
+      <label><input type="radio" name="t1q8" value="3">индивидуальности</label>
+      <p class="expl">Общие способности помогают в самых разных занятиях (память, наблюдательность, воображение). Специальные — только в одной области (музыкальные, математические).</p>
+    </div>
+
+    <div class="q" data-answer="1">
+      <p class="q-text"><span class="q-num">9</span>Расположи по возрастанию уровня развития способностей:</p>
+      <label><input type="radio" name="t1q9" value="0">задатки → талант → одарённость → гениальность</label>
+      <label><input type="radio" name="t1q9" value="1">задатки → одарённость → талант → гениальность</label>
+      <label><input type="radio" name="t1q9" value="2">одарённость → задатки → талант → гениальность</label>
+      <label><input type="radio" name="t1q9" value="3">талант → задатки → одарённость → гениальность</label>
+      <p class="expl">Задатки — природная основа; одарённость — такое сочетание способностей, которое даёт возможность больших успехов; талант — высокий уровень развития; гениальность — наивысший.</p>
+    </div>
+
+    <div class="q" data-answer="1">
+      <p class="q-text"><span class="q-num">10</span>Сознание — это:</p>
+      <label><input type="radio" name="t1q10" value="0">совокупность инстинктов и рефлексов</label>
+      <label><input type="radio" name="t1q10" value="1">высшая, свойственная человеку форма обобщённого и целенаправленного отражения действительности</label>
+      <label><input type="radio" name="t1q10" value="2">набор генов, полученный от родителей</label>
+      <label><input type="radio" name="t1q10" value="3">умение произносить слова</label>
+      <p class="expl">Сознание — не рефлексы (они есть у животных) и не сама речь, а способность осмыслять мир и самого себя.</p>
+    </div>
+
+    <div class="q" data-answer="1">
+      <p class="q-text"><span class="q-num">11</span>Верны ли суждения? <b>А.</b> Биологическое и социальное в человеке существуют отдельно друг от друга и никак не связаны. <b>Б.</b> Раскрыть свою социальную природу человек может только во взаимодействии с другими людьми.</p>
+      <label><input type="radio" name="t1q11" value="0">верно только А</label>
+      <label><input type="radio" name="t1q11" value="1">верно только Б</label>
+      <label><input type="radio" name="t1q11" value="2">верны оба суждения</label>
+      <label><input type="radio" name="t1q11" value="3">оба суждения неверны</label>
+      <p class="expl">Биологическое и социальное в человеке слиты воедино: даже еда (биологическая потребность) у человека обрастает правилами, традициями, этикетом. Суждение А неверно, Б — верно.</p>
+    </div>
+
+    <div class="quiz-foot">
+      <button class="btn primary" onclick="checkQuiz('quiz1','sc1')">Проверить</button>
+      <button class="btn ghost" onclick="resetQuiz('quiz1','sc1')">Сбросить</button>
+      <span class="result" id="quiz1-res"></span>
+    </div>
+  </div>
+
+  <h3>Задания на размышление<small>Шесть заданий. Первое — про волков, последнее — про тебя.</small></h3>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 1. Парадокс Маугли</h4><span class="lvl l2">подумать</span></div>
+    <p>В книге Редьярда Киплинга Маугли, выросший среди волков, свободно говорит, рассуждает о добре и зле и легко возвращается к людям. Реальные «дети-маугли», найденные в лесах, почти никогда не осваивали речь — даже после многих лет среди людей.</p>
+    <ol>
+      <li>Объясни с помощью понятий <mark>биологическое</mark> и <mark>социальное</mark>, почему литературный Маугли невозможен.</li>
+      <li>Какие именно качества из «социальной сущности человека» не могли бы сформироваться у ребёнка без общества? Перечисли и для каждого объясни, почему для него нужны другие люди.</li>
+      <li>А что у такого ребёнка всё-таки было бы, как у любого человека? Почему?</li>
+    </ol>
+    <textarea placeholder="Напиши ответ здесь…"></textarea>
+    <details class="hint"><summary>Подсказка</summary><div class="d-body"><p>Раздели список: что человек получает от рождения (задатки, инстинкты, строение тела), а что требует «тренировки» среди людей. Речь — это задаток или готовое умение?</p></div></details>
+    <details class="key"><summary>Ключ для проверки</summary><div class="d-body">
+      <p><b>1.</b> Речь, мышление, совесть, представления о добре и зле — социальные качества. Они не «включаются» сами, а формируются в общении. Волки не могли передать ребёнку ни язык, ни нормы — значит, и сформироваться было не из чего.</p>
+      <p><b>2.</b> Сознание и разум (нет речи — нечем оперировать понятиями), самосознание и совесть (нет тех, перед кем отвечать), жизненные принципы и идеалы (их берут из культуры), готовность к общественно полезному труду и творчеству (нет образцов деятельности).</p>
+      <p><b>3.</b> Биологическая природа: строение тела и мозга, инстинкты и рефлексы, генотип, а также задатки — например, к речи. Но задатки, не развитые вовремя, «засыпают»: поэтому найденных детей так трудно научить говорить.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 2. Три портрета одного человека</h4><span class="lvl">разминка</span></div>
+    <p>О человеке можно сказать как об <mark>индивиде</mark>, как о <mark>личности</mark> и как об <mark>индивидуальности</mark>. Определи, какому понятию соответствует каждая характеристика.</p>
+    <div class="sort" id="sort1" data-options="индивид|личность|индивидуальность">
+      <div class="s-item" data-answer="индивид"><span>принадлежит к биологическому виду Homo sapiens</span></div>
+      <div class="s-item" data-answer="личность"><span>отвечает за свои поступки и осознаёт их последствия</span></div>
+      <div class="s-item" data-answer="индивидуальность"><span>единственный в школе играет на терменвоксе</span></div>
+      <div class="s-item" data-answer="личность"><span>имеет жизненные принципы и идеалы, которым старается следовать</span></div>
+      <div class="s-item" data-answer="индивидуальность"><span>неповторимая манера смеяться, по которой его узнают друзья</span></div>
+      <div class="s-item" data-answer="индивид"><span>имеет две руки, два глаза и головной мозг</span></div>
+      <div class="s-item" data-answer="личность"><span>участвует в жизни общества: по субботам работает волонтёром в приюте</span></div>
+      <div class="s-item" data-answer="индивидуальность"><span>сочетание застенчивости и математического таланта, какого нет ни у кого другого</span></div>
+      <div class="s-item" data-answer="индивид"><span>один из восьми миллиардов людей на Земле</span></div>
+      <div class="sort-foot">
+        <button class="btn primary" onclick="checkSort('sort1')">Проверить</button>
+        <span class="result" id="sort1-res"></span>
+      </div>
+    </div>
+    <p>А теперь вопрос посложнее. Может ли индивид не быть личностью? А личность — не быть индивидом? А индивидуальность — быть у того, кто не личность?</p>
+    <textarea placeholder="Ответь на все три вопроса с примерами…"></textarea>
+    <details class="key"><summary>Ключ для проверки</summary><div class="d-body">
+      <p>Индивид, не ставший личностью, — возможно: новорождённый или ребёнок-«маугли» — индивиды, но социальные качества у них ещё (или уже) не сформированы. Личность, не являющаяся индивидом, — невозможно: личность всегда «надстраивается» над живым человеком. Индивидуальность есть у каждого индивида (уникальный генотип, внешность), но <i>полная</i> индивидуальность — и биологическая, и социальная — раскрывается только в личности.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 3. Робот в суде</h4><span class="lvl l3">вызов</span></div>
+    <p>2050 год. Робот по имени Арс сочиняет музыку, обыгрывает чемпионов в шахматы, разговаривает на сорока языках и подаёт в суд заявление с просьбой признать его личностью. Ты — приглашённый эксперт по обществознанию.</p>
+    <ol>
+      <li>Пройди по таблице «Отличие человека от животного» и по признакам личности. Составь три списка: какие критерии Арс <b>выполняет</b>, какие <b>не выполняет</b>, какие <b>невозможно проверить</b>.</li>
+      <li>Вынеси решение: личность или нет. Обоснуй его так, чтобы согласился и противник, и сторонник Арса.</li>
+      <li>Что бы изменило твоё решение? Придумай одно новое умение Арса, после которого ты пересмотрел бы вывод.</li>
+    </ol>
+    <textarea placeholder="Списки, решение, условие пересмотра…"></textarea>
+    <details class="hint"><summary>Подсказка</summary><div class="d-body"><p>Начни с вопроса: чем «сочинять музыку по алгоритму» отличается от «иметь духовную потребность в творчестве»? Второе — про желание, а не про умение. И ещё: если Арс что-то сломает — кто будет отвечать?</p></div></details>
+    <details class="key"><summary>Ключ для проверки</summary><div class="d-body">
+      <p>Единственно верного решения нет. В сильном ответе есть: словесная речь — выполняет; изготовление сложных орудий — зависит от того, создаёт ли он что-то сам или только выполняет команды; сознание, самосознание, совесть — невозможно проверить извне (мы видим только поведение); духовные и социальные потребности — сомнительно, потому что потребность предполагает нужду, а не заложенную программу; свобода и ответственность — не выполняет, пока за его действия отвечает создатель. Хороший ответ обязательно замечает, что личность формируется <i>в обществе</i>, а Арс — не рос, а был собран.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 4. Лестница способностей</h4><span class="lvl l2">подумать</span></div>
+    <p>Вольфганг Амадей Моцарт в четыре года подбирал мелодии на слух, в пять сочинял пьесы, в восемь написал первую симфонию. Но есть и другая сторона: его отец Леопольд был профессиональным музыкантом и с раннего детства занимался с сыном по несколько часов ежедневно, а к семнадцати годам Вольфганг уже объездил с концертами пол-Европы.</p>
+    <ol>
+      <li>Нарисуй «лестницу»: задатки → одарённость → талант → гениальность. Отметь, что у Моцарта было от рождения, а что появилось благодаря труду. Каждую ступеньку подтверди фактом из текста.</li>
+      <li>Могут ли задатки без труда стать талантом? А труд без задатков — гениальностью? Ответь на оба вопроса и приведи по одному примеру из жизни или истории.</li>
+    </ol>
+    <textarea placeholder="Лестница и два ответа с примерами…"></textarea>
+    <details class="key"><summary>Ключ для проверки</summary><div class="d-body">
+      <p><b>Задатки</b> — от рождения: музыкальный слух, память (подбирал мелодии в четыре года). <b>Одарённость</b> — сочетание способностей, которое проявилось рано (сочинял в пять). <b>Талант</b> — высокий уровень развития специальных способностей, результат ежедневных занятий (симфония в восемь). <b>Гениальность</b> — наивысший уровень; стала возможной, только когда природная основа соединилась с многолетним трудом и средой (концерты, отец-музыкант).</p>
+      <p>Задатки без труда «засыпают» — способности не развиваются сами. Труд без задатков даёт высокий, но обычно не гениальный результат. Вывод, который стоит ждать: обе стороны необходимы, ни одна не достаточна.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 5. Найди ошибки</h4><span class="lvl">разминка</span></div>
+    <p>Ученик писал конспект по теме, но что-то перепутал. В тексте не меньше <mark>пяти</mark> ошибок. Найди каждую и запиши, как правильно.</p>
+    <div class="quote">
+      <p>Человек — это биологическое существо, поэтому все его качества передаются по наследству. Личностью человек рождается, а индивидуальность — это единичный представитель человечества. Талант — это природная основа способностей, а задатки — наивысший уровень их развития. Главное отличие человека от животного — умение заботиться о потомстве.</p>
+    </div>
+    <textarea placeholder="Ошибка → как правильно…"></textarea>
+    <details class="key"><summary>Ключ для проверки</summary><div class="d-body">
+      <ol>
+        <li>Человек — <b>биосоциальное</b> существо, и социальные качества по наследству не передаются, а формируются в обществе.</li>
+        <li>Личностью не рождаются, а <b>становятся</b>; личность развивается всю жизнь.</li>
+        <li>«Единичный представитель человечества» — это <b>индивид</b>, а не индивидуальность.</li>
+        <li>Природная основа способностей — <b>задатки</b>; талант — высокий уровень их развития.</li>
+        <li>Наивысший уровень развития способностей — <b>гениальность</b>, а не задатки.</li>
+        <li>Заботиться о потомстве умеют и животные. Отличия человека — сознание и речь, творческая деятельность, сложные орудия труда, духовные потребности.</li>
+      </ol>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 6. Дебаты: наследственность или воспитание?</h4><span class="lvl l3">вызов</span></div>
+    <p>Спор, которому больше двух тысяч лет: что делает человека тем, кто он есть — природа или общество?</p>
+    <ol>
+      <li>Подбери по три сильных аргумента <b>за каждую</b> сторону. Аргумент считается сильным, если в нём есть факт или пример, а не только мнение.</li>
+      <li>Теперь сформулируй свою позицию. Постарайся, чтобы она не была ни «только природа», ни «только общество» — и объясни, как именно они взаимодействуют.</li>
+      <li>Что бы ты ответил однокласснику, который говорит: «Из меня ничего не выйдет, у меня нет способностей»? Используй понятия темы.</li>
+    </ol>
+    <textarea placeholder="Аргументы за и против, позиция, ответ однокласснику…"></textarea>
+    <details class="key"><summary>Ключ для проверки</summary><div class="d-body">
+      <p>За наследственность: задатки врождённы (слух, скорость реакции); близнецы, выросшие порознь, часто похожи по характеру; болезни и особенности нервной системы наследуются. За воспитание: дети-«маугли»; один и тот же ребёнок в разных семьях вырастает разным; язык, ценности, профессию человек берёт из среды. Сильная позиция: природа даёт задатки и границы возможностей, общество определяет, какие из них разовьются и во что. Ответ однокласснику: у каждого есть задатки, вопрос — в какой деятельности их развивать; способности не «есть или нет», а «развиты или ещё нет».</p>
+    </div></details>
+  </div>
+</section>
+
+<!-- ================= ТЕМА 2 ================= -->
+<section class="topic" id="t2">
+  <h2>Тема 2. Мировоззрение, его виды и формы</h2>
+  <p class="lead">Что такое мировоззрение, из чего оно состоит, два уровня, пять функций и шесть видов.</p>
+
+  <h3>Тест<small>10 вопросов. Большинство — про то, как отличить один вид или одну функцию мировоззрения от другой.</small></h3>
+  <div class="quiz" id="quiz2">
+
+    <div class="q" data-answer="1">
+      <p class="q-text"><span class="q-num">1</span>Мировоззрение — это:</p>
+      <label><input type="radio" name="t2q1" value="0">сумма всех знаний, полученных человеком в школе</label>
+      <label><input type="radio" name="t2q1" value="1">система взглядов, оценок, норм и установок, определяющих отношение человека к обществу, природе и самому себе</label>
+      <label><input type="radio" name="t2q1" value="2">набор привычек и вкусов человека</label>
+      <label><input type="radio" name="t2q1" value="3">врождённые инстинкты и рефлексы</label>
+      <p class="expl">Ключевое слово — <i>система</i>: не просто набор знаний, а взгляды, которые определяют, как человек относится к миру и себе.</p>
+    </div>
+
+    <div class="q" data-answer="1">
+      <p class="q-text"><span class="q-num">2</span>Бабушка Егора говорит: «Кошка умывается — жди гостей». Её взгляды эмоциональны, изменчивы и основаны на житейском опыте. Какой уровень мировоззрения здесь проявляется?</p>
+      <label><input type="radio" name="t2q2" value="0">теоретический</label>
+      <label><input type="radio" name="t2q2" value="1">обыденно-практический</label>
+      <label><input type="radio" name="t2q2" value="2">научный</label>
+      <label><input type="radio" name="t2q2" value="3">философский</label>
+      <p class="expl">Обыденно-практический уровень — открытая, изменчивая совокупность эмоционально окрашенных взглядов. Теоретический — сложившаяся система идей и принципов. «Научный» и «философский» — это виды, а не уровни.</p>
+    </div>
+
+    <div class="q" data-answer="3">
+      <p class="q-text"><span class="q-num">3</span>Что <b>не</b> входит в структуру мировоззрения?</p>
+      <label><input type="radio" name="t2q3" value="0">знания</label>
+      <label><input type="radio" name="t2q3" value="1">убеждения</label>
+      <label><input type="radio" name="t2q3" value="2">идеалы</label>
+      <label><input type="radio" name="t2q3" value="3">рефлексы</label>
+      <p class="expl">В структуру мировоззрения входят знания, идеи, идеалы, принципы, убеждения, установки, духовные ценности. Рефлексы — биологическая природа человека, к взглядам они не относятся.</p>
+    </div>
+
+    <div class="q" data-answer="2">
+      <p class="q-text"><span class="q-num">4</span>Лена, изучив, как менялся её город за последние сто лет, пытается представить, каким он станет через двадцать. Какая функция мировоззрения здесь проявляется?</p>
+      <label><input type="radio" name="t2q4" value="0">познавательная</label>
+      <label><input type="radio" name="t2q4" value="1">оценочная</label>
+      <label><input type="radio" name="t2q4" value="2">прогностическая</label>
+      <label><input type="radio" name="t2q4" value="3">интегративная</label>
+      <p class="expl">Прогностическая функция — прогнозирование развития окружающего мира и самого себя. Познавательная была бы, если бы Лена только собирала и систематизировала сведения о прошлом.</p>
+    </div>
+
+    <div class="q" data-answer="2">
+      <p class="q-text"><span class="q-num">5</span>Древние греки объясняли гром гневом Зевса, а смену времён года — тоской богини Деметры по дочери Персефоне. Это пример мировоззрения:</p>
+      <label><input type="radio" name="t2q5" value="0">научного</label>
+      <label><input type="radio" name="t2q5" value="1">обыденного</label>
+      <label><input type="radio" name="t2q5" value="2">мифологического</label>
+      <label><input type="radio" name="t2q5" value="3">гуманистического</label>
+      <p class="expl">Мифологическое мировоззрение объясняет мир через образы богов и героев, не требуя доказательств. Оно было основным в древности.</p>
+    </div>
+
+    <div class="q" data-answer="2">
+      <p class="q-text"><span class="q-num">6</span>Какой вид мировоззрения опирается на доказательства, проверяемые факты и логику?</p>
+      <label><input type="radio" name="t2q6" value="0">мифологическое</label>
+      <label><input type="radio" name="t2q6" value="1">религиозное</label>
+      <label><input type="radio" name="t2q6" value="2">научное</label>
+      <label><input type="radio" name="t2q6" value="3">обыденное</label>
+      <p class="expl">Научное мировоззрение строится на данных науки: объективных, проверяемых, доказательных. Религиозное опирается на веру, обыденное — на личный опыт.</p>
+    </div>
+
+    <div class="q" data-answer="2">
+      <p class="q-text"><span class="q-num">7</span>Гуманистическое мировоззрение ставит в центр:</p>
+      <label><input type="radio" name="t2q7" value="0">государство и его интересы</label>
+      <label><input type="radio" name="t2q7" value="1">сверхъестественные силы</label>
+      <label><input type="radio" name="t2q7" value="2">человека, его ценность, свободу и достоинство</label>
+      <label><input type="radio" name="t2q7" value="3">законы природы</label>
+      <p class="expl">Гуманизм (от латинского <i>humanus</i> — человеческий) утверждает ценность человека как личности, его право на свободу и развитие.</p>
+    </div>
+
+    <div class="q" data-answer="0">
+      <p class="q-text"><span class="q-num">8</span>Мировоззрение помогает Даше понимать, как устроено общество и какое место она в нём занимает. Какая функция мировоззрения проявляется?</p>
+      <label><input type="radio" name="t2q8" value="0">социальная</label>
+      <label><input type="radio" name="t2q8" value="1">прогностическая</label>
+      <label><input type="radio" name="t2q8" value="2">оценочная</label>
+      <label><input type="radio" name="t2q8" value="3">интегративная</label>
+      <p class="expl">Социальная функция — формирование целостного взгляда на процессы в обществе и на место человека в нём. Интегративная — объединение всех представлений личности в единое целое.</p>
+    </div>
+
+    <div class="q" data-answer="1">
+      <p class="q-text"><span class="q-num">9</span>Верны ли суждения? <b>А.</b> Мировоззрение складывается раз и навсегда в детстве и потом не меняется. <b>Б.</b> Мировоззрение может изменяться под влиянием опыта, образования и событий жизни.</p>
+      <label><input type="radio" name="t2q9" value="0">верно только А</label>
+      <label><input type="radio" name="t2q9" value="1">верно только Б</label>
+      <label><input type="radio" name="t2q9" value="2">верны оба суждения</label>
+      <label><input type="radio" name="t2q9" value="3">оба суждения неверны</label>
+      <p class="expl">Мировоззрение — не врождённое и не застывшее. Уже обыденный уровень определяется как «открытая, изменчивая совокупность взглядов».</p>
+    </div>
+
+    <div class="q" data-answer="2">
+      <p class="q-text"><span class="q-num">10</span>К философскому мировоззрению относится:</p>
+      <label><input type="radio" name="t2q10" value="0">вера в богов как основа объяснения мира</label>
+      <label><input type="radio" name="t2q10" value="1">объяснение природных явлений действиями духов и героев</label>
+      <label><input type="radio" name="t2q10" value="2">рациональные рассуждения о самых общих вопросах бытия, познания и смысла жизни</label>
+      <label><input type="radio" name="t2q10" value="3">советы из личного житейского опыта</label>
+      <p class="expl">Философия задаёт общие вопросы («что такое истина?», «что такое человек?») и отвечает на них с помощью разума, а не веры или мифа.</p>
+    </div>
+
+    <div class="quiz-foot">
+      <button class="btn primary" onclick="checkQuiz('quiz2','sc2')">Проверить</button>
+      <button class="btn ghost" onclick="resetQuiz('quiz2','sc2')">Сбросить</button>
+      <span class="result" id="quiz2-res"></span>
+    </div>
+  </div>
+
+  <h3>Задания на размышление<small>Шесть заданий: затмение, литературный герой, кошелёк и вопрос, есть ли мировоззрение у собаки.</small></h3>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 1. Одно затмение — пять взглядов</h4><span class="lvl l2">подумать</span></div>
+    <p>Геродот рассказывает: в 585 году до нашей эры во время битвы между лидийцами и мидянами внезапно наступило солнечное затмение. Обе армии прекратили сражение и заключили мир. Философ Фалес, по преданию, это затмение предсказал.</p>
+    <ol>
+      <li>Напиши по одному-два предложения от лица носителя каждого вида мировоззрения — как он объяснит затмение: <mark>мифологического</mark>, <mark>религиозного</mark>, <mark>научного</mark>, <mark>обыденного</mark>, <mark>философского</mark>.</li>
+      <li>Какой вид мировоззрения был у воинов, раз они остановили битву? А у Фалеса? Докажи.</li>
+      <li>Может ли у одного человека сочетаться несколько видов мировоззрения? Приведи пример из своей жизни или из жизни знакомых.</li>
+    </ol>
+    <textarea placeholder="Пять голосов, два ответа, один пример…"></textarea>
+    <details class="key"><summary>Ключ для проверки</summary><div class="d-body">
+      <p>Мифологическое: «Боги разгневались и закрыли солнце — знак прекратить войну». Религиозное: «Это знамение свыше, испытание нашей веры». Научное: «Луна прошла между Землёй и Солнцем; это можно рассчитать заранее». Обыденное: «Что-то неладное творится, лучше переждать». Философское: «Всё в мире подчинено закономерностям, и разум человека способен их постичь». Воины — мифологическое или религиозное (приняли затмение за знак). Фалес — научное или философское (предсказал, значит, видел закономерность). Сочетание возможно: человек может верить в приметы (обыденное), доверять науке в медицине (научное) и ходить в храм (религиозное).</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 2. Собери мировоззрение героя</h4><span class="lvl l2">подумать</span></div>
+    <p>Выбери героя книги, которого хорошо знаешь: Робинзона Крузо, Тома Сойера, Герду из «Снежной королевы» или любого другого. Заполни таблицу элементов его мировоззрения, подтверждая каждый пункт эпизодом или репликой из книги.</p>
+    <table>
+      <tr><th>Элемент</th><th>Что искать в тексте</th></tr>
+      <tr><td>Знания</td><td>что герой умеет и понимает о мире</td></tr>
+      <tr><td>Идеалы</td><td>каким он хочет быть, к чему стремится</td></tr>
+      <tr><td>Принципы</td><td>правила, которые он не нарушает</td></tr>
+      <tr><td>Убеждения</td><td>в чём он уверен настолько, что готов действовать</td></tr>
+      <tr><td>Духовные ценности</td><td>что для него важнее выгоды и удобства</td></tr>
+      <tr><td>Установки</td><td>как он обычно реагирует, «на автомате»</td></tr>
+    </table>
+    <p>Потом определи: уровень мировоззрения героя (обыденно-практический или теоретический), его вид (или сочетание видов) и какая <b>функция</b> мировоззрения помогла ему в самый трудный момент книги.</p>
+    <textarea placeholder="Герой, таблица, уровень, вид, функция…"></textarea>
+    <details class="key"><summary>Ключ для проверки (пример: Робинзон Крузо)</summary><div class="d-body">
+      <p>Знания — ремёсла, навигация, земледелие (осваивает на острове). Идеалы — самостоятельный, трудолюбивый человек. Принципы — не сдаваться, вести учёт добра и зла в дневнике. Убеждения — трудом можно преодолеть любые обстоятельства. Ценности — жизнь, свобода, вера, дружба (Пятница). Установки — на любую беду отвечать делом. Уровень — ближе к теоретическому (система принципов). Вид — сочетание религиозного и обыденного с элементами научного. Функция в трудный момент — интегративная (собирает себя после кораблекрушения в единый план действий) или прогностическая (планирует на годы вперёд). Оценивай не совпадение с этим примером, а доказательность по тексту.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 3. Функции в действии</h4><span class="lvl">разминка</span></div>
+    <p>Определи, какая <mark>функция мировоззрения</mark> проявляется в каждой ситуации.</p>
+    <div class="sort" id="sort2" data-options="познавательная|оценочная|социальная|интегративная|прогностическая">
+      <div class="s-item" data-answer="познавательная"><span>Учёный-климатолог годами собирает данные о ледниках и разрабатывает новые методы измерений</span></div>
+      <div class="s-item" data-answer="оценочная"><span>Катя уверена, что списывать нечестно, поэтому отказалась от подсказки на контрольной</span></div>
+      <div class="s-item" data-answer="прогностическая"><span>Семён, зная свои сильные стороны, представляет, кем станет через десять лет</span></div>
+      <div class="s-item" data-answer="социальная"><span>Разобравшись, как устроено местное самоуправление, Даша поняла, где её место, и записалась в волонтёры при муниципалитете</span></div>
+      <div class="s-item" data-answer="интегративная"><span>Все взгляды и верования Миши складываются в единую картину, по которой он выбирает цели и способы их достижения</span></div>
+      <div class="s-item" data-answer="оценочная"><span>Ира считает жестокость к животным недопустимой и осуждает тех, кто мучает кошек</span></div>
+      <div class="sort-foot">
+        <button class="btn primary" onclick="checkSort('sort2')">Проверить</button>
+        <span class="result" id="sort2-res"></span>
+      </div>
+    </div>
+    <p>Придумай свою ситуацию для той функции, которую было труднее всего распознать, и объясни, почему именно она.</p>
+    <textarea placeholder="Ситуация и объяснение…"></textarea>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 4. Кошелёк на скамейке</h4><span class="lvl l2">подумать</span></div>
+    <p>Два друга находят на скамейке кошелёк с деньгами и документами. Артём хочет отнести его в полицию. Кирилл предлагает оставить деньги, а документы выбросить: «Никто же не видел».</p>
+    <ol>
+      <li>Объясни выбор каждого через <b>элементы мировоззрения</b>: какие ценности, принципы и убеждения стоят за решением Артёма? А за решением Кирилла?</li>
+      <li>Придумай аргумент из мировоззрения Артёма, который мог бы убедить Кирилла, — и наоборот, аргумент Кирилла, который заставил бы Артёма задуматься.</li>
+      <li>Что этот случай говорит о том, зачем вообще человеку мировоззрение? Какие функции здесь сработали?</li>
+    </ol>
+    <textarea placeholder="Два мировоззрения, два аргумента, вывод…"></textarea>
+    <details class="hint"><summary>Подсказка</summary><div class="d-body"><p>У Кирилла тоже есть мировоззрение — не пустое, а другое. Попробуй описать его честно: что для него ценность? Может быть, «своя выгода», а может — «удача, которую грех упускать». Без этого второй пункт не получится.</p></div></details>
+    <details class="key"><summary>Ключ для проверки</summary><div class="d-body">
+      <p>Артём: ценность — честность и чужая собственность; принцип — «не брать чужого»; убеждение — «поступай так, как хотел бы, чтобы поступили с тобой». Кирилл: ценность — личная выгода; установка — «если никто не видит, значит, можно»; убеждение — «мир так устроен, что каждый за себя». Аргумент Артёма: «Представь, что это твой кошелёк с паспортом». Аргумент Кирилла: «Ты уверен, что в полиции его вернут хозяину?» — заставляет задуматься о способе, но не о цели. Вывод: мировоззрение — это то, что делает выбор, когда никто не смотрит. Сработали оценочная (хорошо/плохо) и интегративная (решение вытекает из всей системы взглядов) функции.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 5. Есть ли мировоззрение у…</h4><span class="lvl l3">вызов</span></div>
+    <p>Опираясь на определение и структуру мировоззрения, ответь для каждого случая — есть или нет, и почему:</p>
+    <ol>
+      <li>у новорождённого;</li>
+      <li>у собаки, которая «знает», что хозяин добрый, а сосед злой;</li>
+      <li>у искусственного интеллекта, который прочитал все книги мира;</li>
+      <li>у целого народа.</li>
+    </ol>
+    <p>В конце сформулируй: какой признак оказался решающим во всех четырёх случаях?</p>
+    <textarea placeholder="Четыре ответа и решающий признак…"></textarea>
+    <details class="key"><summary>Ключ для проверки</summary><div class="d-body">
+      <p>Новорождённый — нет: нет знаний, идеалов, убеждений; мировоззрение только начнёт формироваться в обществе. Собака — нет: есть реакции и опыт, но нет системы взглядов и осознанных оценок «добра и зла». Искусственный интеллект — спорно: знания есть, но убеждения предполагают готовность действовать по собственному выбору, а идеалы — стремление; сильный ответ обсуждает, есть ли у него «отношение к себе». Народ — можно говорить о культуре, менталитете, общих ценностях, но носитель мировоззрения — человек; народ его не имеет как единый субъект, хотя формирует мировоззрение каждого своего представителя. Решающий признак: мировоззрение требует сознания и формируется только в обществе.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 6. Найди ошибки</h4><span class="lvl">разминка</span></div>
+    <p>В конспекте не меньше <mark>пяти</mark> ошибок. Найди каждую и исправь.</p>
+    <div class="quote">
+      <p>Мировоззрение — это врождённая система инстинктов, которая не меняется в течение жизни. Оно состоит из знаний, идеалов и рефлексов. Научное мировоззрение объясняет мир действиями богов и духов, а мифологическое опирается на доказательства. Прогностическая функция мировоззрения помогает человеку оценивать свои и чужие поступки.</p>
+    </div>
+    <textarea placeholder="Ошибка → как правильно…"></textarea>
+    <details class="key"><summary>Ключ для проверки</summary><div class="d-body">
+      <ol>
+        <li>Мировоззрение не врождённое — оно <b>формируется</b> в течение жизни.</li>
+        <li>Это система <b>взглядов, оценок, норм и установок</b>, а не инстинктов.</li>
+        <li>Оно <b>изменяется</b> под влиянием опыта и событий.</li>
+        <li>В структуру входят знания, идеи, идеалы, принципы, убеждения, установки, ценности — но <b>не рефлексы</b>.</li>
+        <li>Научное и мифологическое перепутаны местами.</li>
+        <li>Оценивать поступки помогает <b>оценочная</b> функция; прогностическая — предвидеть будущее.</li>
+      </ol>
+    </div></details>
+  </div>
+</section>
+
+<!-- ================= ТЕМА 3 ================= -->
+<section class="topic" id="t3">
+  <h2>Тема 3. Виды знаний</h2>
+  <p class="lead">Познание и его этапы, чувственное и рациональное, научное и ненаучное познание, социальное познание, виды знаний.</p>
+
+  <h3>Тест<small>13 вопросов. Здесь особенно легко перепутать похожие понятия — читай медленно.</small></h3>
+  <div class="quiz" id="quiz3">
+
+    <div class="q" data-answer="1">
+      <p class="q-text"><span class="q-num">1</span>Результатом познания является:</p>
+      <label><input type="radio" name="t3q1" value="0">истина</label>
+      <label><input type="radio" name="t3q1" value="1">знание</label>
+      <label><input type="radio" name="t3q1" value="2">ощущение</label>
+      <label><input type="radio" name="t3q1" value="3">мировоззрение</label>
+      <p class="expl">Тонкость: истина — <i>цель</i> познания, а <i>результат</i> — знание. Знание может оказаться и заблуждением, тогда цель не достигнута, но результат есть.</p>
+    </div>
+
+    <div class="q" data-answer="0">
+      <p class="q-text"><span class="q-num">2</span>«Мир в принципе непознаваем. Человеку доступны лишь его собственные ощущения, а что за ними — узнать нельзя». Это позиция:</p>
+      <label><input type="radio" name="t3q2" value="0">агностицизма</label>
+      <label><input type="radio" name="t3q2" value="1">скептицизма</label>
+      <label><input type="radio" name="t3q2" value="2">гносеологического оптимизма</label>
+      <label><input type="radio" name="t3q2" value="3">здравого смысла</label>
+      <p class="expl">Агностицизм <i>отрицает</i> возможность познания. Скептик лишь сомневается в достоверности знаний, не отрицая познаваемости.</p>
+    </div>
+
+    <div class="q" data-answer="1">
+      <p class="q-text"><span class="q-num">3</span>«Я не утверждаю, что мир непознаваем. Но всё, что мы считаем знанием, стоит ещё раз перепроверить — уверенности нет». Это позиция:</p>
+      <label><input type="radio" name="t3q3" value="0">агностицизма</label>
+      <label><input type="radio" name="t3q3" value="1">скептицизма</label>
+      <label><input type="radio" name="t3q3" value="2">гносеологического оптимизма</label>
+      <label><input type="radio" name="t3q3" value="3">мифологии</label>
+      <p class="expl">Скептицизм — сомнение в достоверности знаний. Гносеологический оптимизм — уверенность в принципиальной познаваемости мира.</p>
+    </div>
+
+    <div class="q" data-answer="2">
+      <p class="q-text"><span class="q-num">4</span>Закрыв глаза, Аня вспомнила, как пахнут бабушкины пирожки. Какая форма чувственного познания описана?</p>
+      <label><input type="radio" name="t3q4" value="0">ощущение</label>
+      <label><input type="radio" name="t3q4" value="1">восприятие</label>
+      <label><input type="radio" name="t3q4" value="2">представление</label>
+      <label><input type="radio" name="t3q4" value="3">понятие</label>
+      <p class="expl">Представление — образ, воспроизведённый из памяти без воздействия предмета на органы чувств. Пирожков рядом нет, но запах «есть».</p>
+    </div>
+
+    <div class="q" data-answer="0">
+      <p class="q-text"><span class="q-num">5</span>Откусив яблоко, Дима почувствовал кислый вкус. Это:</p>
+      <label><input type="radio" name="t3q5" value="0">ощущение</label>
+      <label><input type="radio" name="t3q5" value="1">восприятие</label>
+      <label><input type="radio" name="t3q5" value="2">представление</label>
+      <label><input type="radio" name="t3q5" value="3">суждение</label>
+      <p class="expl">Ощущение — отражение <i>отдельного</i> свойства предмета (кислый). Восприятие было бы, если бы Дима воспринял яблоко целиком: круглое, красное, кислое, хрустящее.</p>
+    </div>
+
+    <div class="q" data-answer="2">
+      <p class="q-text"><span class="q-num">6</span>«Все металлы проводят электрический ток. Медь — металл. Значит, медь проводит ток». Это:</p>
+      <label><input type="radio" name="t3q6" value="0">понятие</label>
+      <label><input type="radio" name="t3q6" value="1">суждение</label>
+      <label><input type="radio" name="t3q6" value="2">умозаключение</label>
+      <label><input type="radio" name="t3q6" value="3">восприятие</label>
+      <p class="expl">Умозаключение — мысль, логически выводящая новое суждение из одного или нескольких других. Здесь два суждения дают третье.</p>
+    </div>
+
+    <div class="q" data-answer="3">
+      <p class="q-text"><span class="q-num">7</span>Какая форма относится к рациональному познанию?</p>
+      <label><input type="radio" name="t3q7" value="0">ощущение</label>
+      <label><input type="radio" name="t3q7" value="1">восприятие</label>
+      <label><input type="radio" name="t3q7" value="2">представление</label>
+      <label><input type="radio" name="t3q7" value="3">понятие</label>
+      <p class="expl">Чувственное познание: ощущение, восприятие, представление. Рациональное: понятие, суждение, умозаключение.</p>
+    </div>
+
+    <div class="q" data-answer="1">
+      <p class="q-text"><span class="q-num">8</span>Продавец «энергетического браслета» уверяет, что тот «гармонизирует биополе», но отказывается проверить это в лаборатории: «Приборы этого не улавливают». Как называется такой способ познания?</p>
+      <label><input type="radio" name="t3q8" value="0">наука</label>
+      <label><input type="radio" name="t3q8" value="1">паранаука</label>
+      <label><input type="radio" name="t3q8" value="2">народная мудрость</label>
+      <label><input type="radio" name="t3q8" value="3">искусство</label>
+      <p class="expl">Признаки паранауки: нет реально существующего объекта (биополе), нет соответствия критериям науки (проверяемость), нет рационального объяснения.</p>
+    </div>
+
+    <div class="q" data-answer="0">
+      <p class="q-text"><span class="q-num">9</span>«Семь раз отмерь — один раз отрежь». Это форма познания:</p>
+      <label><input type="radio" name="t3q9" value="0">народная мудрость</label>
+      <label><input type="radio" name="t3q9" value="1">наука</label>
+      <label><input type="radio" name="t3q9" value="2">мифология</label>
+      <label><input type="radio" name="t3q9" value="3">паранаука</label>
+      <p class="expl">Народная мудрость — коллективный опыт человечества, выраженный в пословицах и поговорках.</p>
+    </div>
+
+    <div class="q" data-answer="0">
+      <p class="q-text"><span class="q-num">10</span>Особенность социального познания, которой нет у познания природы:</p>
+      <label><input type="radio" name="t3q10" value="0">субъект и объект познания совпадают</label>
+      <label><input type="radio" name="t3q10" value="1">используется наблюдение</label>
+      <label><input type="radio" name="t3q10" value="2">целью является истина</label>
+      <label><input type="radio" name="t3q10" value="3">требуются доказательства</label>
+      <p class="expl">Изучая общество, общество познаёт само себя. Физик не является частью атома, а социолог — часть общества, которое изучает.</p>
+    </div>
+
+    <div class="q" data-answer="0">
+      <p class="q-text"><span class="q-num">11</span>Почему в социальном познании трудно применять эксперимент?</p>
+      <label><input type="radio" name="t3q11" value="0">общество постоянно меняется, поэтому эксперимент невоспроизводим</label>
+      <label><input type="radio" name="t3q11" value="1">учёным запрещено изучать общество</label>
+      <label><input type="radio" name="t3q11" value="2">общество слишком просто устроено</label>
+      <label><input type="radio" name="t3q11" value="3">в социальном познании не нужны факты</label>
+      <p class="expl">Один и тот же опыт нельзя повторить в тех же условиях: люди уже изменились, ситуация ушла. К тому же над людьми нельзя экспериментировать, как над веществами.</p>
+    </div>
+
+    <div class="q" data-answer="1">
+      <p class="q-text"><span class="q-num">12</span>Верны ли суждения? <b>А.</b> Чувственное познание не нужно, если есть рациональное. <b>Б.</b> Истинное знание формируется в единстве чувственного и рационального познания.</p>
+      <label><input type="radio" name="t3q12" value="0">верно только А</label>
+      <label><input type="radio" name="t3q12" value="1">верно только Б</label>
+      <label><input type="radio" name="t3q12" value="2">верны оба суждения</label>
+      <label><input type="radio" name="t3q12" value="3">оба суждения неверны</label>
+      <p class="expl">Без ощущений разуму не с чем работать; без разума ощущения остаются разрозненными. Нужны оба этапа.</p>
+    </div>
+
+    <div class="q" data-answer="0">
+      <p class="q-text"><span class="q-num">13</span>Роман, в котором война показана через судьбу одной семьи, даёт читателю знание:</p>
+      <label><input type="radio" name="t3q13" value="0">художественное</label>
+      <label><input type="radio" name="t3q13" value="1">научное</label>
+      <label><input type="radio" name="t3q13" value="2">житейское</label>
+      <label><input type="radio" name="t3q13" value="3">паранаучное</label>
+      <p class="expl">Художественное знание — конкретно-чувственные образы, раскрывающие одно явление (война) через другое (судьба семьи).</p>
+    </div>
+
+    <div class="quiz-foot">
+      <button class="btn primary" onclick="checkQuiz('quiz3','sc3')">Проверить</button>
+      <button class="btn ghost" onclick="resetQuiz('quiz3','sc3')">Сбросить</button>
+      <span class="result" id="quiz3-res"></span>
+    </div>
+  </div>
+
+  <h3>Задания на размышление<small>Семь заданий: детектив, суд над браслетом, муравейник и настоящая ошибка в справочнике.</small></h3>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 1. Дело инспектора Волковой</h4><span class="lvl l2">подумать</span></div>
+    <p>В рассказе спрятаны все шесть форм познания — три чувственных и три рациональных. Каждый выделенный фрагмент — одна форма. Определи, какая.</p>
+    <div class="sort story" id="sort3" data-options="ощущение|восприятие|представление|понятие|суждение|умозаключение">
+      Инспектор Волкова вошла в квартиру и <span class="frag" data-answer="ощущение">сразу почувствовала резкий запах гари</span>. <span class="frag" data-answer="восприятие">Она окинула взглядом комнату: опрокинутый стул, разбитая чашка, распахнутое окно, тёмное пятно на ковре — картина сложилась целиком</span>. <span class="frag" data-answer="представление">Волкова вспомнила, как выглядела эта комната неделю назад, когда она заходила сюда в первый раз</span>. «<span class="frag" data-answer="понятие">Беспорядок</span>», — мысленно отметила она. <span class="frag" data-answer="суждение">«В комнате была борьба»</span>, — решила инспектор. <span class="frag" data-answer="умозаключение">«Если была борьба, а дверь заперта изнутри, значит, тот, кого мы ищем, ушёл через окно»</span>, — заключила Волкова.
+      <div class="sort-foot">
+        <button class="btn primary" onclick="checkSort('sort3')">Проверить</button>
+        <span class="result" id="sort3-res"></span>
+      </div>
+    </div>
+    <p>Теперь подумай: какой из шагов Волковой мог оказаться ошибочным и почему? Могли ли её органы чувств обмануть её? А логика?</p>
+    <textarea placeholder="Где слабое место в рассуждении инспектора…"></textarea>
+    <details class="key"><summary>Ключ для проверки</summary><div class="d-body">
+      <p>Слабых мест два. Чувственное: «картина борьбы» — интерпретация; стул мог упасть от сквозняка, пятно — быть кофе. Рациональное: умозаключение верно только если верны оба суждения («была борьба» и «дверь заперта изнутри»); если первое — ошибка восприятия, вывод рушится, хотя логика безупречна. Сильный ответ замечает: логика не спасает от ложных посылок.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 2. Суд над чудо-браслетом</h4><span class="lvl l3">вызов</span></div>
+    <div class="quote">
+      <p>«Браслет "Гармония-X" настраивает биополе организма на волну здоровья! 97% покупателей чувствуют прилив энергии уже в первую неделю. Учёные скрывают правду, но тысячи отзывов не могут лгать!»</p>
+    </div>
+    <ol>
+      <li>Найди в рекламе <b>все три признака паранауки</b> из таблицы и покажи, какие слова рекламы им соответствуют.</li>
+      <li>Придумай научную проверку браслета. Ответь на четыре вопроса: что именно измерять; зачем нужна вторая группа, которая получит браслет-подделку; почему участники не должны знать, у кого настоящий; почему опыт должен повторить другой учёный.</li>
+      <li>Объясни, почему «тысячи отзывов» — не доказательство. Какой вид знания в них содержится?</li>
+    </ol>
+    <textarea placeholder="Три признака, план проверки, ответ про отзывы…"></textarea>
+    <details class="hint"><summary>Подсказка</summary><div class="d-body"><p>Если человек верит, что браслет помогает, он и правда может почувствовать себя лучше — это называется самовнушение. Как отделить действие браслета от действия веры в браслет?</p></div></details>
+    <details class="key"><summary>Ключ для проверки</summary><div class="d-body">
+      <p><b>1.</b> Нет реально существующего объекта — «биополе»; несоответствие научным критериям — «учёные скрывают правду» вместо проверки; нет рационального объяснения — «настраивает на волну здоровья» ничего не объясняет.</p>
+      <p><b>2.</b> Измерять объективные показатели (пульс, давление, результаты тестов на выносливость), а не «прилив энергии». Вторая группа с подделкой нужна для сравнения — иначе непонятно, браслет подействовал или просто прошла неделя. Незнание участников исключает самовнушение. Повтор другим учёным — воспроизводимость и объективность: результат не должен зависеть от того, кто проверяет.</p>
+      <p><b>3.</b> Отзывы — обыденное (житейское) знание: субъективное, поверхностное, без сравнения. «97%» ничего не значит без группы сравнения: возможно, 97% людей с подделкой почувствовали то же самое.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 3. Семь способов узнать мир</h4><span class="lvl">разминка</span></div>
+    <p>Определи <mark>способ познания</mark> для каждого примера.</p>
+    <div class="sort" id="sort4" data-options="наука|мифология|народная мудрость|обыденное знание|паранаука|искусство|религия">
+      <div class="s-item" data-answer="мифология"><span>«Гром гремит, потому что Перун едет по небу на огненной колеснице»</span></div>
+      <div class="s-item" data-answer="народная мудрость"><span>«Не зная броду, не суйся в воду»</span></div>
+      <div class="s-item" data-answer="наука"><span>Химик повторил опыт трижды и опубликовал результаты, чтобы их могли проверить коллеги</span></div>
+      <div class="s-item" data-answer="обыденное знание"><span>«Я знаю, что чайник горячий: вчера обожглась»</span></div>
+      <div class="s-item" data-answer="паранаука"><span>Гороскоп обещает Овнам удачную неделю в делах</span></div>
+      <div class="s-item" data-answer="искусство"><span>Картина, на которой горе матери передано одним жестом рук</span></div>
+      <div class="s-item" data-answer="религия"><span>«Мир создан Творцом, и в этом его смысл»</span></div>
+      <div class="s-item" data-answer="паранаука"><span>Нумеролог вычислил по дате рождения, что тебе подходит профессия врача</span></div>
+      <div class="sort-foot">
+        <button class="btn primary" onclick="checkSort('sort4')">Проверить</button>
+        <span class="result" id="sort4-res"></span>
+      </div>
+    </div>
+    <p>Вопрос на засыпку: чем «Не зная броду, не суйся в воду» отличается от «Я знаю, что чайник горячий»? Оба — про опыт. Почему одно — народная мудрость, а другое — обыденное знание?</p>
+    <textarea placeholder="В чём разница…"></textarea>
+    <details class="key"><summary>Ключ для проверки</summary><div class="d-body"><p>Народная мудрость — <b>коллективный</b> опыт, накопленный поколениями и отлитый в устойчивую форму (пословицу). Обыденное знание — <b>личный</b> опыт одного человека из его повседневной жизни. Пословица пережила своих авторов, знание про чайник — только Дашино.</p></div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 4. Муравейник и класс</h4><span class="lvl l2">подумать</span></div>
+    <p>Биолог изучает муравейник. Социолог изучает твой класс. Оба — учёные, но второму приходится труднее.</p>
+    <ol>
+      <li>По каждой <b>особенности социального познания</b> из таблицы приведи пример из жизни класса: как именно она мешает социологу. Например: «субъект и объект совпадают» — социолог сам когда-то был школьником и невольно судит по себе.</li>
+      <li>Почему биологу проще: у него этих трудностей нет или они меньше? Разбери хотя бы три.</li>
+      <li>Как социолог может всё-таки получить объективное знание о классе? Предложи два приёма.</li>
+    </ol>
+    <textarea placeholder="Особенности с примерами, сравнение, два приёма…"></textarea>
+    <details class="key"><summary>Ключ для проверки</summary><div class="d-body">
+      <p>Связь с интересами: классный руководитель хочет, чтобы класс выглядел дружным. Ценностный характер: социолог считает списывание злом, а класс — взаимовыручкой. Сложность объекта: 25 человек с разными семьями, характерами, историями. Ограниченность эксперимента: нельзя «пересадить» половину класса ради опыта; к тому же ученики, зная, что их изучают, ведут себя иначе. Муравьи не знают, что их изучают, не имеют интересов, их поведение повторяется. Приёмы: анонимные опросы; наблюдение со стороны разных людей и сравнение результатов; повторное исследование через время; проверка выводов на других классах.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 5. Три философа спорят</h4><span class="lvl l3">вызов</span></div>
+    <p>Агностик, скептик и гносеологический оптимист обсуждают вопрос: <b>«Можно ли по-настоящему узнать, что чувствует другой человек?»</b></p>
+    <ol>
+      <li>Напиши диалог: по две-три реплики каждому. Каждый должен отвечать другим, а не говорить сам с собой.</li>
+      <li>Чья позиция тебе ближе? Объясни, но обязательно назови самый сильный аргумент противника.</li>
+      <li>Как этот спор связан с особенностями социального познания?</li>
+    </ol>
+    <textarea placeholder="Диалог, позиция, связь с социальным познанием…"></textarea>
+    <details class="key"><summary>Ключ для проверки</summary><div class="d-body">
+      <p>Агностик: «Чужие чувства недоступны в принципе: я вижу слёзы, но не грусть». Скептик: «Возможно, доступны, но любое моё понимание — лишь догадка, которую стоит перепроверять». Оптимист: «Через речь, поведение, сопереживание мы понимаем друг друга достаточно, чтобы жить вместе, — значит, познание возможно». Связь с социальным познанием: субъект и объект совпадают (мы судим о чужих чувствах по своим), ценностный характер, невозможность эксперимента. Оценивай живость диалога и точность позиций.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 6. Ошибка в настоящем справочнике</h4><span class="lvl">разминка</span></div>
+    <p>Эта таблица взята из реального учебного справочника без изменений. Найди ошибку.</p>
+    <table>
+      <tr><th>Элемент структуры</th><th>Характеристика</th></tr>
+      <tr><td>Объект</td><td>человек (тот, кто познаёт)</td></tr>
+      <tr><td>Субъект</td><td>предмет (то, что познаётся)</td></tr>
+      <tr><td>Цель познания</td><td>осознанный образ результата</td></tr>
+      <tr><td>Результат познания</td><td>новое знание</td></tr>
+    </table>
+    <ol>
+      <li>Что перепутано? Запиши, как правильно.</li>
+      <li>Приведи два примера ситуаций, где субъект и объект познания — одно и то же.</li>
+      <li>Почему ошибку в справочнике важно уметь замечать самому? Какое отношение к познаваемости мира здесь помогает — агностицизм, скептицизм или оптимизм?</li>
+    </ol>
+    <textarea placeholder="Исправление, два примера, вывод…"></textarea>
+    <details class="key"><summary>Ключ для проверки</summary><div class="d-body">
+      <p>Перепутаны местами: <b>субъект</b> — тот, кто познаёт (человек); <b>объект</b> — то, что познаётся. Примеры совпадения: самопознание (человек изучает собственный характер); социальное познание (общество изучает само себя). Замечать ошибки помогает здоровый скептицизм — не отрицание познаваемости, а привычка перепроверять даже авторитетный источник.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 7. Слепые мудрецы и слон</h4><span class="lvl l2">подумать</span></div>
+    <p>Древняя притча: несколько слепых мудрецов ощупывали слона. Тот, кто держал хобот, сказал: «Слон — это змея». Тот, кто трогал ухо: «Слон — это веер». Тот, кто обнял ногу: «Слон — это колонна». Они поспорили и разошлись, каждый уверенный в своей правоте.</p>
+    <ol>
+      <li>Какой этап познания использовали мудрецы? Какую именно его форму? Почему они ошиблись — что не так с этой формой познания самой по себе?</li>
+      <li>Что им нужно было сделать, чтобы прийти к истине? Опиши по шагам, называя формы познания из таблицы.</li>
+      <li>Приведи пример из науки или из жизни, когда ощущения обманывают, а разум исправляет ошибку.</li>
+    </ol>
+    <textarea placeholder="Этап и форма, шаги к истине, пример…"></textarea>
+    <details class="key"><summary>Ключ для проверки</summary><div class="d-body">
+      <p>Чувственное познание, ощущение — каждый отразил лишь отдельное свойство. Ощущение само по себе даёт частичную, внешнюю информацию. Шаги: обменяться ощущениями и собрать целостный образ (восприятие) → зафиксировать общее («большое животное с хоботом, ушами, ногами» — понятие) → сформулировать суждение → сделать умозаключение. Примеры: Солнце «ходит» по небу, а на деле вращается Земля; ложка в стакане воды кажется сломанной; поезд за окном «трогается», а движется соседний.</p>
+    </div></details>
+  </div>
+</section>
+
+<!-- ================= ИТОГ ================= -->
+<section class="topic" id="t4">
+  <h2>Итог. Три темы вместе</h2>
+  <p class="lead">Здесь понятия из трёх тем встречаются друг с другом. Сначала блиц, потом три больших задания.</p>
+
+  <h3>Блиц<small>8 вопросов, каждый — на связь двух тем.</small></h3>
+  <div class="quiz" id="quiz4">
+
+    <div class="q" data-answer="0">
+      <p class="q-text"><span class="q-num">1</span>Что из перечисленного одновременно входит в характеристику личности (тема 1) и в структуру мировоззрения (тема 2)?</p>
+      <label><input type="radio" name="t4q1" value="0">жизненные принципы и идеалы</label>
+      <label><input type="radio" name="t4q1" value="1">инстинкты и рефлексы</label>
+      <label><input type="radio" name="t4q1" value="2">генотип</label>
+      <label><input type="radio" name="t4q1" value="3">ощущения</label>
+      <p class="expl">Личность — носитель жизненных принципов и идеалов; они же — элементы мировоззрения. Личность и мировоззрение формируются вместе.</p>
+    </div>
+
+    <div class="q" data-answer="0">
+      <p class="q-text"><span class="q-num">2</span>Учёный написал статью о революции, а художник — картину о ней же. Результаты их работы:</p>
+      <label><input type="radio" name="t4q2" value="0">оба являются знанием, но разных видов — научным и художественным</label>
+      <label><input type="radio" name="t4q2" value="1">знанием является только статья учёного</label>
+      <label><input type="radio" name="t4q2" value="2">знанием является только картина, потому что она нагляднее</label>
+      <label><input type="radio" name="t4q2" value="3">ни то, ни другое — знанием, потому что революцию нельзя изучать</label>
+      <p class="expl">Искусство — тоже способ познания: оно отражает действительность в художественных образах. Знание бывает не только научным.</p>
+    </div>
+
+    <div class="q" data-answer="1">
+      <p class="q-text"><span class="q-num">3</span>Какое суждение верно связывает тему 1 и тему 3?</p>
+      <label><input type="radio" name="t4q3" value="0">рациональное познание есть и у животных, потому что у них есть инстинкты</label>
+      <label><input type="radio" name="t4q3" value="1">рациональное познание возможно только благодаря сознанию — свойству, отличающему человека от животного</label>
+      <label><input type="radio" name="t4q3" value="2">чувственное познание — исключительно человеческая способность</label>
+      <label><input type="radio" name="t4q3" value="3">познание не связано с сознанием</label>
+      <p class="expl">Ощущения и восприятие есть и у животных. А вот понятия, суждения и умозаключения требуют сознания и речи — того, что отличает человека.</p>
+    </div>
+
+    <div class="q" data-answer="0">
+      <p class="q-text"><span class="q-num">4</span>Что появляется у ребёнка раньше всего остального?</p>
+      <label><input type="radio" name="t4q4" value="0">ощущения и восприятие</label>
+      <label><input type="radio" name="t4q4" value="1">умозаключения</label>
+      <label><input type="radio" name="t4q4" value="2">научное мировоззрение</label>
+      <label><input type="radio" name="t4q4" value="3">теоретический уровень мировоззрения</label>
+      <p class="expl">Чувственное познание работает с рождения, рациональное развивается вместе с речью, а мировоззрение складывается годами.</p>
+    </div>
+
+    <div class="q" data-answer="2">
+      <p class="q-text"><span class="q-num">5</span>Носитель научного мировоззрения, отвечая на вопрос о познаваемости мира, скорее всего займёт позицию:</p>
+      <label><input type="radio" name="t4q5" value="0">агностицизма</label>
+      <label><input type="radio" name="t4q5" value="1">мифологии</label>
+      <label><input type="radio" name="t4q5" value="2">гносеологического оптимизма</label>
+      <label><input type="radio" name="t4q5" value="3">никакой — учёные не задают таких вопросов</label>
+      <p class="expl">Наука исходит из того, что мир в принципе познаваем, иначе исследовать его бессмысленно. При этом учёный сохраняет долю скептицизма — перепроверяет результаты.</p>
+    </div>
+
+    <div class="q" data-answer="1">
+      <p class="q-text"><span class="q-num">6</span>У ребёнка, выросшего вне общества, не могло сформироваться мировоззрение, потому что:</p>
+      <label><input type="radio" name="t4q6" value="0">мировоззрение передаётся по наследству, а родителей рядом не было</label>
+      <label><input type="radio" name="t4q6" value="1">мировоззрение, как и другие социальные качества, формируется только в обществе</label>
+      <label><input type="radio" name="t4q6" value="2">у него не было органов чувств</label>
+      <label><input type="radio" name="t4q6" value="3">мировоззрение появляется только в школе</label>
+      <p class="expl">Знания, идеалы, ценности, нормы — всё это человек получает от других людей. Без общества нет ни языка, ни взглядов.</p>
+    </div>
+
+    <div class="q" data-answer="0">
+      <p class="q-text"><span class="q-num">7</span>Что общего у понятий «индивидуальность» (тема 1) и «художественное знание» (тема 3)?</p>
+      <label><input type="radio" name="t4q7" value="0">и то, и другое неповторимо и субъективно</label>
+      <label><input type="radio" name="t4q7" value="1">и то, и другое объективно и проверяемо</label>
+      <label><input type="radio" name="t4q7" value="2">и то, и другое дано человеку от рождения</label>
+      <label><input type="radio" name="t4q7" value="3">ничего общего</label>
+      <p class="expl">Индивидуальность — уникальное сочетание качеств одного человека; художественное знание раскрывает личность творца. Оба — про неповторимое.</p>
+    </div>
+
+    <div class="q" data-answer="1">
+      <p class="q-text"><span class="q-num">8</span>Что общего у пары «чувственное — рациональное познание» и пары «обыденно-практический — теоретический уровень мировоззрения»?</p>
+      <label><input type="radio" name="t4q8" value="0">в обеих парах первое — научное, второе — ненаучное</label>
+      <label><input type="radio" name="t4q8" value="1">в обеих парах первое — непосредственное и эмоциональное, второе — системное и логическое</label>
+      <label><input type="radio" name="t4q8" value="2">в обеих парах первое есть только у детей, второе — только у взрослых</label>
+      <label><input type="radio" name="t4q8" value="3">это одно и то же под разными названиями</label>
+      <p class="expl">Ощущения и житейские взгляды — живые, конкретные, эмоциональные. Понятия и теоретическое мировоззрение — обобщённые, упорядоченные. Один и тот же принцип в двух темах.</p>
+    </div>
+
+    <div class="quiz-foot">
+      <button class="btn primary" onclick="checkQuiz('quiz4','sc4')">Проверить</button>
+      <button class="btn ghost" onclick="resetQuiz('quiz4','sc4')">Сбросить</button>
+      <span class="result" id="quiz4-res"></span>
+    </div>
+  </div>
+
+  <h3>Большие задания<small>На каждое — не меньше урока. Подходят для проекта или домашней работы на неделю.</small></h3>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 1. Карта понятий</h4><span class="lvl l3">вызов</span></div>
+    <p>Построй схему, в которой связаны стрелками девять понятий: <mark>человек</mark>, <mark>сознание</mark>, <mark>мышление</mark>, <mark>познание</mark>, <mark>знание</mark>, <mark>истина</mark>, <mark>мировоззрение</mark>, <mark>личность</mark>, <mark>способности</mark>. Каждую стрелку подпиши одним-двумя словами: что делает одно понятие с другим («порождает», «является результатом», «входит в», «развивает»).</p>
+    <p>Затем ответь: какое понятие оказалось в центре твоей схемы — к нему ведёт больше всего стрелок? Почему именно оно? Могла ли схема получиться с другим центром?</p>
+    <textarea placeholder="Опиши связи словами (или нарисуй на бумаге и опиши здесь центр)…"></textarea>
+    <details class="key"><summary>Ключ для проверки</summary><div class="d-body">
+      <p>Примеры верных связей: человек → обладает → сознанием; сознание → делает возможным → мышление; мышление → является инструментом → познания; познание → даёт → знание; знание, соответствующее предмету, → истина; знания → входят в → мировоззрение; мировоззрение → характеризует → личность; личность → развивает → способности; способности → определяют успех → познания. Чаще всего в центре оказывается сознание или человек. Схема с другим центром (например, познание) тоже возможна — важно, чтобы каждая стрелка была обоснована.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 2. Человек 2126 года</h4><span class="lvl l3">вызов</span></div>
+    <p>Через сто лет. Напиши эссе (около 300 слов) о том, каким станет человек, — но не фантазируй свободно, а иди по темам:</p>
+    <ol>
+      <li><b>Тема 1.</b> Что изменится в биологической стороне человека? А в социальной? Что останется прежним, что бы ни случилось?</li>
+      <li><b>Тема 2.</b> Какие виды мировоззрения будут преобладать? Появится ли новый вид? Какая функция мировоззрения станет самой важной?</li>
+      <li><b>Тема 3.</b> Как изменятся способы познания? Что будет с чувственным познанием, если появятся новые органы чувств или приборы? Останется ли паранаука?</li>
+    </ol>
+    <p>В конце: какие из описанных изменений ты считаешь благом, а какие — риском, и почему.</p>
+    <textarea placeholder="Эссе…" style="min-height:220px"></textarea>
+    <details class="key"><summary>Что искать в сильном эссе</summary><div class="d-body">
+      <p>Не прогноз, а работа с понятиями: ученик различает биологическое и социальное; понимает, что мировоззрение формируется обществом, а значит, его виды зависят от того, каким будет общество; видит, что приборы расширяют чувственное познание, но не заменяют рациональное; замечает, что паранаука живёт там, где есть неуверенность и страх. Ценятся неочевидные мысли: например, что в мире с идеальными приборами скептицизм станет важнее оптимизма.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 3. Ты — автор справочника</h4><span class="lvl l2">подумать</span></div>
+    <p>Перечитай три темы и найди три места, которые тебе кажутся самыми запутанными или неточными (одно ты уже нашёл в задании 6 темы 3).</p>
+    <ol>
+      <li>Для каждого объясни, в чём именно трудность: похожие термины? неполное определение? нет примера?</li>
+      <li>Напиши для каждого своё объяснение — такое, чтобы понял одноклассник, который тему не читал.</li>
+      <li>Придумай к каждому запоминающийся пример или образ. Проверь на ком-нибудь: получилось ли понять с первого раза?</li>
+    </ol>
+    <textarea placeholder="Три трудных места, три объяснения, три примера…"></textarea>
+    <details class="key"><summary>Подсказка для учителя</summary><div class="d-body">
+      <p>Типичные трудные места: индивид — личность — индивидуальность; уровни мировоззрения против видов; ощущение — восприятие — представление; обыденное знание против народной мудрости против здравого смысла; истина как цель против знания как результата. Лучшие работы можно собрать в общий «словарь класса».</p>
+    </div></details>
+  </div>
+</section>
+
+</main>
+</div>
+
+<script>
+// ---------- навигация ----------
+function show(id, btn){
+  document.querySelectorAll('section.topic').forEach(s=>s.classList.toggle('on', s.id===id));
+  document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('on', b===btn));
+  window.scrollTo({top:0});
+}
+
+// ---------- тест ----------
+function checkQuiz(quizId, scoreId){
+  const quiz=document.getElementById(quizId);
+  const qs=quiz.querySelectorAll('.q');
+  let correct=0, answered=0;
+  qs.forEach(q=>{
+    const ans=q.dataset.answer;
+    const labels=q.querySelectorAll('label');
+    const chosen=q.querySelector('input:checked');
+    labels.forEach(l=>l.classList.remove('right','wrong'));
+    q.classList.add('done');
+    if(chosen){
+      answered++;
+      const lbl=chosen.closest('label');
+      if(chosen.value===ans){correct++; lbl.classList.add('right');}
+      else{
+        lbl.classList.add('wrong');
+        labels.forEach(l=>{ if(l.querySelector('input').value===ans) l.classList.add('right'); });
+      }
+    }else{
+      labels.forEach(l=>{ if(l.querySelector('input').value===ans) l.classList.add('right'); });
+    }
+  });
+  const total=qs.length;
+  const res=document.getElementById(quizId+'-res');
+  let text=`${correct} из ${total}`;
+  if(answered<total) text+=` (не отвечено: ${total-answered})`;
+  let cls='low';
+  const share=correct/total;
+  if(share>=0.85){cls='good'; text+=' — отлично';}
+  else if(share>=0.6){cls='mid'; text+=' — хорошо, посмотри объяснения';}
+  else{text+=' — вернись к теме и попробуй ещё раз';}
+  res.className='result '+cls;
+  res.textContent=text;
+  document.getElementById(scoreId).textContent=`${correct}/${total}`;
+}
+function resetQuiz(quizId, scoreId){
+  const quiz=document.getElementById(quizId);
+  quiz.querySelectorAll('input[type=radio]').forEach(i=>i.checked=false);
+  quiz.querySelectorAll('.q').forEach(q=>q.classList.remove('done'));
+  quiz.querySelectorAll('label').forEach(l=>l.classList.remove('right','wrong'));
+  document.getElementById(quizId+'-res').textContent='';
+  document.getElementById(scoreId).textContent='—';
+}
+
+// ---------- распределение ----------
+function buildSorts(){
+  document.querySelectorAll('.sort[data-options]').forEach(sort=>{
+    const opts=sort.dataset.options.split('|');
+    sort.querySelectorAll('[data-answer]').forEach(item=>{
+      const sel=document.createElement('select');
+      sel.setAttribute('aria-label','Выбери вариант');
+      const o0=document.createElement('option'); o0.value=''; o0.textContent='выбери…'; sel.appendChild(o0);
+      opts.forEach(o=>{const op=document.createElement('option'); op.value=o; op.textContent=o; sel.appendChild(op);});
+      item.appendChild(sel);
+    });
+  });
+}
+function checkSort(id){
+  const sort=document.getElementById(id);
+  const items=sort.querySelectorAll('[data-answer]');
+  let correct=0, empty=0;
+  items.forEach(item=>{
+    const sel=item.querySelector('select');
+    item.classList.remove('right','wrong');
+    if(!sel.value){empty++; return;}
+    if(sel.value===item.dataset.answer){correct++; item.classList.add('right');}
+    else item.classList.add('wrong');
+  });
+  const res=document.getElementById(id+'-res');
+  let text=`${correct} из ${items.length}`;
+  if(empty) text+=` (не выбрано: ${empty})`;
+  res.className='result '+(correct===items.length?'good':(correct/items.length>=0.6?'mid':'low'));
+  res.textContent=text;
+}
+
+// ---------- режим учителя ----------
+function toggleTeacher(){
+  const on=document.body.classList.toggle('teacher');
+  document.getElementById('teachBtn').textContent='Режим учителя: '+(on?'вкл':'выкл');
+  document.querySelectorAll('details').forEach(d=>d.open=on);
+  document.querySelectorAll('.q').forEach(q=>{
+    q.querySelectorAll('label').forEach(l=>{
+      const isAns=l.querySelector('input').value===q.dataset.answer;
+      l.classList.toggle('answer', on&&isAns);
+    });
+  });
+}
+
+buildSorts();
+</script>
+</body>
+</html>
