@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Человек и общество. Темы 3, 4, 6, 7. Тесты, ЕГЭ и олимпиада</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FFFFFF;--ink:#1B2340;--ink-soft:#4C5470;--rule:#D8DCE8;
+  --pen:#2F55B8;--pen-bg:#EEF2FB;--marker:#FFE86A;
+  --ok:#2A8552;--ok-bg:#E6F4EB;--bad:#C4402C;--bad-bg:#FBE8E4;--miss:#B07A10;--miss-bg:#FFF4D6;
+  --field:#F5F6FA;
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+  --sans:"Onest","Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;overflow-wrap:anywhere}
+mark{background:linear-gradient(transparent 20%,var(--marker) 20%,var(--marker) 88%,transparent 88%);padding:0 .15em;color:inherit}
+
+.top{border-bottom:2px solid var(--ink);padding:26px 32px 22px}
+.top-in{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 28px}
+.top h1{font-family:var(--serif);font-weight:700;font-size:30px;line-height:1.15;margin:0}
+.top .sub{color:var(--ink-soft);font-size:15px;margin:6px 0 0}
+.tools{display:flex;gap:10px;flex-wrap:wrap}
+.btn{font:inherit;font-size:15px;font-weight:500;padding:9px 16px;border-radius:6px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);cursor:pointer}
+.btn:hover{background:var(--pen-bg)}
+.btn:focus-visible,select:focus-visible,textarea:focus-visible,input:focus-visible,summary:focus-visible,.nav button:focus-visible{outline:3px solid var(--marker);outline-offset:2px}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.primary:hover{background:#2C3660}
+.btn.ghost{border-color:var(--rule);color:var(--ink-soft)}
+body.teacher .btn.teach{background:var(--marker)}
+
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:0 48px;padding:0 32px 80px}
+.nav{position:sticky;top:0;align-self:start;padding:28px 0 0;max-height:100vh;overflow:auto}
+.nav button{display:block;width:100%;text-align:left;font:inherit;font-size:16px;padding:9px 12px 9px 14px;border:0;border-left:3px solid transparent;background:none;color:var(--ink-soft);cursor:pointer;border-radius:0 6px 6px 0}
+.nav button:hover{color:var(--ink);background:var(--field)}
+.nav button.on{color:var(--ink);border-left-color:var(--ink);font-weight:600}
+.score{margin:18px 0 0;padding:14px;border:1.5px dashed var(--rule);border-radius:8px;font-size:14px;color:var(--ink-soft)}
+.score b{display:block;color:var(--ink);font-weight:600;margin-bottom:6px}
+.score table{margin:0;font-size:13.5px}
+.score th,.score td{padding:3px 4px;border:0;width:auto}
+.score th{font-weight:500;color:var(--ink-soft);border-bottom:1px solid var(--rule)}
+.score td em{font-style:normal;color:var(--ink);font-weight:600}
+.content{padding-top:28px;max-width:800px;min-width:0}
+section.topic{display:none}
+section.topic.on{display:block}
+
+h2{font-family:var(--serif);font-weight:700;font-size:28px;line-height:1.2;margin:0 0 6px}
+.lead{color:var(--ink-soft);margin:0 0 24px;font-size:16px}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}
+.jump a{font-size:15px;color:var(--pen);text-decoration:none;border:1.5px solid var(--rule);border-radius:99px;padding:4px 12px}
+.jump a:hover{border-color:var(--pen)}
+h3{font-family:var(--serif);font-weight:700;font-size:23px;margin:48px 0 14px;padding-top:22px;border-top:2px solid var(--ink);scroll-margin-top:12px}
+h3 small{display:block;font-family:var(--sans);font-weight:400;font-size:15px;color:var(--ink-soft);margin-top:4px}
+h3.fmt-ege{border-top-color:var(--pen)}
+h3.fmt-olymp{border-top-style:double;border-top-width:5px}
+h4{font-family:var(--serif);font-weight:700;font-size:19px;margin:0;line-height:1.3}
+h5{font-family:var(--sans);font-size:16px;font-weight:600;margin:30px 0 10px;color:var(--ink-soft)}
+.task{margin:0 0 36px;padding:0 0 0 18px;border-left:3px solid var(--rule)}
+.meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px}
+.lvl{font-size:13px;font-weight:500;padding:2px 9px;border-radius:99px;border:1.5px solid var(--rule);color:var(--ink-soft);white-space:nowrap}
+.lvl.ege{border-color:var(--pen);color:var(--pen)}
+.lvl.olymp{border-color:var(--ink);color:var(--ink);background:var(--marker)}
+.task p{margin:0 0 10px}
+.task ol,.task ul{margin:0 0 12px;padding-left:22px}
+.task li{margin:4px 0}
+.quote{background:var(--field);border-left:3px solid var(--pen);padding:12px 16px;margin:12px 0 14px;font-family:var(--serif);font-size:16.5px;line-height:1.65}
+.quote p{margin:0 0 8px}.quote p:last-child{margin:0}
+.note{background:var(--pen-bg);border-radius:8px;padding:12px 16px;margin:10px 0 14px;font-size:15.5px}
+.note p{margin:0 0 6px}.note p:last-child{margin:0}
+textarea{width:100%;min-height:110px;font:inherit;font-size:16px;line-height:1.5;padding:12px 14px;border:1.5px solid var(--rule);border-radius:6px;background:var(--paper);color:var(--ink);resize:vertical;margin:8px 0 10px;background-image:repeating-linear-gradient(transparent,transparent 27px,var(--rule) 27px,var(--rule) 28px);background-attachment:local;background-position:0 12px}
+input[type=text]{font:inherit;font-size:16px;padding:8px 12px;border:1.5px solid var(--rule);border-radius:6px;min-width:220px;max-width:100%;color:var(--ink)}
+details{margin:6px 0;border:1.5px solid var(--rule);border-radius:6px;background:var(--paper)}
+details summary{cursor:pointer;padding:9px 14px;font-weight:500;color:var(--pen);list-style:none;display:flex;gap:8px;align-items:center}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .15s}
+details[open] summary::before{transform:rotate(45deg)}
+details .d-body{padding:2px 16px 14px;font-size:16px}
+details .d-body p{margin:0 0 8px}
+details .d-body ul,details .d-body ol{margin:0 0 8px;padding-left:20px}
+details.key{border-color:var(--ok);background:var(--ok-bg)}
+details.key summary{color:var(--ok)}
+table{border-collapse:collapse;width:100%;margin:10px 0 14px;font-size:15.5px}
+th,td{text-align:left;vertical-align:top;padding:8px 12px;border-bottom:1px solid var(--rule)}
+th{font-weight:600;border-bottom:1.5px solid var(--ink)}
+
+/* единицы проверки */
+.unit{padding:16px 0 14px;border-bottom:1px solid var(--rule)}
+.block>.unit:last-of-type,.block .task:last-of-type .unit{border-bottom:0}
+.task .unit{border-bottom:0;padding-top:4px}
+.q-text{margin:0 0 10px;font-weight:500;display:flex;gap:12px}
+.q-num{flex:0 0 auto;font-family:var(--serif);font-weight:700;color:var(--pen);min-width:22px}
+.unit label{display:block;padding:6px 10px 6px 34px;margin:2px 0;border-radius:6px;cursor:pointer;position:relative}
+.unit label:hover{background:var(--field)}
+.unit input[type=radio],.unit input[type=checkbox]{position:absolute;left:10px;top:9px;accent-color:var(--pen);width:17px;height:17px;margin:0}
+.expl{display:none;margin:10px 0 0 34px;padding:10px 14px;border-radius:6px;background:var(--field);font-size:15px;color:var(--ink-soft)}
+.unit.done .expl{display:block}
+body.teacher .expl{display:block}
+.unit.done label.right{background:var(--ok-bg);color:var(--ok);font-weight:500}
+.unit.done label.wrong{background:var(--bad-bg);color:var(--bad)}
+.unit.done label.missed{background:var(--miss-bg);color:var(--miss)}
+.unit.done label.right::after{content:"✓";display:inline-block;margin-left:8px;padding-left:10px}
+.unit.done label.wrong::after{content:"✗ лишнее";font-size:13px;display:inline-block;margin-left:8px;white-space:nowrap;padding-left:10px}
+.q.done label.wrong::after{content:"✗ неверно"}
+.unit.done label.missed::after{content:"пропущено";font-size:13px;display:inline-block;margin-left:8px;white-space:nowrap;padding-left:10px}
+body.teacher .unit label.answer{background:var(--ok-bg)}
+.instr{font-size:15px;color:var(--ink-soft);margin:-4px 0 10px 34px}
+
+.rows{margin:6px 0 4px}
+.row{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between;padding:9px 12px;border-bottom:1px solid var(--rule)}
+.row>span{flex:1 1 300px}
+select{font:inherit;font-size:15px;padding:6px 32px 6px 10px;border:1.5px solid var(--rule);border-radius:6px;background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231B2340' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 10px center;color:var(--ink);appearance:none;-webkit-appearance:none;cursor:pointer;max-width:100%}
+.row.right{background:var(--ok-bg)}
+.row.wrong{background:var(--bad-bg)}
+.row.wrong::after{content:"верно: " attr(data-show);font-size:13px;color:var(--bad);padding:2px 8px;border:1px solid var(--bad);border-radius:99px}
+body.teacher .row::after{content:"верно: " attr(data-show);font-size:13px;color:var(--ok);padding:2px 8px;border:1px solid var(--ok);border-radius:99px}
+.gaptext{font-family:var(--serif);font-size:17px;line-height:2.15;background:var(--field);padding:16px 20px;border-radius:8px;margin:10px 0 12px}
+.row.frag{display:inline;padding:2px 4px;border:0;background:var(--paper);box-shadow:inset 0 -2px 0 var(--pen);border-radius:3px}
+.row.frag select{margin:0 2px 0 4px;font-size:14px;padding:2px 24px 2px 8px;vertical-align:baseline}
+.row.frag.right{background:var(--ok-bg);box-shadow:inset 0 -2px 0 var(--ok)}
+.row.frag.wrong{background:var(--bad-bg);box-shadow:inset 0 -2px 0 var(--bad)}
+.row.frag::after{margin-left:6px}
+.wordlist{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:15.5px;margin:0 0 6px;padding:10px 14px;border:1.5px dashed var(--rule);border-radius:8px}
+.textans .ans-line{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-left:34px}
+.textans.done.right input{border-color:var(--ok);background:var(--ok-bg)}
+.textans.done.wrong input{border-color:var(--bad);background:var(--bad-bg)}
+.textans .ans-show{display:none;font-size:14px;color:var(--ok);border:1px solid var(--ok);border-radius:99px;padding:2px 10px}
+.textans.done.wrong .ans-show,body.teacher .textans .ans-show{display:inline-block}
+.textans.done.wrong .ans-show{color:var(--bad);border-color:var(--bad)}
+.pts{font-size:13px;color:var(--ink-soft);margin-left:auto;white-space:nowrap}
+
+.block-foot{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:18px 0 6px}
+.result{font-weight:600;font-size:17px}
+.result.good{color:var(--ok)}.result.mid{color:var(--pen)}.result.low{color:var(--bad)}
+
+@media print{
+  .tools,.nav,.btn,.jump{display:none}
+  .wrap{display:block;padding:0}
+  section.topic{display:block;page-break-before:always}
+  section.topic:first-of-type{page-break-before:auto}
+  details summary{display:none}
+  details{border:0;background:none}
+  details:not([open]) .d-body{display:none}
+  .task,.unit{page-break-inside:avoid}
+  h3{page-break-after:avoid}
+  textarea{min-height:140px;background:none}
+}
+@media (max-width:900px){
+  body{font-size:16px}
+  .top{padding:20px 18px}
+  .top h1{font-size:24px}
+  .wrap{grid-template-columns:minmax(0,1fr);padding:0 18px 60px}
+  .nav{position:static;max-height:none;padding:16px 0 0;display:flex;flex-wrap:wrap;gap:6px}
+  .nav button{width:auto;border-left:0;border-bottom:3px solid transparent;border-radius:6px 6px 0 0;padding:8px 10px}
+  .nav button.on{border-bottom-color:var(--ink)}
+  .score{width:100%;margin:8px 0 0}
+  .content{padding-top:18px;max-width:100%}
+  .expl,.instr{margin-left:0}
+  .textans .ans-line{margin-left:0}
+  .task{padding-left:12px}
+  .gaptext{padding:12px 14px}
+}
+
+/* ключи к открытым заданиям видны только в режиме учителя */
+details.key{display:none}
+body.teacher details.key{display:block}
+dialog.pass{border:2px solid var(--ink);border-radius:10px;padding:22px 24px 20px;max-width:360px;width:calc(100% - 32px);color:var(--ink);background:var(--paper);font-family:var(--sans)}
+dialog.pass::backdrop{background:rgba(27,35,64,.45)}
+dialog.pass h4{font-family:var(--serif);font-size:20px;margin:0 0 6px}
+dialog.pass p{margin:0 0 12px;font-size:15px;color:var(--ink-soft)}
+dialog.pass input{width:100%;font:inherit;font-size:17px;padding:10px 12px;border:1.5px solid var(--rule);border-radius:6px;letter-spacing:.15em}
+dialog.pass input:focus-visible{outline:3px solid var(--marker);outline-offset:2px}
+dialog.pass .err{color:var(--bad);font-size:14px;min-height:20px;margin:6px 0 10px}
+dialog.pass .row-b{display:flex;gap:10px;justify-content:flex-end}
+@media print{dialog.pass{display:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div>
+      <h1>Человек и общество. Темы 3, 4, 6, 7</h1>
+      <p class="sub">Подробные тесты, задания в формате ЕГЭ и олимпиады для одарённых учеников 7 класса</p>
+    </div>
+    <div class="tools">
+      <button class="btn teach" onclick="toggleTeacher()" id="teachBtn">Режим учителя: выкл</button>
+      <button class="btn ghost" onclick="window.print()">Распечатать</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+<nav class="nav" aria-label="Разделы">
+  <button class="on" onclick="show('t0',this)">Как работать</button>
+  <button onclick="show('t3',this)">Тема 3. Виды знаний</button>
+  <button onclick="show('t4',this)">Тема 4. Истина и её критерии</button>
+  <button onclick="show('t6',this)">Тема 6. Потребности и интересы</button>
+  <button onclick="show('t7',this)">Тема 7. Свобода и ответственность</button>
+  <div class="score">
+    <b>Результаты</b>
+    <table>
+      <tr><th></th><th>Тест</th><th>ЕГЭ</th><th>Олимп.</th></tr>
+      <tr><td>Тема 3</td><td><em id="s-b3t">—</em></td><td><em id="s-b3e">—</em></td><td><em id="s-b3o">—</em></td></tr>
+      <tr><td>Тема 4</td><td><em id="s-b4t">—</em></td><td><em id="s-b4e">—</em></td><td><em id="s-b4o">—</em></td></tr>
+      <tr><td>Тема 6</td><td><em id="s-b6t">—</em></td><td><em id="s-b6e">—</em></td><td><em id="s-b6o">—</em></td></tr>
+      <tr><td>Тема 7</td><td><em id="s-b7t">—</em></td><td><em id="s-b7e">—</em></td><td><em id="s-b7o">—</em></td></tr>
+    </table>
+  </div>
+</nav>
+
+<main class="content">
+
+<section class="topic on" id="t0">
+  <h2>Как работать с тетрадью</h2>
+  <p class="lead">Четыре темы. В каждой — три части: подробный тест, задания в формате ЕГЭ и задания в формате Всероссийской олимпиады школьников.</p>
+  <table>
+    <tr><th>Часть</th><th>Что внутри</th><th>Проверка</th></tr>
+    <tr><td><b>Тест</b></td><td>15–16 вопросов с одним ответом: определения, ситуации, «верны ли суждения». После проверки к каждому вопросу появляется объяснение.</td><td>Автоматически, 1 балл за вопрос</td></tr>
+    <tr><td><b>ЕГЭ, часть 1</b></td><td>Задания с кратким ответом, как в экзамене: выбор верных суждений, установление соответствия, поиск лишних терминов, обобщающее понятие, текст с пропусками.</td><td>Автоматически, по правилам ЕГЭ: 2 балла без ошибок, 1 балл при одной ошибке, 0 — при двух и более</td></tr>
+    <tr><td><b>ЕГЭ, часть 2</b></td><td>Задания с развёрнутым ответом: смысл понятия, примеры, план, работа с текстом, задача.</td><td>По ключу с критериями (виден в режиме учителя)</td></tr>
+    <tr><td><b>Олимпиада</b></td><td>Задания в духе школьного и муниципального этапов ВсОШ: «да или нет», логические задачи, ряды понятий, анализ высказываний, мини-эссе.</td><td>Часть — автоматически, часть — по ключу в режиме учителя</td></tr>
+  </table>
+  <p>Ошибка «одна» в ЕГЭ-задании означает: одна лишняя цифра, одна пропущенная или одна неверная позиция в соответствии.</p>
+
+  <h3>Для учителя<small>Как пользоваться ключами</small></h3>
+  <p>Кнопка «Режим учителя» открывает все ключи, правильные ответы и объяснения сразу во всех темах. Она защищена паролем: без него ученик видит объяснения к вопросам только после собственной проверки, а ключи и критерии к развёрнутым заданиям не видит вовсе. Её удобно включить на проекторе при разборе. Кнопка «Распечатать» выводит все темы подряд, каждую с новой страницы; ключи в печать не попадают, если режим учителя выключен.</p>
+  <p>Для заданий части 2 в ключах указано, что обязательно должно быть в ответе на полный балл. Шкала там приближена к экзаменационной, но адаптирована под 7 класс: например, в плане достаточно трёх пунктов, из которых два раскрыты подпунктами.</p>
+  <p>В олимпиадных заданиях баллы указаны у каждого задания. Для эссе предложены критерии, близкие к олимпиадным: понимание смысла высказывания, теоретическая аргументация, примеры из жизни, истории, литературы, собственный вывод.</p>
+  <p>Тема 3 уже была в первой тетради. Здесь по ней новые вопросы, а не повтор, так что две тетради можно использовать вместе.</p>
+</section>
+
+<!-- =========================== ТЕМА 3 =========================== -->
+<section class="topic" id="t3">
+  <h2>Тема 3. Виды знаний</h2>
+  <p class="lead">Познание и знание, подходы к познаваемости мира, чувственное и рациональное познание, научное и ненаучное познание, социальное познание, виды знаний.</p>
+  <div class="jump"><a href="#t3-test">Тест</a><a href="#t3-ege">ЕГЭ</a><a href="#t3-ol">Олимпиада</a></div>
+
+  <h3 id="t3-test">Тест<small>16 вопросов. Новые, не из первой тетради: больше ситуаций и «ловушек».</small></h3>
+  <div class="block" id="b3t">
+    <div class="unit q" data-answer="1">
+      <p class="q-text"><span class="q-num">1</span>Что является <b>целью</b> познания?</p>
+      <label><input type="radio">любое новое знание, даже ошибочное</label>
+      <label><input type="radio">истинное знание</label>
+      <label><input type="radio">ощущение</label>
+      <label><input type="radio">мировоззрение</label>
+      <p class="expl">Цель познания — истинное знание, а его результат — знание вообще. Результат может не совпасть с целью: человек пытался узнать истину, а получил заблуждение.</p>
+    </div>
+    <div class="unit q" data-answer="0">
+      <p class="q-text"><span class="q-num">2</span>Немецкий философ XVIII века Иммануил Кант считал, что человек познаёт лишь то, как вещи <i>являются</i> ему, а какими они существуют сами по себе, узнать невозможно. Такая позиция ближе всего к:</p>
+      <label><input type="radio">агностицизму</label>
+      <label><input type="radio">гносеологическому оптимизму</label>
+      <label><input type="radio">мифологии</label>
+      <label><input type="radio">здравому смыслу</label>
+      <p class="expl">Кант — классический пример в учебниках: он не отрицал, что мы что-то знаем, но считал «вещь в себе» принципиально непознаваемой. Это и есть агностицизм — отрицание возможности полного познания мира.</p>
+    </div>
+    <div class="unit q" data-answer="1">
+      <p class="q-text"><span class="q-num">3</span>Турист стоит перед старинным собором: видит его высоту и цвет кирпича, слышит звон колоколов, чувствует прохладу камня. Всё это складывается в единый образ. Какая форма познания описана?</p>
+      <label><input type="radio">ощущение</label>
+      <label><input type="radio">восприятие</label>
+      <label><input type="radio">представление</label>
+      <label><input type="radio">понятие</label>
+      <p class="expl">Восприятие — целостный образ предмета во всём многообразии его свойств. Отдельный звон колокола был бы ощущением; образ собора, который турист вспомнит дома, — представлением.</p>
+    </div>
+    <div class="unit q" data-answer="3">
+      <p class="q-text"><span class="q-num">4</span>Что <b>не</b> является признаком чувственного познания?</p>
+      <label><input type="radio">непосредственный контакт органов чувств с предметом</label>
+      <label><input type="radio">наглядность информации</label>
+      <label><input type="radio">воспроизведение внешних сторон и свойств объектов</label>
+      <label><input type="radio">отвлечение от частных свойств и обобщение существенных</label>
+      <p class="expl">Отвлечение от частного и обобщение существенного — признаки рационального познания. Чувства дают нам конкретное и внешнее, разум — общее и существенное.</p>
+    </div>
+    <div class="unit q" data-answer="1">
+      <p class="q-text"><span class="q-num">5</span>«Кит — млекопитающее». С точки зрения форм рационального познания это:</p>
+      <label><input type="radio">понятие</label>
+      <label><input type="radio">суждение</label>
+      <label><input type="radio">умозаключение</label>
+      <label><input type="radio">представление</label>
+      <p class="expl">Суждение утверждает или отрицает что-либо об объекте. «Кит» и «млекопитающее» по отдельности — понятия; соединённые утверждением — суждение. Умозаключение появилось бы, если бы из нескольких суждений выводилось новое.</p>
+    </div>
+    <div class="unit q" data-answer="2">
+      <p class="q-text"><span class="q-num">6</span>В каком порядке усложняются формы рационального познания?</p>
+      <label><input type="radio">суждение → понятие → умозаключение</label>
+      <label><input type="radio">умозаключение → суждение → понятие</label>
+      <label><input type="radio">понятие → суждение → умозаключение</label>
+      <label><input type="radio">понятие → умозаключение → суждение</label>
+      <p class="expl">Из понятий строятся суждения, из суждений — умозаключения. Каждая следующая форма опирается на предыдущую.</p>
+    </div>
+    <div class="unit q" data-answer="0">
+      <p class="q-text"><span class="q-num">7</span>«Совокупность общепринятых, часто неосознанных способов объяснения и оценки наблюдаемых явлений». Это определение:</p>
+      <label><input type="radio">здравого смысла</label>
+      <label><input type="radio">научного знания</label>
+      <label><input type="radio">паранауки</label>
+      <label><input type="radio">мифологии</label>
+      <p class="expl">Здравый смысл суммирует фрагменты опыта, нужные каждому в повседневной жизни. «Не стой под стрелой крана» никто не доказывает — это просто общепринято.</p>
+    </div>
+    <div class="unit q" data-answer="2">
+      <p class="q-text"><span class="q-num">8</span>Учёные из Японии описали новый способ получения материала. Через год их опыт повторили в лабораториях Германии и Бразилии и получили те же результаты. Какой признак научного познания здесь проявился <b>прежде всего</b>?</p>
+      <label><input type="radio">наличие специального языка</label>
+      <label><input type="radio">системность</label>
+      <label><input type="radio">воспроизводимость</label>
+      <label><input type="radio">образность</label>
+      <p class="expl">Воспроизводимость: повторение всех действий исследователя другим человеком даёт тот же результат. Образность — признак искусства, а не науки.</p>
+    </div>
+    <div class="unit q" data-answer="1">
+      <p class="q-text"><span class="q-num">9</span>Древние греки рассказывали, что Прометей украл у богов огонь и отдал его людям. С точки зрения способов познания это пример:</p>
+      <label><input type="radio">народной мудрости</label>
+      <label><input type="radio">мифологии</label>
+      <label><input type="radio">паранауки</label>
+      <label><input type="radio">научного знания</label>
+      <p class="expl">Мифология — основной способ познания в древности; в образной форме фиксирует представления о мире и сверхъестественном, не отличается достоверностью.</p>
+    </div>
+    <div class="unit q" data-answer="3">
+      <p class="q-text"><span class="q-num">10</span>Чем искусство как способ познания отличается от науки?</p>
+      <label><input type="radio">искусство стремится к доказательности</label>
+      <label><input type="radio">искусство обязательно использует эксперимент</label>
+      <label><input type="radio">искусство не связано с действительностью</label>
+      <label><input type="radio">искусство отражает мир в образах и имеет субъективный характер</label>
+      <p class="expl">Искусство тоже отражает действительность, но через художественные образы, раскрывающие личность творца и зрителя. Доказательность и эксперимент — черты науки.</p>
+    </div>
+    <div class="unit q" data-answer="2">
+      <p class="q-text"><span class="q-num">11</span>Два историка изучают одни и те же документы о реформе, но один называет её «спасением страны», а другой — «катастрофой». Какая особенность социального познания здесь проявилась?</p>
+      <label><input type="radio">ограниченность эксперимента</label>
+      <label><input type="radio">совпадение субъекта и объекта</label>
+      <label><input type="radio">ценностный характер познания</label>
+      <label><input type="radio">использование математических методов</label>
+      <p class="expl">Люди рассматривают общественные явления через призму своих принципов, идеалов и ценностей, поэтому оценки одних и тех же фактов расходятся.</p>
+    </div>
+    <div class="unit q" data-answer="0">
+      <p class="q-text"><span class="q-num">12</span>Производитель сладкой газировки заплатил за исследование, по итогам которого сахар «не так вреден, как принято считать». Какая особенность социального познания здесь ярче всего видна?</p>
+      <label><input type="radio">связь с интересами субъектов познания</label>
+      <label><input type="radio">сложность объекта познания</label>
+      <label><input type="radio">совпадение субъекта и объекта</label>
+      <label><input type="radio">наличие специального языка</label>
+      <p class="expl">Социальное познание всегда связано с интересами людей, организаций, групп. Поэтому важно спрашивать не только «что выяснили», но и «кто заказал исследование».</p>
+    </div>
+    <div class="unit q" data-answer="1">
+      <p class="q-text"><span class="q-num">13</span>Опытный врач ещё до анализов «чувствует», что у пациента редкая болезнь, и оказывается прав. Это пример знания:</p>
+      <label><input type="radio">рационального</label>
+      <label><input type="radio">иррационального</label>
+      <label><input type="radio">художественного</label>
+      <label><input type="radio">мифологического</label>
+      <p class="expl">Предмет иррационального знания — эмоции, переживания, интуиция, воля. Интуиция врача опирается на опыт, но работает не через логические шаги.</p>
+    </div>
+    <div class="unit q" data-answer="3">
+      <p class="q-text"><span class="q-num">14</span>Какой признак отличает <b>паранауку</b>?</p>
+      <label><input type="radio">проверяемость результатов другими исследователями</label>
+      <label><input type="radio">опора на коллективный опыт, выраженный в пословицах</label>
+      <label><input type="radio">отражение мира в художественных образах</label>
+      <label><input type="radio">неспособность дать рациональное истолкование изучаемых явлений</label>
+      <p class="expl">Признаки паранауки: нет реального объекта познания, нет соответствия научным критериям, нет рационального объяснения. Пословицы — народная мудрость, образы — искусство.</p>
+    </div>
+    <div class="unit q" data-answer="0">
+      <p class="q-text"><span class="q-num">15</span>Верны ли суждения? <b>А.</b> Объектом социального познания выступают социальные факты — действия и поступки людей, результаты их деятельности. <b>Б.</b> В социальном познании количественные методы и математизация применяются чаще, чем в естествознании.</p>
+      <label><input type="radio">верно только А</label>
+      <label><input type="radio">верно только Б</label>
+      <label><input type="radio">верны оба суждения</label>
+      <label><input type="radio">оба суждения неверны</label>
+      <p class="expl">Б — наоборот: в социальном познании количественные методы и формализация применяются реже, чем в естествознании.</p>
+    </div>
+    <div class="unit q" data-answer="2">
+      <p class="q-text"><span class="q-num">16</span>Верны ли суждения? <b>А.</b> Скептицизм — это сомнение в том, что все знания о мире носят достоверный характер. <b>Б.</b> Житейское знание обычно имеет поверхностный характер.</p>
+      <label><input type="radio">верно только А</label>
+      <label><input type="radio">верно только Б</label>
+      <label><input type="radio">верны оба суждения</label>
+      <label><input type="radio">оба суждения неверны</label>
+      <p class="expl">Оба суждения — почти дословные определения из справочника. Обрати внимание: «поверхностное» не значит «неверное». Житейское знание часто полезно, просто не объясняет глубинных причин.</p>
+    </div>
+    <div class="block-foot"><button class="btn primary" onclick="checkBlock('b3t')">Проверить тест</button><button class="btn ghost" onclick="resetBlock('b3t')">Сбросить</button><span class="result"></span></div>
+  </div>
+
+  <h3 id="t3-ege" class="fmt-ege">Формат ЕГЭ<small>Часть 1 — краткий ответ, проверяется автоматически. Часть 2 — развёрнутый ответ, проверяется по ключу.</small></h3>
+  <h5>Часть 1</h5>
+  <div class="block" id="b3e">
+    <div class="unit multi" data-answer="135">
+      <p class="q-text"><span class="q-num">1</span>Выберите верные суждения о познании и его формах.</p>
+      <p class="instr">Отметьте все верные варианты.</p>
+      <label><input type="checkbox">Результатом познания является знание.</label>
+      <label><input type="checkbox">Агностицизм утверждает принципиальную познаваемость мира.</label>
+      <label><input type="checkbox">Представление — образ предмета, сохранённый в памяти и воспроизводимый без непосредственного воздействия предмета на органы чувств.</label>
+      <label><input type="checkbox">Понятие, суждение и умозаключение относятся к формам чувственного познания.</label>
+      <label><input type="checkbox">Рациональное познание предполагает отвлечение от частных, несущественных свойств отдельных предметов.</label>
+      <p class="expl">Верны 1, 3, 5. Агностицизм отрицает возможность познания; понятие, суждение и умозаключение — формы рационального познания.</p>
+    </div>
+    <div class="unit match" data-options="1|2" data-labels="чувственное|рациональное">
+      <p class="q-text"><span class="q-num">2</span>Установите соответствие между формами познания и этапами познания: к каждой позиции первого столбца подберите позицию из второго.</p>
+      <p class="instr">Этапы: 1) чувственное; 2) рациональное.</p>
+      <div class="rows">
+        <div class="row" data-answer="1"><span>А) ощущение</span></div>
+        <div class="row" data-answer="2"><span>Б) суждение</span></div>
+        <div class="row" data-answer="1"><span>В) восприятие</span></div>
+        <div class="row" data-answer="2"><span>Г) понятие</span></div>
+        <div class="row" data-answer="1"><span>Д) представление</span></div>
+      </div>
+      <p class="expl">Ответ: 12121.</p>
+    </div>
+    <div class="unit match" data-options="1|2" data-labels="мифология|наука">
+      <p class="q-text"><span class="q-num">3</span>Установите соответствие между характеристиками и способами познания.</p>
+      <p class="instr">Способы: 1) мифология; 2) наука.</p>
+      <div class="rows">
+        <div class="row" data-answer="1"><span>А) фиксация представлений о сверхъестественном в образной форме</span></div>
+        <div class="row" data-answer="2"><span>Б) проверяемость и воспроизводимость результатов</span></div>
+        <div class="row" data-answer="2"><span>В) наличие специального языка</span></div>
+        <div class="row" data-answer="1"><span>Г) знание не отличается достоверностью и логичностью</span></div>
+        <div class="row" data-answer="2"><span>Д) системность</span></div>
+      </div>
+      <p class="expl">Ответ: 12212.</p>
+    </div>
+    <div class="unit multi" data-answer="26">
+      <p class="q-text"><span class="q-num">4</span>Ниже приведён ряд терминов. Все они, за исключением двух, относятся к понятию «рациональное познание». Найдите два термина, «выпадающих» из общего ряда.</p>
+      <label><input type="checkbox">понятие</label>
+      <label><input type="checkbox">ощущение</label>
+      <label><input type="checkbox">суждение</label>
+      <label><input type="checkbox">умозаключение</label>
+      <label><input type="checkbox">абстрагирование</label>
+      <label><input type="checkbox">восприятие</label>
+      <p class="expl">Ощущение и восприятие — формы чувственного познания.</p>
+    </div>
+    <div class="unit textans" data-answer="4" data-exact="1">
+      <p class="q-text"><span class="q-num">5</span>Найдите понятие, которое является обобщающим для всех остальных понятий ряда, и запишите цифру, под которой оно указано: 1) мифология; 2) паранаука; 3) народная мудрость; 4) ненаучное познание; 5) здравый смысл.</p>
+      <div class="ans-line"><input type="text" inputmode="numeric" aria-label="Ответ"><span class="ans-show">ответ: 4</span></div>
+    </div>
+    <div class="unit match" data-options="1|2|3|4|5|6|7|8|9" data-labels="восприятие|рациональное|социальное|истинное|абсолютное|ощущение|умозаключение|чувственное|научное">
+      <p class="q-text"><span class="q-num">6</span>Прочитайте текст, в котором пропущены слова. Выберите из списка слова, которые необходимо вставить на место пропусков.</p>
+      <div class="wordlist"><span>1) восприятие</span><span>2) рациональное</span><span>3) социальное</span><span>4) истинное</span><span>5) абсолютное</span><span>6) ощущение</span><span>7) умозаключение</span><span>8) чувственное</span><span>9) научное</span></div>
+      <div class="gaptext">
+        Познание — процесс получения человеком нового знания, целью которого является <span class="row frag" data-answer="4">(А)</span> знание. Начальным этапом выступает <span class="row frag" data-answer="8">(Б)</span> познание, предполагающее непосредственный контакт органов чувств с предметом. Его первая форма — <span class="row frag" data-answer="6">(В)</span>, отражающее отдельные свойства предметов. На этапе, который называют <span class="row frag" data-answer="2">(Г)</span> познанием, человек оперирует понятиями, суждениями и выводами — каждый такой вывод называют <span class="row frag" data-answer="7">(Д)</span>. Особым видом является <span class="row frag" data-answer="3">(Е)</span> познание, в котором субъект и объект познания совпадают.
+      </div>
+      <p class="expl">Ответ: А4, Б8, В6, Г2, Д7, Е3.</p>
+    </div>
+    <div class="block-foot"><button class="btn primary" onclick="checkBlock('b3e')">Проверить часть 1</button><button class="btn ghost" onclick="resetBlock('b3e')">Сбросить</button><span class="result"></span></div>
+  </div>
+
+  <h5>Часть 2</h5>
+  <div class="task">
+    <div class="meta"><h4>Задание 7. Смысл понятия</h4><span class="lvl ege">ЕГЭ · 3 балла</span></div>
+    <p>Раскройте смысл понятия <mark>«познание»</mark>. Составьте два предложения: одно, содержащее информацию о формах чувственного познания, и одно, раскрывающее любую особенность научного познания.</p>
+    <textarea placeholder="Смысл понятия и два предложения…"></textarea>
+    <details class="key"><summary>Критерии и образец</summary><div class="d-body">
+      <p><b>1 балл</b> — смысл понятия: «Познание — процесс получения человеком нового знания, активное отражение действительности в сознании, целью которого является истинное знание». Засчитывается и другое корректное определение.</p>
+      <p><b>По 1 баллу за каждое предложение</b>, если оно содержит верную информацию на заданный аспект и связано со смыслом понятия. Например: «Формами чувственного познания являются ощущение, восприятие и представление». «Научное познание отличается воспроизводимостью: повторение опыта другим исследователем должно приводить к тем же результатам».</p>
+      <p>Предложения-определения («научное познание — это…») и предложения не на заданный аспект не засчитываются.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 8. Три примера</h4><span class="lvl ege">ЕГЭ · 3 балла</span></div>
+    <p>Назовите любые три особенности социального познания и проиллюстрируйте каждую примером. Каждый пример должен быть сформулирован развёрнуто.</p>
+    <textarea placeholder="Особенность — пример…"></textarea>
+    <details class="key"><summary>Критерии и образец</summary><div class="d-body">
+      <p>По 1 баллу за каждую особенность с корректным развёрнутым примером. Например:</p>
+      <ul>
+        <li><b>Ограниченность эксперимента:</b> нельзя «проверить», что было бы, если бы в 1917 году события пошли иначе, — историческую ситуацию невозможно воспроизвести.</li>
+        <li><b>Ценностный характер:</b> журналисты двух разных изданий по-разному оценили новый закон о школьной форме, исходя из собственных взглядов на свободу и порядок.</li>
+        <li><b>Совпадение субъекта и объекта:</b> социолог, изучающий отношение подростков к соцсетям, сам пользуется соцсетями, и его личный опыт влияет на формулировку вопросов анкеты.</li>
+      </ul>
+      <p>Пример без указания особенности или особенность без примера — 0 баллов за эту позицию.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 9. План</h4><span class="lvl ege">ЕГЭ · 4 балла</span></div>
+    <p>Составьте сложный план, позволяющий раскрыть по существу тему <mark>«Формы и способы познания»</mark>. План должен содержать не менее трёх пунктов, непосредственно раскрывающих тему, из которых два или более детализированы в подпунктах.</p>
+    <textarea placeholder="1. …&#10;   а) …&#10;   б) …" style="min-height:160px"></textarea>
+    <details class="key"><summary>Образец плана</summary><div class="d-body">
+      <ol>
+        <li>Познание как процесс получения нового знания.</li>
+        <li>Подходы к познаваемости мира:
+          <br>а) агностицизм; б) скептицизм; в) гносеологический оптимизм.</li>
+        <li>Чувственное познание и его формы:
+          <br>а) ощущение; б) восприятие; в) представление.</li>
+        <li>Рациональное познание и его формы:
+          <br>а) понятие; б) суждение; в) умозаключение.</li>
+        <li>Научное и ненаучное познание:
+          <br>а) признаки научного познания; б) мифология, народная мудрость, здравый смысл; в) паранаука и её признаки.</li>
+        <li>Особенности социального познания.</li>
+      </ol>
+      <p>Наличие пунктов 3, 4 и 5 (в любой формулировке) позволяет раскрыть тему по существу. Пункты вроде «Введение» и «Заключение» не засчитываются.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 10. Задача</h4><span class="lvl ege">ЕГЭ · 3 балла</span></div>
+    <p>Школьники решили выяснить, правда ли, что музыка помогает лучше запоминать слова. Половина класса учила 30 английских слов под музыку, половина — в тишине. Затем все написали проверочную работу. Учитель предложил повторить опыт в параллельном классе.</p>
+    <ol>
+      <li>К какому способу познания относится деятельность школьников? Назовите два признака этого способа, которые проявились в ситуации.</li>
+      <li>Зачем учитель предложил повторить опыт в другом классе?</li>
+      <li>Объясните, почему в этом опыте результат может зависеть не только от музыки. Какая особенность социального познания здесь проявляется?</li>
+    </ol>
+    <textarea placeholder="Ответы на три вопроса…"></textarea>
+    <details class="key"><summary>Критерии и образец</summary><div class="d-body">
+      <p><b>1.</b> Научное познание (элементы эксперимента). Признаки: проверяемость (контрольная работа), объективность (сравнение двух групп), стремление к воспроизводимости.</p>
+      <p><b>2.</b> Чтобы проверить воспроизводимость: результат, полученный один раз, мог быть случайным.</p>
+      <p><b>3.</b> На результат влияют настроение, способности, интерес учеников, то, что они знали заранее, что опыт проводится. Особенность: сложность объекта познания; ограниченность эксперимента (люди меняются, опыт невозможно повторить в точности).</p>
+      <p>По 1 баллу за каждый верный ответ.</p>
+    </div></details>
+  </div>
+
+  <h3 id="t3-ol" class="fmt-olymp">Формат олимпиады<small>Задания в духе школьного и муниципального этапов ВсОШ по обществознанию.</small></h3>
+  <div class="block" id="b3o">
+    <div class="task">
+      <div class="meta"><h4>Задание 1. «Да» или «нет»</h4><span class="lvl olymp">по 1 баллу · 6 баллов</span></div>
+      <div class="unit match" data-mode="each" data-options="да|нет" data-labels="да|нет">
+        <p class="instr" style="margin-left:0">Если вы согласны с утверждением, выберите «да», если не согласны — «нет».</p>
+        <div class="rows">
+          <div class="row" data-answer="нет"><span>1. Ощущение отражает предмет целостно, во всей полноте его свойств.</span></div>
+          <div class="row" data-answer="да"><span>2. Скептицизм не отрицает возможности познания, а лишь сомневается в достоверности знаний.</span></div>
+          <div class="row" data-answer="да"><span>3. Объект социального познания постоянно изменяется, поэтому эксперименты в нём трудно воспроизвести.</span></div>
+          <div class="row" data-answer="нет"><span>4. Народная мудрость — это знание, которое один человек получил в своей повседневной жизни.</span></div>
+          <div class="row" data-answer="да"><span>5. Представление может возникнуть без непосредственного воздействия предмета на органы чувств.</span></div>
+          <div class="row" data-answer="нет"><span>6. Художественное знание стремится к однозначности и отказу от метафор.</span></div>
+        </div>
+        <p class="expl">1 — нет (это восприятие; ощущение отражает отдельные свойства). 4 — нет (народная мудрость — коллективный опыт). 6 — нет (художественное знание — система многозначных метафор и символов).</p>
+      </div>
+    </div>
+
+    <div class="task">
+      <div class="meta"><h4>Задание 2. Логическая задача: три философа</h4><span class="lvl olymp">3 балла</span></div>
+      <div class="unit match" data-mode="each" data-options="агностик|скептик|оптимист" data-labels="агностик|скептик|гносеологический оптимист">
+        <p>На философском диспуте выступали Альберт, Бернар и Карл. Один из них — агностик, другой — скептик, третий — гносеологический оптимист. Известно:</p>
+        <ol>
+          <li>Альберт не отрицает возможности познания мира.</li>
+          <li>Тот, кто уверен в принципиальной познаваемости мира, спорил и с Альбертом, и с Карлом.</li>
+          <li>Карл никогда не говорит «возможно» и «надо перепроверить»: он либо уверенно отрицает, либо уверенно утверждает.</li>
+        </ol>
+        <p>Определите позицию каждого.</p>
+        <div class="rows">
+          <div class="row" data-answer="скептик"><span>Альберт</span></div>
+          <div class="row" data-answer="оптимист"><span>Бернар</span></div>
+          <div class="row" data-answer="агностик"><span>Карл</span></div>
+        </div>
+        <p class="expl">Из условия 2: оптимист — не Альберт и не Карл, значит, Бернар. Из условия 1: Альберт не агностик, и он не оптимист — значит, скептик. Карлу остаётся агностицизм; условие 3 с этим согласуется: агностик уверенно отрицает познаваемость.</p>
+      </div>
+    </div>
+
+    <div class="task">
+      <div class="meta"><h4>Задание 3. Что лишнее?</h4><span class="lvl olymp">по 1 баллу за лишнее + до 1 балла за объяснение</span></div>
+      <p>В каждом ряду найдите лишнее понятие и запишите его. Объяснение принципа, по которому образован ряд, напишите ниже в поле — оно проверяется по ключу.</p>
+      <div class="unit textans" data-answer="гуманизм">
+        <p class="q-text"><span class="q-num">а</span>Агностицизм, скептицизм, гносеологический оптимизм, гуманизм.</p>
+        <div class="ans-line"><input type="text" aria-label="Лишнее понятие"><span class="ans-show">ответ: гуманизм</span></div>
+      </div>
+      <div class="unit textans" data-answer="наук">
+        <p class="q-text"><span class="q-num">б</span>Мифология, паранаука, наука, народная мудрость, здравый смысл.</p>
+        <div class="ans-line"><input type="text" aria-label="Лишнее понятие"><span class="ans-show">ответ: наука</span></div>
+      </div>
+      <div class="unit textans" data-answer="представлен">
+        <p class="q-text"><span class="q-num">в</span>Понятие, суждение, умозаключение, представление.</p>
+        <div class="ans-line"><input type="text" aria-label="Лишнее понятие"><span class="ans-show">ответ: представление</span></div>
+      </div>
+      <div class="unit textans" data-answer="образн">
+        <p class="q-text"><span class="q-num">г</span>Объективность, доказательность, проверяемость, образность, системность.</p>
+        <div class="ans-line"><input type="text" aria-label="Лишнее понятие"><span class="ans-show">ответ: образность</span></div>
+      </div>
+      <textarea placeholder="Принцип каждого ряда…" style="min-height:90px"></textarea>
+      <details class="key"><summary>Ключ к объяснениям</summary><div class="d-body">
+        <p>а) подходы к познаваемости мира; гуманизм — вид мировоззрения. б) способы ненаучного познания; наука — научное. в) формы рационального познания; представление — чувственного. г) особенности научного познания; образность — черта искусства.</p>
+      </div></details>
+    </div>
+    <div class="block-foot"><button class="btn primary" onclick="checkBlock('b3o')">Проверить олимпиадные задания 1–3</button><button class="btn ghost" onclick="resetBlock('b3o')">Сбросить</button><span class="result"></span></div>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 4. Анализ высказывания</h4><span class="lvl olymp">до 6 баллов</span></div>
+    <p>Древнегреческому философу Сократу приписывают слова: <b>«Я знаю, что ничего не знаю»</b>.</p>
+    <ol>
+      <li>Какой из подходов к познаваемости мира ближе к этой мысли? Аргументируйте, почему это не агностицизм (или, наоборот, почему агностицизм), — рассмотрите обе возможности.</li>
+      <li>Сократ при этом всю жизнь задавал людям вопросы, стараясь докопаться до истины. Нет ли здесь противоречия?</li>
+      <li>Как эта мысль может помочь учёному? А как — помешать?</li>
+    </ol>
+    <textarea placeholder="Развёрнутый ответ…"></textarea>
+    <details class="key"><summary>Ключ</summary><div class="d-body">
+      <p>Сильный ответ отличает скептицизм от агностицизма: Сократ сомневается в достоверности собственных знаний, но не утверждает, что мир непознаваем, — иначе не было бы смысла задавать вопросы. Поэтому ближе к скептицизму (2 балла). Противоречия нет: осознание незнания — начало познания, стимул искать (2 балла). Учёному помогает: перепроверять, не останавливаться на достигнутом; мешает, если сомнение становится абсолютным и парализует действие (2 балла).</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 5. Мини-эссе</h4><span class="lvl olymp">до 10 баллов</span></div>
+    <p>Выберите одно высказывание и напишите мини-эссе (150–200 слов): раскройте смысл, приведите теоретический аргумент, пример из истории, науки, литературы или собственной жизни, сделайте вывод.</p>
+    <ol>
+      <li>«Знание — сила». <i>(Фрэнсис Бэкон)</i></li>
+      <li>«Мыслю, следовательно, существую». <i>(Рене Декарт)</i></li>
+      <li>«Здравый смысл — это сумма предрассудков, приобретённых до восемнадцати лет». <i>(приписывается Альберту Эйнштейну)</i></li>
+    </ol>
+    <textarea placeholder="Эссе…" style="min-height:220px"></textarea>
+    <details class="key"><summary>Критерии оценки</summary><div class="d-body">
+      <table>
+        <tr><th>Критерий</th><th>Баллы</th></tr>
+        <tr><td>Раскрыт смысл высказывания, показано понимание идеи автора</td><td>0–2</td></tr>
+        <tr><td>Теоретическая аргументация с корректным использованием понятий темы (формы познания, виды знаний, научное и ненаучное познание)</td><td>0–3</td></tr>
+        <tr><td>Фактическая аргументация: не менее двух примеров из разных источников</td><td>0–3</td></tr>
+        <tr><td>Собственный вывод, логичность, отсутствие фактических ошибок</td><td>0–2</td></tr>
+      </table>
+      <p>Подсказка для проверяющего по третьему высказыванию: сильная работа соглашается частично — здравый смысл действительно содержит неосознанные установки, но также суммирует полезный опыт, необходимый в повседневной жизни.</p>
+    </div></details>
+  </div>
+</section>
+
+<!-- =========================== ТЕМА 4 =========================== -->
+<section class="topic" id="t4">
+  <h2>Тема 4. Понятие истины, её критерии</h2>
+  <p class="lead">Истина и её свойства, относительная и абсолютная истина, заблуждение и ложь, критерии истины, роль практики в познании.</p>
+  <div class="jump"><a href="#t4-test">Тест</a><a href="#t4-ege">ЕГЭ</a><a href="#t4-ol">Олимпиада</a></div>
+
+  <h3 id="t4-test">Тест<small>16 вопросов. Особое внимание — разнице между заблуждением и ложью и между разными критериями истины.</small></h3>
+  <div class="block" id="b4t">
+    <div class="unit q" data-answer="2">
+      <p class="q-text"><span class="q-num">1</span>Истина — это:</p>
+      <label><input type="radio">мнение большинства людей</label>
+      <label><input type="radio">любое знание, полученное учёным</label>
+      <label><input type="radio">знание, соответствующее свойствам познаваемого предмета</label>
+      <label><input type="radio">знание, которое нравится тому, кто его получил</label>
+      <p class="expl">Истинность определяется соответствием знания предмету, а не числом согласных, авторитетом или симпатиями.</p>
+    </div>
+    <div class="unit q" data-answer="0">
+      <p class="q-text"><span class="q-num">2</span>Высота Эльбруса не зависит от того, нравится ли эта гора альпинисту и в какой стране он живёт. Какое свойство истины здесь проявляется?</p>
+      <label><input type="radio">объективность</label>
+      <label><input type="radio">конкретность</label>
+      <label><input type="radio">относительность</label>
+      <label><input type="radio">субъективность</label>
+      <p class="expl">Объективность — соответствие содержания действительности и независимость от предпочтений и оценок познающего.</p>
+    </div>
+    <div class="unit q" data-answer="1">
+      <p class="q-text"><span class="q-num">3</span>«Вода кипит при 100 °C». Учитель физики уточнил: «…при нормальном атмосферном давлении; высоко в горах — при более низкой температуре». Какое свойство истины подчёркивает учитель?</p>
+      <label><input type="radio">объективность</label>
+      <label><input type="radio">конкретность</label>
+      <label><input type="radio">абсолютность</label>
+      <label><input type="radio">авторитетность</label>
+      <p class="expl">Конкретность: соотнесение знания с реальностью всегда осуществляется при определённых условиях. Без условий истинное утверждение может стать неверным.</p>
+    </div>
+    <div class="unit q" data-answer="3">
+      <p class="q-text"><span class="q-num">4</span>В начале XX века Эрнест Резерфорд предложил модель атома, похожую на маленькую Солнечную систему. Позже её значительно уточнили, но многое в ней оказалось верным. Как назвать такое знание?</p>
+      <label><input type="radio">ложь</label>
+      <label><input type="radio">заблуждение</label>
+      <label><input type="radio">абсолютная истина</label>
+      <label><input type="radio">относительная истина</label>
+      <p class="expl">Относительная истина — знание, точное при определённых условиях или недостаточно полное, которое по мере развития науки может измениться. Это не ошибка, а ступень к более полному знанию.</p>
+    </div>
+    <div class="unit q" data-answer="2">
+      <p class="q-text"><span class="q-num">5</span>В школьном курсе какое из утверждений обычно приводят как пример абсолютной истины?</p>
+      <label><input type="radio">«Современная наука знает о Вселенной всё»</label>
+      <label><input type="radio">«Атом неделим»</label>
+      <label><input type="radio">«Юрий Гагарин совершил первый в истории полёт человека в космос 12 апреля 1961 года»</label>
+      <label><input type="radio">«Механика Ньютона описывает любое движение»</label>
+      <p class="expl">Установленный исторический факт уже не может быть опровергнут. «Атом неделим» оказалось заблуждением, механика Ньютона — относительная истина. Философы спорят, достижима ли абсолютная истина «о мире в целом», но отдельные такие факты в учебниках называют абсолютными истинами.</p>
+    </div>
+    <div class="unit q" data-answer="0">
+      <p class="q-text"><span class="q-num">6</span>Средневековые астрономы искренне считали, что Солнце вращается вокруг неподвижной Земли. Это пример:</p>
+      <label><input type="radio">заблуждения</label>
+      <label><input type="radio">лжи</label>
+      <label><input type="radio">абсолютной истины</label>
+      <label><input type="radio">паранауки</label>
+      <p class="expl">Заблуждение — неверная информация, ошибочно принимаемая за истину. Ключевое слово — «искренне»: астрономы не обманывали.</p>
+    </div>
+    <div class="unit q" data-answer="1">
+      <p class="q-text"><span class="q-num">7</span>Продавец знает, что телефон уже был в ремонте, но уверяет покупателя, что он «абсолютно новый». Это:</p>
+      <label><input type="radio">заблуждение</label>
+      <label><input type="radio">ложь</label>
+      <label><input type="radio">относительная истина</label>
+      <label><input type="radio">конкретность истины</label>
+      <p class="expl">Ложь — искажение действительного состояния дел с целью обмана. Продавец знает правду и сознательно её скрывает.</p>
+    </div>
+    <div class="unit q" data-answer="3">
+      <p class="q-text"><span class="q-num">8</span>Что <b>главным образом</b> отличает ложь от заблуждения?</p>
+      <label><input type="radio">ложь всегда касается науки</label>
+      <label><input type="radio">заблуждение всегда безвредно</label>
+      <label><input type="radio">ложь всегда легко распознать</label>
+      <label><input type="radio">наличие намерения обмануть</label>
+      <p class="expl">И ложь, и заблуждение не соответствуют действительности. Разница — в намерении: лжец знает правду и хочет обмануть, заблуждающийся искренне ошибается.</p>
+    </div>
+    <div class="unit q" data-answer="2">
+      <p class="q-text"><span class="q-num">9</span>Что признают <b>основным</b> критерием истины?</p>
+      <label><input type="radio">авторитетность источника</label>
+      <label><input type="radio">простоту и ясность мысли</label>
+      <label><input type="radio">общественную практику</label>
+      <label><input type="radio">договорённость специалистов</label>
+      <p class="expl">Практика — проверка знания делом. Остальные критерии полезны, но могут подвести: авторитеты ошибаются, простые объяснения бывают неверными.</p>
+    </div>
+    <div class="unit q" data-answer="0">
+      <p class="q-text"><span class="q-num">10</span>Патентное бюро отказалось рассматривать проект «вечного двигателя», даже не проверяя его на практике. Каким критерием истины руководствовались эксперты?</p>
+      <label><input type="radio">соответствием ранее открытым законам</label>
+      <label><input type="radio">авторитетностью источника</label>
+      <label><input type="radio">договорённостью специалистов</label>
+      <label><input type="radio">простотой и ясностью мысли</label>
+      <p class="expl">Вечный двигатель противоречит закону сохранения энергии, поэтому его невозможность можно установить без опыта.</p>
+    </div>
+    <div class="unit q" data-answer="1">
+      <p class="q-text"><span class="q-num">11</span>В 2006 году Международный астрономический союз принял новое определение планеты, и Плутон стал считаться карликовой планетой. Какой критерий истины здесь использован?</p>
+      <label><input type="radio">практика</label>
+      <label><input type="radio">договорённость специалистов</label>
+      <label><input type="radio">логичность и непротиворечивость</label>
+      <label><input type="radio">авторитетность источника</label>
+      <p class="expl">Сам Плутон не изменился — изменилось соглашение о том, что называть планетой. Это пример договорённости специалистов.</p>
+    </div>
+    <div class="unit q" data-answer="3">
+      <p class="q-text"><span class="q-num">12</span>Чтобы проверить дату Куликовской битвы, Даша открыла энциклопедию, изданную ведущим научным издательством. Каким критерием истины она воспользовалась?</p>
+      <label><input type="radio">практикой</label>
+      <label><input type="radio">договорённостью специалистов</label>
+      <label><input type="radio">соответствием ранее открытым законам</label>
+      <label><input type="radio">авторитетностью источника знания</label>
+      <p class="expl">Доверяя надёжному источнику, мы опираемся на его авторитет. Для повседневных вопросов это разумно, но авторитет — не гарантия: энциклопедии тоже бывают с ошибками.</p>
+    </div>
+    <div class="unit q" data-answer="0">
+      <p class="q-text"><span class="q-num">13</span>В Древнем Египте разливы Нила каждый год смывали границы полей, и их приходилось заново измерять. Так, по преданию, зародилась геометрия. Какую роль практики иллюстрирует этот пример?</p>
+      <label><input type="radio">практика — источник познания</label>
+      <label><input type="radio">практика — критерий истины</label>
+      <label><input type="radio">практика — форма чувственного познания</label>
+      <label><input type="radio">практика — вид заблуждения</label>
+      <p class="expl">Практические нужды ставят перед человеком вопросы и побуждают к познанию. Роль критерия была бы, если бы геометрические расчёты проверяли, правильно ли размечены поля.</p>
+    </div>
+    <div class="unit q" data-answer="1">
+      <p class="q-text"><span class="q-num">14</span>После расчётов инженеров новый мост нагрузили десятками грузовиков с песком, и он выдержал. Какую роль практики иллюстрирует этот пример?</p>
+      <label><input type="radio">практика — источник познания</label>
+      <label><input type="radio">практика — критерий истины</label>
+      <label><input type="radio">практика — цель познания</label>
+      <label><input type="radio">практика — форма рационального познания</label>
+      <p class="expl">Испытание мостов — классический пример: расчёт подтверждён делом.</p>
+    </div>
+    <div class="unit q" data-answer="2">
+      <p class="q-text"><span class="q-num">15</span>Почему логичность рассуждения <b>не может</b> быть единственным критерием истины?</p>
+      <label><input type="radio">потому что логика — это вид искусства</label>
+      <label><input type="radio">потому что учёные не пользуются логикой</label>
+      <label><input type="radio">потому что из ложных исходных утверждений можно логически безупречно вывести ложный вывод</label>
+      <label><input type="radio">потому что логичные рассуждения всегда сложны</label>
+      <p class="expl">«Все рыбы летают. Акула — рыба. Значит, акула летает» — логика правильная, вывод ложный. Логика проверяет связи между мыслями, но не их соответствие действительности.</p>
+    </div>
+    <div class="unit q" data-answer="0">
+      <p class="q-text"><span class="q-num">16</span>Верны ли суждения? <b>А.</b> Истинное знание формируется в единстве чувственного и рационального познания. <b>Б.</b> Относительная истина — это разновидность заблуждения.</p>
+      <label><input type="radio">верно только А</label>
+      <label><input type="radio">верно только Б</label>
+      <label><input type="radio">верны оба суждения</label>
+      <label><input type="radio">оба суждения неверны</label>
+      <p class="expl">Относительная истина — это всё-таки истина: она соответствует предмету, но не полностью или лишь при определённых условиях. Заблуждение предмету не соответствует.</p>
+    </div>
+    <div class="block-foot"><button class="btn primary" onclick="checkBlock('b4t')">Проверить тест</button><button class="btn ghost" onclick="resetBlock('b4t')">Сбросить</button><span class="result"></span></div>
+  </div>
+
+  <h3 id="t4-ege" class="fmt-ege">Формат ЕГЭ<small>Часть 1 — краткий ответ. Часть 2 — задания к тексту и развёрнутые ответы.</small></h3>
+  <h5>Часть 1</h5>
+  <div class="block" id="b4e">
+    <div class="unit multi" data-answer="145">
+      <p class="q-text"><span class="q-num">1</span>Выберите верные суждения об истине и её критериях.</p>
+      <p class="instr">Отметьте все верные варианты.</p>
+      <label><input type="checkbox">Истина — это знание, соответствующее свойствам познаваемого предмета.</label>
+      <label><input type="checkbox">Относительная истина не может измениться по мере развития науки.</label>
+      <label><input type="checkbox">Заблуждение — это сознательное искажение действительности с целью обмана.</label>
+      <label><input type="checkbox">Объективность истины означает её независимость от предпочтений и оценок познающего субъекта.</label>
+      <label><input type="checkbox">Основным критерием истины признаётся общественная практика.</label>
+      <p class="expl">Верны 1, 4, 5. В суждении 2 — наоборот; в суждении 3 описана ложь, а не заблуждение.</p>
+    </div>
+    <div class="unit match" data-options="1|2|3" data-labels="относительная истина|заблуждение|ложь">
+      <p class="q-text"><span class="q-num">2</span>Установите соответствие между примерами и видами знания.</p>
+      <p class="instr">Виды: 1) относительная истина; 2) заблуждение; 3) ложь.</p>
+      <div class="rows">
+        <div class="row" data-answer="2"><span>А) геоцентрическая система мира Птолемея, в которую искренне верили астрономы Средневековья</span></div>
+        <div class="row" data-answer="1"><span>Б) механика Ньютона, верно описывающая движение тел при скоростях, много меньших скорости света</span></div>
+        <div class="row" data-answer="3"><span>В) реклама уверяет, что крем убирает морщины за один день, хотя производитель знает, что это не так</span></div>
+        <div class="row" data-answer="1"><span>Г) современные представления об устройстве Вселенной, которые продолжают уточняться</span></div>
+        <div class="row" data-answer="2"><span>Д) мальчик уверен, что киты — рыбы, потому что они живут в воде</span></div>
+      </div>
+      <p class="expl">Ответ: 21312.</p>
+    </div>
+    <div class="unit match" data-options="1|2|3" data-labels="соответствие ранее открытым законам|договорённость специалистов|практика">
+      <p class="q-text"><span class="q-num">3</span>Установите соответствие между примерами и критериями истины.</p>
+      <p class="instr">Критерии: 1) соответствие ранее открытым законам; 2) договорённость специалистов; 3) практика.</p>
+      <div class="rows">
+        <div class="row" data-answer="3"><span>А) новое лекарство прошло клинические испытания и помогло больным</span></div>
+        <div class="row" data-answer="2"><span>Б) международная конференция по мерам и весам утвердила новое определение килограмма</span></div>
+        <div class="row" data-answer="1"><span>В) проект вечного двигателя отклонили, потому что он противоречит закону сохранения энергии</span></div>
+        <div class="row" data-answer="3"><span>Г) мост, построенный по новым расчётам, выдержал испытательную нагрузку</span></div>
+        <div class="row" data-answer="2"><span>Д) лингвисты условились, какое написание слова считать нормой</span></div>
+      </div>
+      <p class="expl">Ответ: 32132.</p>
+    </div>
+    <div class="unit multi" data-answer="35">
+      <p class="q-text"><span class="q-num">4</span>Все термины ряда, за исключением двух, относятся к понятию «критерии истины». Найдите два термина, «выпадающих» из общего ряда.</p>
+      <label><input type="checkbox">практика</label>
+      <label><input type="checkbox">логичность и непротиворечивость</label>
+      <label><input type="checkbox">заблуждение</label>
+      <label><input type="checkbox">соответствие ранее открытым законам</label>
+      <label><input type="checkbox">ложь</label>
+      <label><input type="checkbox">договорённость специалистов</label>
+      <p class="expl">Заблуждение и ложь — знание, не соответствующее действительности, а не критерии истины.</p>
+    </div>
+    <div class="unit match" data-options="1|2|3|4|5|6|7|8|9" data-labels="практика|заблуждение|истина|абсолютная|объективность|ложь|относительная|конкретность|авторитет">
+      <p class="q-text"><span class="q-num">5</span>Прочитайте текст с пропусками и выберите из списка слова для каждого пропуска.</p>
+      <div class="wordlist"><span>1) практика</span><span>2) заблуждение</span><span>3) истина</span><span>4) абсолютная</span><span>5) объективность</span><span>6) ложь</span><span>7) относительная</span><span>8) конкретность</span><span>9) авторитет</span></div>
+      <div class="gaptext">
+        <span class="row frag" data-answer="3">(А)</span> — это знание, соответствующее свойствам познаваемого предмета. Её важнейшее свойство — <span class="row frag" data-answer="5">(Б)</span>: содержание истины не зависит от желаний и оценок человека. Знание, точное лишь при определённых условиях и способное измениться по мере развития науки, — это <span class="row frag" data-answer="7">(В)</span> истина. Неверная информация, ошибочно принимаемая за истину, — это <span class="row frag" data-answer="2">(Г)</span>, а намеренное искажение действительности с целью обмана — это <span class="row frag" data-answer="6">(Д)</span>. Основным критерием истины признают общественную <span class="row frag" data-answer="1">(Е)</span>.
+      </div>
+      <p class="expl">Ответ: А3, Б5, В7, Г2, Д6, Е1.</p>
+    </div>
+    <div class="block-foot"><button class="btn primary" onclick="checkBlock('b4e')">Проверить часть 1</button><button class="btn ghost" onclick="resetBlock('b4e')">Сбросить</button><span class="result"></span></div>
+  </div>
+
+  <h5>Часть 2. Работа с текстом</h5>
+  <div class="task">
+    <div class="meta"><h4>Текст: «Врач, которому не поверили»</h4><span class="lvl ege">ЕГЭ · задания 6–9</span></div>
+    <div class="quote">
+      <p>В 1840-х годах в одной из крупнейших больниц Вены молодой врач Игнац Земмельвейс заметил странную вещь. В родильном отделении, где работали врачи и студенты-медики, женщины гибли от родильной горячки во много раз чаще, чем в отделении, где принимали роды акушерки. Земмельвейс сопоставил факты: врачи нередко приходили к роженицам прямо из анатомического театра, где вскрывали тела умерших, а акушерки там не бывали.</p>
+      <p>Он предположил, что на руках врачей переносится некое «трупное вещество», и в 1847 году потребовал, чтобы все перед осмотром мыли руки раствором хлорной извести. Смертность в отделении резко упала. Казалось бы, практика дала ясный ответ.</p>
+      <p>Однако большинство коллег отвергли открытие. Авторитетные профессора считали, что болезнь вызывается «дурным воздухом», а мысль, будто врач сам может быть причиной смерти пациентки, казалась им оскорбительной. Объяснить, <i>почему</i> мытьё рук помогает, Земмельвейс не мог: о микробах как причине болезней тогда ещё почти ничего не знали. Его идеи соответствовали фактам, но противоречили общепринятой теории.</p>
+      <p>Признание пришло лишь спустя десятилетия, когда работы Луи Пастера и Джозефа Листера показали, что многие болезни вызываются микроорганизмами. Сегодня Земмельвейса называют «спасителем матерей», а история его открытия напоминает: научная истина утверждается не голосованием и не званием, а проверкой и объяснением.</p>
+    </div>
+    <p class="note" style="font-size:14.5px">Текст составлен для этого задания на основе общеизвестных фактов истории медицины.</p>
+
+    <p><b>6.</b> Составьте план текста. Для этого выделите основные смысловые фрагменты и озаглавьте каждый из них. <i>(2 балла)</i></p>
+    <textarea placeholder="План текста…" style="min-height:90px"></textarea>
+    <p><b>7.</b> Какие два критерия истины столкнулись в истории Земмельвейса? Найдите в тексте и приведите по одному аргументу в пользу каждой стороны. <i>(2 балла)</i></p>
+    <textarea placeholder="Критерии и аргументы…" style="min-height:90px"></textarea>
+    <p><b>8.</b> Используя текст и обществоведческие знания, объясните, почему открытие Земмельвейса в 1847 году можно считать относительной истиной. Что сделало его знание более полным? <i>(2 балла)</i></p>
+    <textarea placeholder="Объяснение…" style="min-height:90px"></textarea>
+    <p><b>9.</b> Автор пишет, что научная истина утверждается «не голосованием и не званием». Согласны ли вы? Приведите два аргумента в защиту своей позиции и учтите контраргумент. <i>(3 балла)</i></p>
+    <textarea placeholder="Позиция и аргументы…"></textarea>
+    <details class="key"><summary>Ключ к заданиям 6–9</summary><div class="d-body">
+      <p><b>6.</b> Например: 1) Загадочная разница в смертности; 2) Мытьё рук и первый успех; 3) Отказ коллег и его причины; 4) Запоздалое признание и урок истории. Допускаются иные формулировки и объединение 3 и 4 пунктов.</p>
+      <p><b>7.</b> Практика (мытьё рук снизило смертность) и соответствие ранее открытым законам / авторитетность источника (теория «дурного воздуха», мнение профессоров). Аргумент за практику: результаты в отделении были очевидны. Аргумент за осторожность коллег: Земмельвейс не мог объяснить причину, а знание без объяснения не включается в систему науки.</p>
+      <p><b>8.</b> Знание было верным (мытьё рук спасает), но неполным: Земмельвейс не знал механизма, говорил о «трупном веществе». Полноту знанию придала микробиологическая теория Пастера и Листера.</p>
+      <p><b>9.</b> Засчитывается любая позиция при наличии двух аргументов. Например: «Согласен: звания профессоров не помешали им ошибаться; Плутон не изменился от решения астрономов — изменилось лишь название». Контраргумент: договорённость специалистов всё же нужна для терминов, единиц измерения, классификаций.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 10. Смысл понятия</h4><span class="lvl ege">ЕГЭ · 3 балла</span></div>
+    <p>Раскройте смысл понятия <mark>«истина»</mark>. Составьте два предложения: одно, раскрывающее свойства истины, и одно, содержащее информацию о видах истины.</p>
+    <textarea placeholder="Смысл понятия и два предложения…"></textarea>
+    <details class="key"><summary>Критерии и образец</summary><div class="d-body">
+      <p>Смысл: «Истина — знание, соответствующее свойствам познаваемого предмета». Предложения: «Истина обладает объективностью: её содержание не зависит от желаний и оценок человека». «Различают абсолютную истину — полное, исчерпывающее знание, которое не может быть опровергнуто, и относительную истину — знание, которое может уточняться по мере развития науки».</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 11. Три примера</h4><span class="lvl ege">ЕГЭ · 3 балла</span></div>
+    <p>Проиллюстрируйте тремя примерами три разные роли практики в процессе познания: практика как источник познания, как основа познания, как критерий истины.</p>
+    <textarea placeholder="Роль — пример…"></textarea>
+    <details class="key"><summary>Образец</summary><div class="d-body">
+      <ul>
+        <li><b>Источник:</b> эпидемии заставили учёных искать способы защиты, так появились вакцины.</li>
+        <li><b>Основа:</b> чтобы изучать звёзды, астрономы создают телескопы — практическая деятельность даёт инструменты познания.</li>
+        <li><b>Критерий:</b> космический аппарат долетел до Марса точно по рассчитанной траектории, подтвердив расчёты.</li>
+      </ul>
+    </div></details>
+  </div>
+
+  <h3 id="t4-ol" class="fmt-olymp">Формат олимпиады<small>Логика, логические ловушки и философские вопросы об истине.</small></h3>
+  <div class="block" id="b4o">
+    <div class="task">
+      <div class="meta"><h4>Задание 1. «Да» или «нет»</h4><span class="lvl olymp">по 1 баллу · 6 баллов</span></div>
+      <div class="unit match" data-mode="each" data-options="да|нет" data-labels="да|нет">
+        <div class="rows">
+          <div class="row" data-answer="да"><span>1. Ложь и заблуждение одинаково не соответствуют действительности.</span></div>
+          <div class="row" data-answer="нет"><span>2. Если большинство людей считают утверждение верным, оно становится истиной.</span></div>
+          <div class="row" data-answer="да"><span>3. Одно и то же утверждение может быть истинным при одних условиях и ложным при других.</span></div>
+          <div class="row" data-answer="нет"><span>4. Простота и ясность мысли гарантируют её истинность.</span></div>
+          <div class="row" data-answer="да"><span>5. Относительная истина содержит в себе элементы абсолютной.</span></div>
+          <div class="row" data-answer="нет"><span>6. Практика является критерием истины, но не может быть источником познания.</span></div>
+        </div>
+        <p class="expl">2 — нет: истинность не определяется голосованием. 4 — нет: простое объяснение может быть ошибочным. 5 — да: относительная истина содержит верное, неопровержимое ядро. 6 — нет: практика и источник, и цель, и основа познания, и критерий истины.</p>
+      </div>
+    </div>
+
+    <div class="task">
+      <div class="meta"><h4>Задание 2. Кто говорит правду?</h4><span class="lvl olymp">3 балла + открытая часть</span></div>
+      <div class="unit match" data-mode="each" data-options="истина|заблуждение|ложь" data-labels="истина|заблуждение|ложь">
+        <p>Из кабинета пропал классный журнал. На самом деле его взяла завуч. Трое учеников отвечают на вопрос «Где журнал?».</p>
+        <ul>
+          <li><b>Петя</b> видел, как уборщица выносила синюю папку, и уверен, что это был журнал. Он говорит: «Журнал унесла уборщица».</li>
+          <li><b>Вова</b> видел, как завуч брала журнал, но хочет, чтобы его поискали подольше: там двойка. Он говорит: «Журнал в учительской».</li>
+          <li><b>Лиза</b> видела, как завуч брала журнал. Она говорит: «Журнал у завуча».</li>
+        </ul>
+        <div class="rows">
+          <div class="row" data-answer="заблуждение"><span>Слова Пети</span></div>
+          <div class="row" data-answer="ложь"><span>Слова Вовы</span></div>
+          <div class="row" data-answer="истина"><span>Слова Лизы</span></div>
+        </div>
+      </div>
+      <p><b>А теперь — две ловушки.</b> Ответьте развёрнуто.</p>
+      <ol>
+        <li>Пока Вова говорил, завуч действительно отнесла журнал в учительскую. Слова Вовы теперь соответствуют действительности. Он сказал истину или солгал?</li>
+        <li>Маша ничего не видела, но наугад сказала: «Журнал у завуча» — и угадала. Можно ли сказать, что Маша <i>знает</i>, где журнал?</li>
+      </ol>
+      <textarea placeholder="Ответы на ловушки…"></textarea>
+      <details class="key"><summary>Ключ к ловушкам</summary><div class="d-body">
+        <p><b>1.</b> Его утверждение случайно стало истинным, но поступок остался ложью: ложь определяется намерением обмануть, а не только несоответствием словам. Сильный ответ разводит две вещи — истинность высказывания и честность говорящего (2 балла).</p>
+        <p><b>2.</b> Утверждение Маши истинно, но это не знание: знание — результат познания, а у Маши нет ни чувственных данных, ни рассуждения — только случайность. Этот вопрос веками обсуждают философы: достаточно ли «верного мнения», чтобы называть его знанием (2 балла).</p>
+      </div></details>
+    </div>
+
+    <div class="task">
+      <div class="meta"><h4>Задание 3. Логика как критерий</h4><span class="lvl olymp">2 балла + открытая часть</span></div>
+      <div class="unit multi" data-answer="14">
+        <p class="q-text"><span class="q-num">?</span>Какие рассуждения построены логически правильно (вывод обязательно следует из посылок)?</p>
+        <label><input type="checkbox">Все металлы проводят электрический ток. Медь — металл. Значит, медь проводит ток.</label>
+        <label><input type="checkbox">Все великие учёные когда-то ошибались. Я часто ошибаюсь. Значит, я великий учёный.</label>
+        <label><input type="checkbox">Если идёт дождь, асфальт мокрый. Асфальт мокрый. Значит, идёт дождь.</label>
+        <label><input type="checkbox">Если идёт дождь, асфальт мокрый. Асфальт сухой. Значит, дождя нет.</label>
+        <label><input type="checkbox">Все кошки — млекопитающие. Все кошки — животные. Значит, все животные — млекопитающие.</label>
+        <p class="expl">Правильны 1 и 4. В рассуждении 3 асфальт мог намочить поливальная машина; в 2 и 5 вывод о целом классе сделан из того, что два класса пересекаются.</p>
+      </div>
+      <p>Придумайте рассуждение, построенное так же правильно, как первое, но с ложным выводом. Что это доказывает о логичности как критерии истины?</p>
+      <textarea placeholder="Рассуждение и вывод…" style="min-height:90px"></textarea>
+      <details class="key"><summary>Ключ</summary><div class="d-body">
+        <p>Например: «Все птицы умеют летать. Пингвин — птица. Значит, пингвин умеет летать». Форма правильная, но первая посылка ложна. Логичность — необходимое, но недостаточное условие истины: она проверяет связь мыслей, но не их соответствие действительности (2 балла).</p>
+      </div></details>
+    </div>
+    <div class="block-foot"><button class="btn primary" onclick="checkBlock('b4o')">Проверить олимпиадные задания 1–3</button><button class="btn ghost" onclick="resetBlock('b4o')">Сбросить</button><span class="result"></span></div>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 4. Анализ высказывания</h4><span class="lvl olymp">до 6 баллов</span></div>
+    <p>Аристотелю приписывают слова: <b>«Платон мне друг, но истина дороже»</b>. Аристотель был учеником Платона, но во многом с ним не соглашался.</p>
+    <ol>
+      <li>Какой критерий истины Аристотель отказывается считать решающим?</li>
+      <li>Какое свойство истины подчёркивает высказывание?</li>
+      <li>Приведите пример из истории науки или из школьной жизни, когда ученику (или младшему учёному) пришлось спорить с авторитетом. Чем всё кончилось?</li>
+    </ol>
+    <textarea placeholder="Ответ…"></textarea>
+    <details class="key"><summary>Ключ</summary><div class="d-body">
+      <p>1. Авторитетность источника (2 балла). 2. Объективность: истина не зависит от личных симпатий и отношений (2 балла). 3. Любой корректный пример: Земмельвейс; Коперник и Галилей против авторитета Птолемея; ученик нашёл ошибку в учебнике (2 балла).</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 5. Мини-эссе</h4><span class="lvl olymp">до 10 баллов</span></div>
+    <p>Выберите высказывание и напишите мини-эссе (150–200 слов).</p>
+    <ol>
+      <li>«Истина рождается в споре». <i>(Мысль, восходящая к Сократу)</i></li>
+      <li>«Опыт — сын ошибок трудных». <i>(А. С. Пушкин)</i></li>
+      <li>«Практика без теории слепа, теория без практики мертва». <i>(Распространённый афоризм)</i></li>
+    </ol>
+    <textarea placeholder="Эссе…" style="min-height:220px"></textarea>
+    <details class="key"><summary>Критерии оценки</summary><div class="d-body">
+      <p>Смысл высказывания — 0–2; теоретические аргументы с понятиями темы (истина, относительная истина, заблуждение, критерии истины, роль практики) — 0–3; два примера из разных источников — 0–3; вывод и отсутствие фактических ошибок — 0–2.</p>
+      <p>По первому высказыванию сильная работа замечает: спор полезен, если стороны проверяют аргументы практикой и логикой; если побеждает самый громкий — рождается не истина, а заблуждение.</p>
+    </div></details>
+  </div>
+</section>
+
+<!-- =========================== ТЕМА 6 =========================== -->
+<section class="topic" id="t6">
+  <h2>Тема 6. Потребности и интересы</h2>
+  <p class="lead">Понятие потребности, естественные, социальные и духовные потребности, другие классификации, мнимые и подлинные потребности, интерес.</p>
+  <div class="jump"><a href="#t6-test">Тест</a><a href="#t6-ege">ЕГЭ</a><a href="#t6-ol">Олимпиада</a></div>
+
+  <h3 id="t6-test">Тест<small>16 вопросов. Часто одна и та же потребность «маскируется» под другую — читай внимательно.</small></h3>
+  <div class="block" id="b6t">
+    <div class="unit q" data-answer="1">
+      <p class="q-text"><span class="q-num">1</span>Потребность — это:</p>
+      <label><input type="radio">случайное желание, которое быстро проходит</label>
+      <label><input type="radio">переживаемая и осознаваемая человеком нужда в том, что необходимо для поддержания его жизни и развития личности</label>
+      <label><input type="radio">целенаправленное отношение человека к объекту</label>
+      <label><input type="radio">способность успешно заниматься каким-либо делом</label>
+      <p class="expl">Третий вариант — определение интереса, четвёртый — способностей. Потребность — именно нужда, необходимая для жизни и развития.</p>
+    </div>
+    <div class="unit q" data-answer="0">
+      <p class="q-text"><span class="q-num">2</span>После бессонной ночи перед экзаменом Артём уснул прямо в автобусе. Какая потребность проявилась?</p>
+      <label><input type="radio">естественная</label>
+      <label><input type="radio">социальная</label>
+      <label><input type="radio">духовная</label>
+      <label><input type="radio">мнимая</label>
+      <p class="expl">Сон — естественная (биологическая) потребность, необходимая для существования организма.</p>
+    </div>
+    <div class="unit q" data-answer="2">
+      <p class="q-text"><span class="q-num">3</span>Инженер мечтает, чтобы коллеги признали его лучшим специалистом отдела. Какая это потребность?</p>
+      <label><input type="radio">естественная</label>
+      <label><input type="radio">духовная</label>
+      <label><input type="radio">социальная</label>
+      <label><input type="radio">сиюминутная</label>
+      <p class="expl">Общественное признание, жизненный успех, занятие определённой позиции в обществе — социальные потребности: они возникают только в обществе.</p>
+    </div>
+    <div class="unit q" data-answer="3">
+      <p class="q-text"><span class="q-num">4</span>Пожилой профессор после выхода на пенсию часами размышляет о том, ради чего жил и что останется после него. Какая потребность здесь проявляется?</p>
+      <label><input type="radio">естественная</label>
+      <label><input type="radio">социальная</label>
+      <label><input type="radio">мнимая</label>
+      <label><input type="radio">духовная</label>
+      <p class="expl">Поиск смысла жизни — классический пример духовной (идеальной) потребности.</p>
+    </div>
+    <div class="unit q" data-answer="1">
+      <p class="q-text"><span class="q-num">5</span>Какая из перечисленных потребностей <b>не</b> относится к естественным?</p>
+      <label><input type="radio">в воздухе для дыхания</label>
+      <label><input type="radio">в общении</label>
+      <label><input type="radio">в самосохранении</label>
+      <label><input type="radio">в продолжении рода</label>
+      <p class="expl">Общение — продукт общественной жизни, это социальная потребность.</p>
+    </div>
+    <div class="unit q" data-answer="2">
+      <p class="q-text"><span class="q-num">6</span>Одежда нужна человеку, чтобы не замёрзнуть. Но Кира хочет куртку именно модного бренда, «чтобы в классе уважали». С какой потребностью связано именно это желание?</p>
+      <label><input type="radio">только с естественной</label>
+      <label><input type="radio">с духовной</label>
+      <label><input type="radio">с социальной</label>
+      <label><input type="radio">ни с какой — это каприз</label>
+      <p class="expl">Потребность в одежде как таковой естественная, но желание статусной вещи связано с признанием и позицией в группе — это социальная потребность. Хороший пример того, как биологическое и социальное в человеке переплетаются.</p>
+    </div>
+    <div class="unit q" data-answer="0">
+      <p class="q-text"><span class="q-num">7</span>Потребность в табаке — пример потребности:</p>
+      <label><input type="radio">мнимой</label>
+      <label><input type="radio">подлинной</label>
+      <label><input type="radio">естественной</label>
+      <label><input type="radio">духовной</label>
+      <p class="expl">Мнимые потребности — те, удовлетворение которых причиняет вред человеку, его интеллектуальному и нравственному развитию.</p>
+    </div>
+    <div class="unit q" data-answer="3">
+      <p class="q-text"><span class="q-num">8</span>По какому признаку потребности делят на подлинные и мнимые?</p>
+      <label><input type="radio">по тому, врождённые они или приобретённые</label>
+      <label><input type="radio">по тому, относятся они к одному человеку или к группе</label>
+      <label><input type="radio">по длительности</label>
+      <label><input type="radio">по тому, полезно или вредно их удовлетворение для человека и развития его личности</label>
+      <p class="expl">Подлинные связаны с тем, что действительно необходимо человеку; мнимые причиняют вред. Остальные варианты — другие основания классификации.</p>
+    </div>
+    <div class="unit q" data-answer="1">
+      <p class="q-text"><span class="q-num">9</span>Городу необходимы новые больницы и хорошо подготовленные врачи. Это пример потребностей:</p>
+      <label><input type="radio">индивидуальных</label>
+      <label><input type="radio">общественных</label>
+      <label><input type="radio">мнимых</label>
+      <label><input type="radio">сиюминутных</label>
+      <p class="expl">Общественные потребности — потребности определённых социальных групп или общества в целом.</p>
+    </div>
+    <div class="unit q" data-answer="2">
+      <p class="q-text"><span class="q-num">10</span>Аня в восьмом классе решила стать архитектором: записалась в художественную школу и начала готовиться к экзаменам по математике. Какая потребность прежде всего здесь проявляется по длительности?</p>
+      <label><input type="radio">сиюминутная</label>
+      <label><input type="radio">мнимая</label>
+      <label><input type="radio">долговременная</label>
+      <label><input type="radio">естественная</label>
+      <p class="expl">Долговременные потребности связаны с перспективными возможностями и целями. Сиюминутные — потребности текущего момента.</p>
+    </div>
+    <div class="unit q" data-answer="0">
+      <p class="q-text"><span class="q-num">11</span>Интерес — это:</p>
+      <label><input type="radio">целенаправленное отношение человека к какому-либо объекту его потребности</label>
+      <label><input type="radio">врождённый инстинкт</label>
+      <label><input type="radio">любая потребность, которую человек не осознаёт</label>
+      <label><input type="radio">система взглядов на мир</label>
+      <p class="expl">Интерес направлен на конкретный объект, способный удовлетворить потребность. Нужда в знаниях — потребность; увлечённость именно астрономией — интерес.</p>
+    </div>
+    <div class="unit q" data-answer="3">
+      <p class="q-text"><span class="q-num">12</span>Как связаны потребности и интересы?</p>
+      <label><input type="radio">интересы лежат в основе потребностей</label>
+      <label><input type="radio">они никак не связаны</label>
+      <label><input type="radio">интерес — это то же самое, что потребность</label>
+      <label><input type="radio">потребности лежат в основе возникновения интересов</label>
+      <p class="expl">Сначала нужда, затем — направленность на конкретный объект. Потребность в общении → интерес к театральной студии, где есть единомышленники.</p>
+    </div>
+    <div class="unit q" data-answer="1">
+      <p class="q-text"><span class="q-num">13</span>Голодный подросток увидел на парте чужой бутерброд, но не взял его, а дождался обеда в столовой. Какое положение справочника иллюстрирует этот пример?</p>
+      <label><input type="radio">все потребности удовлетворяются в полной мере</label>
+      <label><input type="radio">активность, направленная на удовлетворение потребностей, не должна нарушать социальных норм</label>
+      <label><input type="radio">естественные потребности не важны для человека</label>
+      <label><input type="radio">потребности не меняются в течение жизни</label>
+      <p class="expl">Нужда в еде реальна, но способ её удовлетворения подчиняется нормам общества.</p>
+    </div>
+    <div class="unit q" data-answer="0">
+      <p class="q-text"><span class="q-num">14</span>В детстве Тимуру больше всего нужны были игры и внимание родителей, в юности — признание друзей, а к сорока годам — возможность передать опыт ученикам. Какое утверждение это иллюстрирует?</p>
+      <label><input type="radio">потребности человека меняются в течение жизни</label>
+      <label><input type="radio">потребности не зависят от возраста</label>
+      <label><input type="radio">социальные потребности есть только у взрослых</label>
+      <label><input type="radio">духовные потребности исчезают с возрастом</label>
+      <p class="expl">Это одно из важнейших положений темы: набор и иерархия потребностей перестраиваются на разных этапах жизни.</p>
+    </div>
+    <div class="unit q" data-answer="2">
+      <p class="q-text"><span class="q-num">15</span>Студентка в свободное время читает книги по астрономии и ходит в планетарий — давно мечтает разобраться, как устроена Вселенная. Какая это потребность?</p>
+      <label><input type="radio">естественная</label>
+      <label><input type="radio">мнимая</label>
+      <label><input type="radio">духовная</label>
+      <label><input type="radio">общественная</label>
+      <p class="expl">Познание окружающего мира — духовная потребность.</p>
+    </div>
+    <div class="unit q" data-answer="1">
+      <p class="q-text"><span class="q-num">16</span>Верны ли суждения? <b>А.</b> Все потребности человека могут быть удовлетворены в полной мере. <b>Б.</b> Потребности лежат в основе направленности личности.</p>
+      <label><input type="radio">верно только А</label>
+      <label><input type="radio">верно только Б</label>
+      <label><input type="radio">верны оба суждения</label>
+      <label><input type="radio">оба суждения неверны</label>
+      <p class="expl">Не все потребности могут быть удовлетворены полностью: ресурсы ограничены, а одни потребности могут противоречить другим.</p>
+    </div>
+    <div class="block-foot"><button class="btn primary" onclick="checkBlock('b6t')">Проверить тест</button><button class="btn ghost" onclick="resetBlock('b6t')">Сбросить</button><span class="result"></span></div>
+  </div>
+
+  <h3 id="t6-ege" class="fmt-ege">Формат ЕГЭ<small>Часть 1 — краткий ответ. Часть 2 — развёрнутые ответы и задача.</small></h3>
+  <h5>Часть 1</h5>
+  <div class="block" id="b6e">
+    <div class="unit multi" data-answer="235">
+      <p class="q-text"><span class="q-num">1</span>Выберите верные суждения о потребностях человека.</p>
+      <p class="instr">Отметьте все верные варианты.</p>
+      <label><input type="checkbox">Интересы лежат в основе возникновения потребностей.</label>
+      <label><input type="checkbox">Активность, направленная на удовлетворение потребностей, не должна нарушать социальных норм.</label>
+      <label><input type="checkbox">К духовным потребностям относится потребность в познании окружающего мира.</label>
+      <label><input type="checkbox">Мнимые потребности способствуют интеллектуальному и нравственному развитию личности.</label>
+      <label><input type="checkbox">Потребности человека могут меняться в течение жизни.</label>
+      <p class="expl">Верны 2, 3, 5. В суждении 1 перепутано: потребности лежат в основе интересов. Мнимые потребности, наоборот, вредят развитию личности.</p>
+    </div>
+    <div class="unit match" data-options="1|2|3" data-labels="естественные|социальные|духовные">
+      <p class="q-text"><span class="q-num">2</span>Установите соответствие между потребностями и их видами.</p>
+      <p class="instr">Виды: 1) естественные; 2) социальные; 3) духовные.</p>
+      <div class="rows">
+        <div class="row" data-answer="1"><span>А) потребность в пище</span></div>
+        <div class="row" data-answer="2"><span>Б) потребность в общественном признании</span></div>
+        <div class="row" data-answer="3"><span>В) потребность в поиске смысла жизни</span></div>
+        <div class="row" data-answer="2"><span>Г) потребность в труде</span></div>
+        <div class="row" data-answer="1"><span>Д) потребность в самосохранении</span></div>
+        <div class="row" data-answer="3"><span>Е) потребность в достижении гармонии и красоты</span></div>
+      </div>
+      <p class="expl">Ответ: 123213.</p>
+    </div>
+    <div class="unit multi" data-answer="36">
+      <p class="q-text"><span class="q-num">3</span>Все термины ряда, за исключением двух, относятся к естественным потребностям. Найдите два термина, «выпадающих» из общего ряда.</p>
+      <label><input type="checkbox">сон</label>
+      <label><input type="checkbox">жилище</label>
+      <label><input type="checkbox">общение</label>
+      <label><input type="checkbox">воздух</label>
+      <label><input type="checkbox">самосохранение</label>
+      <label><input type="checkbox">познание мира</label>
+      <p class="expl">Общение — социальная потребность, познание мира — духовная.</p>
+    </div>
+    <div class="unit textans" data-answer="3" data-exact="1">
+      <p class="q-text"><span class="q-num">4</span>Найдите понятие, которое является обобщающим для всех остальных понятий ряда, и запишите цифру: 1) естественные; 2) социальные; 3) потребности; 4) духовные; 5) мнимые.</p>
+      <div class="ans-line"><input type="text" inputmode="numeric" aria-label="Ответ"><span class="ans-show">ответ: 3</span></div>
+    </div>
+    <div class="unit match" data-options="1|2|3|4|5|6|7|8|9" data-labels="интерес|естественные|мнимые|потребность|духовные|социальные|подлинные|мотив|способность">
+      <p class="q-text"><span class="q-num">5</span>Прочитайте текст с пропусками и выберите из списка слова для каждого пропуска.</p>
+      <div class="wordlist"><span>1) интерес</span><span>2) естественные</span><span>3) мнимые</span><span>4) потребность</span><span>5) духовные</span><span>6) социальные</span><span>7) подлинные</span><span>8) мотив</span><span>9) способность</span></div>
+      <div class="gaptext">
+        <span class="row frag" data-answer="4">(А)</span> — это переживаемая и осознаваемая нужда человека в том, что необходимо для поддержания его жизни и развития личности. Потребности в пище, воде, сне — это <span class="row frag" data-answer="2">(Б)</span> потребности. Потребности в общении, труде, общественном признании — <span class="row frag" data-answer="6">(В)</span>. Стремление к познанию, поиск смысла жизни, художественное творчество — это <span class="row frag" data-answer="5">(Г)</span> потребности. Потребности, удовлетворение которых причиняет вред человеку, — <span class="row frag" data-answer="3">(Д)</span>. Целенаправленное отношение человека к объекту его потребности — это <span class="row frag" data-answer="1">(Е)</span>.
+      </div>
+      <p class="expl">Ответ: А4, Б2, В6, Г5, Д3, Е1.</p>
+    </div>
+    <div class="block-foot"><button class="btn primary" onclick="checkBlock('b6e')">Проверить часть 1</button><button class="btn ghost" onclick="resetBlock('b6e')">Сбросить</button><span class="result"></span></div>
+  </div>
+
+  <h5>Часть 2</h5>
+  <div class="task">
+    <div class="meta"><h4>Задание 6. Смысл понятия</h4><span class="lvl ege">ЕГЭ · 3 балла</span></div>
+    <p>Раскройте смысл понятия <mark>«потребность»</mark>. Составьте два предложения: одно, содержащее информацию о видах потребностей, и одно, раскрывающее связь потребностей и интересов.</p>
+    <textarea placeholder="Смысл понятия и два предложения…"></textarea>
+    <details class="key"><summary>Образец</summary><div class="d-body">
+      <p>Смысл: «Потребность — переживаемая и осознаваемая человеком нужда в том, что необходимо для поддержания его жизни и развития личности». Предложения: «Выделяют естественные, социальные и духовные потребности человека». «Потребности лежат в основе возникновения интересов: например, потребность в познании мира может породить у школьника интерес к астрономии».</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 7. Задача</h4><span class="lvl ege">ЕГЭ · 4 балла</span></div>
+    <p>Семья Петровых получила премию и обсуждает, как её потратить. Отец хочет купить новую удочку, чтобы по выходным рыбачить с друзьями. Мать предлагает оплатить курсы английского языка для дочери, которая собирается поступать на факультет международных отношений. Сын требует игровую приставку «прямо сейчас, потому что у всех уже есть». Бабушка напоминает, что пора заменить протекающую крышу на даче.</p>
+    <ol>
+      <li>Определите для каждого предложения вид потребности (естественная, социальная, духовная). Обоснуйте.</li>
+      <li>Какие из этих потребностей долговременные, а какие — сиюминутные?</li>
+      <li>Почему семья не может удовлетворить все потребности сразу? Какое положение темы это иллюстрирует?</li>
+      <li>Предложите, по какому принципу семье стоит принять решение. Используйте понятия темы.</li>
+    </ol>
+    <textarea placeholder="Ответы на четыре вопроса…"></textarea>
+    <details class="key"><summary>Ключ</summary><div class="d-body">
+      <p><b>1.</b> Удочка — социальная (общение с друзьями), возможно, отчасти духовная (отдых, гармония). Курсы — социальная (будущая профессия, позиция в обществе) и духовная (познание). Приставка — социальная (признание среди сверстников, «у всех есть»). Крыша — естественная (жилище, защита). Возможны иные обоснованные трактовки.</p>
+      <p><b>2.</b> Долговременные: курсы английского, крыша. Сиюминутные: приставка «прямо сейчас».</p>
+      <p><b>3.</b> Ресурсы ограничены — не все потребности могут быть удовлетворены в полной мере.</p>
+      <p><b>4.</b> Сначала — естественные и неотложные (крыша), затем долговременные, связанные с развитием личности (курсы); сиюминутные — при остатке средств. Засчитывается иной обоснованный принцип.</p>
+      <p>По 1 баллу за каждый пункт.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 8. План</h4><span class="lvl ege">ЕГЭ · 4 балла</span></div>
+    <p>Составьте сложный план по теме <mark>«Потребности человека»</mark>: не менее трёх пунктов, из которых два или более детализированы в подпунктах.</p>
+    <textarea placeholder="1. …&#10;   а) …" style="min-height:160px"></textarea>
+    <details class="key"><summary>Образец плана</summary><div class="d-body">
+      <ol>
+        <li>Понятие потребности.</li>
+        <li>Основная классификация потребностей:
+          <br>а) естественные (биологические); б) социальные; в) духовные (идеальные).</li>
+        <li>Другие классификации:
+          <br>а) индивидуальные и общественные; б) подлинные и мнимые; в) долговременные и сиюминутные.</li>
+        <li>Особенности потребностей:
+          <br>а) изменчивость в течение жизни; б) невозможность удовлетворить все полностью; в) соответствие способов удовлетворения социальным нормам.</li>
+        <li>Потребности и интересы.</li>
+      </ol>
+    </div></details>
+  </div>
+
+  <h3 id="t6-ol" class="fmt-olymp">Формат олимпиады<small>Пирамида Маслоу, реклама и потребности, которые трудно классифицировать.</small></h3>
+  <div class="note">
+    <p><b>Справка для олимпиадников.</b> Американский психолог Абрахам Маслоу в середине XX века предложил иерархию потребностей, которую часто изображают в виде пирамиды. Снизу вверх: <b>1)</b> физиологические; <b>2)</b> в безопасности; <b>3)</b> в принадлежности и любви; <b>4)</b> в уважении и признании; <b>5)</b> в самоактуализации — реализации своих способностей. По Маслоу, высшие потребности обычно становятся важными, когда более или менее удовлетворены низшие. В школьных учебниках её не изучают подробно, но на олимпиадах она встречается часто.</p>
+  </div>
+  <div class="block" id="b6o">
+    <div class="task">
+      <div class="meta"><h4>Задание 1. Этажи пирамиды</h4><span class="lvl olymp">по 1 баллу · 6 баллов</span></div>
+      <div class="unit match" data-mode="each" data-options="1|2|3|4|5" data-labels="физиологические|безопасность|принадлежность и любовь|уважение и признание|самоактуализация">
+        <p>Определите, к какому уровню пирамиды Маслоу относится каждая ситуация.</p>
+        <div class="rows">
+          <div class="row" data-answer="2"><span>а) Семья ставит в квартире железную дверь и сигнализацию.</span></div>
+          <div class="row" data-answer="5"><span>б) Бухгалтер в 45 лет бросает работу, чтобы стать художником, потому что «иначе не буду собой».</span></div>
+          <div class="row" data-answer="1"><span>в) Альпинист на высоте мечтает только о глотке воды и тёплом спальнике.</span></div>
+          <div class="row" data-answer="3"><span>г) Новенький в классе больше всего хочет, чтобы его приняли в компанию.</span></div>
+          <div class="row" data-answer="4"><span>д) Спортсменка мечтает о звании мастера спорта и уважении тренеров.</span></div>
+          <div class="row" data-answer="2"><span>е) Работник отказывается от интересной, но рискованной работы ради стабильной зарплаты.</span></div>
+        </div>
+        <p class="expl">а — безопасность; б — самоактуализация; в — физиологические; г — принадлежность; д — уважение и признание; е — безопасность (стабильность и защищённость от рисков).</p>
+      </div>
+    </div>
+
+    <div class="task">
+      <div class="meta"><h4>Задание 2. «Да» или «нет»</h4><span class="lvl olymp">по 1 баллу · 5 баллов</span></div>
+      <div class="unit match" data-mode="each" data-options="да|нет" data-labels="да|нет">
+        <div class="rows">
+          <div class="row" data-answer="нет"><span>1. Интерес и потребность — синонимы.</span></div>
+          <div class="row" data-answer="да"><span>2. Одна и та же потребность может быть индивидуальной и одновременно сиюминутной.</span></div>
+          <div class="row" data-answer="да"><span>3. Удовлетворение естественной потребности у человека обычно оформлено социально (правила, традиции, этикет).</span></div>
+          <div class="row" data-answer="нет"><span>4. Социальные потребности у человека заложены от рождения так же, как естественные.</span></div>
+          <div class="row" data-answer="да"><span>5. Общество может формировать у людей новые потребности.</span></div>
+        </div>
+        <p class="expl">2 — да: классификации проводятся по разным основаниям и пересекаются. 3 — да: например, обед за столом с приборами. 4 — нет: социальные потребности формируются в обществе. 5 — да: реклама, мода, технологии создают потребности, которых раньше не было.</p>
+      </div>
+    </div>
+
+    <div class="task">
+      <div class="meta"><h4>Задание 3. Найдите лишнее</h4><span class="lvl olymp">по 1 баллу · 3 балла</span></div>
+      <div class="unit textans" data-answer="общени">
+        <p class="q-text"><span class="q-num">а</span>Воздух, вода, пища, общение, сон.</p>
+        <div class="ans-line"><input type="text" aria-label="Лишнее"><span class="ans-show">ответ: общение</span></div>
+      </div>
+      <div class="unit textans" data-answer="пищ|еда|еде">
+        <p class="q-text"><span class="q-num">б</span>Религиозная вера, поиск смысла жизни, пища, саморазвитие, нравственное поведение.</p>
+        <div class="ans-line"><input type="text" aria-label="Лишнее"><span class="ans-show">ответ: пища</span></div>
+      </div>
+      <div class="unit textans" data-answer="подлин">
+        <p class="q-text"><span class="q-num">в</span>Потребность в алкоголе, потребность в табаке, подлинная потребность, потребность в наркотиках.</p>
+        <div class="ans-line"><input type="text" aria-label="Лишнее"><span class="ans-show">ответ: подлинная</span></div>
+      </div>
+    </div>
+    <div class="block-foot"><button class="btn primary" onclick="checkBlock('b6o')">Проверить олимпиадные задания 1–3</button><button class="btn ghost" onclick="resetBlock('b6o')">Сбросить</button><span class="result"></span></div>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 4. Опровергает ли Ван Гог Маслоу?</h4><span class="lvl olymp">до 6 баллов</span></div>
+    <p>Винсент Ван Гог большую часть жизни жил бедно, часто впроголодь, во многом на деньги брата Тео. При жизни его картины почти не покупали. И всё же он написал около 860 картин маслом и сотни рисунков.</p>
+    <ol>
+      <li>Почему критики приводят этот пример против теории Маслоу? Объясните.</li>
+      <li>Попробуйте защитить Маслоу: найдите хотя бы один аргумент, почему этот пример теорию <i>не</i> опровергает.</li>
+      <li>Как этот спор соотносится с классификацией потребностей из справочника (естественные — социальные — духовные)? Есть ли в ней иерархия?</li>
+    </ol>
+    <textarea placeholder="Развёрнутый ответ…"></textarea>
+    <details class="key"><summary>Ключ</summary><div class="d-body">
+      <p>1. Самоактуализация (высший уровень) оказалась важнее физиологических потребностей и безопасности, которые не были удовлетворены (2 балла).</p>
+      <p>2. Например: сам Маслоу говорил о «более или менее» удовлетворённых потребностях — минимум у Ван Гога был благодаря брату; теория описывает типичную, а не обязательную последовательность; творческие люди — исключение, которое подтверждает силу духовных потребностей (2 балла).</p>
+      <p>3. В справочнике виды не выстроены в иерархию — это классификация, а не «лестница». Сильный ответ замечает: у Маслоу — порядок важности, в справочнике — деление по источнику потребности (2 балла).</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 5. Кто решает, какая потребность мнимая?</h4><span class="lvl olymp">до 8 баллов</span></div>
+    <p>Реклама говорит: «Без нового смартфона ты отстал от жизни!» Один ученик считает, что это создаёт мнимую потребность. Другой возражает: «Смартфон помогает учиться и общаться — значит, потребность подлинная».</p>
+    <ol>
+      <li>Кто прав? Найдите критерий, по которому можно отличить подлинную потребность от мнимой в этом случае.</li>
+      <li>Может ли одна и та же вещь удовлетворять подлинную потребность у одного человека и мнимую — у другого? Приведите пример.</li>
+      <li>Сто лет назад потребности в смартфоне не было ни у кого. Откуда она взялась? Какое свойство потребностей это показывает?</li>
+      <li>Предложите правило, которое помогло бы подростку не поддаваться навязанным потребностям.</li>
+    </ol>
+    <textarea placeholder="Развёрнутый ответ…"></textarea>
+    <details class="key"><summary>Ключ</summary><div class="d-body">
+      <p>1. Оба отчасти правы: телефон как средство связи удовлетворяет подлинную потребность; желание заменить исправный телефон «чтобы не отстать» — скорее навязано рекламой. Критерий — польза или вред для развития личности, а не сам предмет (2 балла).</p>
+      <p>2. Да: компьютер для программиста — подлинная потребность, а многочасовые игры, вытесняющие сон и учёбу, — мнимая (2 балла).</p>
+      <p>3. Потребности исторически изменчивы, создаются развитием общества и техники (2 балла).</p>
+      <p>4. Например: «Прежде чем купить, спроси себя, какую потребность это удовлетворит и не удовлетворяет ли её то, что у меня уже есть» (2 балла).</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 6. Мини-эссе</h4><span class="lvl olymp">до 10 баллов</span></div>
+    <p>Выберите высказывание и напишите мини-эссе (150–200 слов).</p>
+    <ol>
+      <li>«Богат не тот, у кого много, а тот, кому достаточно». <i>(Народная мудрость)</i></li>
+      <li>«Есть надо для того, чтобы жить, а не жить для того, чтобы есть». <i>(Мысль, которую приписывают Сократу)</i></li>
+      <li>«Человек — единственное существо, которое не знает, чего оно хочет». <i>(Распространённый афоризм)</i></li>
+    </ol>
+    <textarea placeholder="Эссе…" style="min-height:220px"></textarea>
+    <details class="key"><summary>Критерии оценки</summary><div class="d-body">
+      <p>Смысл высказывания — 0–2; теоретические аргументы (виды потребностей, подлинные и мнимые, связь потребностей и интересов, изменчивость потребностей) — 0–3; два примера из разных источников — 0–3; вывод — 0–2.</p>
+    </div></details>
+  </div>
+</section>
+
+<!-- =========================== ТЕМА 7 =========================== -->
+<section class="topic" id="t7">
+  <h2>Тема 7. Свобода и необходимость. Свобода и ответственность</h2>
+  <p class="lead">Понятие свободы, ограничители свободы, ответственность, проявления свободы в разных сферах общества.</p>
+  <div class="jump"><a href="#t7-test">Тест</a><a href="#t7-ege">ЕГЭ</a><a href="#t7-ol">Олимпиада</a></div>
+
+  <h3 id="t7-test">Тест<small>16 вопросов. Главная трудность — отличать внешние ограничители от внутренних и свободу от произвола.</small></h3>
+  <div class="block" id="b7t">
+    <div class="unit q" data-answer="2">
+      <p class="q-text"><span class="q-num">1</span>Свобода — это:</p>
+      <label><input type="radio">возможность делать всё, что захочется, не считаясь ни с кем</label>
+      <label><input type="radio">полное отсутствие правил и обязанностей</label>
+      <label><input type="radio">возможность выбора видов деятельности в соответствии со своими желаниями, интересами и целями, формируемыми в рамках общечеловеческих ценностей</label>
+      <label><input type="radio">способность принимать последствия своих поступков</label>
+      <p class="expl">Важная часть определения — «в рамках общечеловеческих ценностей». Последний вариант — определение ответственности, первые два описывают произвол.</p>
+    </div>
+    <div class="unit q" data-answer="1">
+      <p class="q-text"><span class="q-num">2</span>Какое утверждение о свободе верно?</p>
+      <label><input type="radio">свобода абсолютна, если человек живёт в демократическом государстве</label>
+      <label><input type="radio">свобода не абсолютна</label>
+      <label><input type="radio">свобода существует только в экономической сфере</label>
+      <label><input type="radio">свобода не связана с ответственностью</label>
+      <p class="expl">Свобода всегда ограничена: природой, обществом, нормами и самим человеком.</p>
+    </div>
+    <div class="unit q" data-answer="0">
+      <p class="q-text"><span class="q-num">3</span>Из-за сильной метели отменили все рейсы, и Максим не смог улететь на соревнования. Какой ограничитель свободы проявился?</p>
+      <label><input type="radio">природные факторы</label>
+      <label><input type="radio">социальные нормы</label>
+      <label><input type="radio">ценностные ориентации человека</label>
+      <label><input type="radio">чувство долга</label>
+      <p class="expl">Природа — внешний ограничитель, от воли человека не зависящий.</p>
+    </div>
+    <div class="unit q" data-answer="3">
+      <p class="q-text"><span class="q-num">4</span>Олег хотел пойти в театр в шортах и шлёпанцах, но передумал: «Люди будут коситься». Какой ограничитель свободы сработал?</p>
+      <label><input type="radio">природные факторы</label>
+      <label><input type="radio">политические реалии</label>
+      <label><input type="radio">определённая структура общества</label>
+      <label><input type="radio">социальные нормы и общественное мнение</label>
+      <p class="expl">Закона против шорт в театре нет, но есть неписаные правила и мнение окружающих.</p>
+    </div>
+    <div class="unit q" data-answer="2">
+      <p class="q-text"><span class="q-num">5</span>Чиновнику предложили крупную взятку. Никто бы не узнал, но он отказался: «Я так не живу». Какой ограничитель свободы здесь проявился <b>прежде всего</b>?</p>
+      <label><input type="radio">природные факторы</label>
+      <label><input type="radio">общественное мнение</label>
+      <label><input type="radio">ценностные ориентации человека</label>
+      <label><input type="radio">экономические реалии</label>
+      <p class="expl">«Никто бы не узнал» — значит, внешнего давления не было. Остановили собственные ценности — внутренний ограничитель.</p>
+    </div>
+    <div class="unit q" data-answer="1">
+      <p class="q-text"><span class="q-num">6</span>Молодая семья хотела купить квартиру в центре города, но не хватило денег, и пришлось выбрать окраину. Какой ограничитель свободы проявился?</p>
+      <label><input type="radio">чувство долга</label>
+      <label><input type="radio">экономические реалии</label>
+      <label><input type="radio">природные факторы</label>
+      <label><input type="radio">самоограничение</label>
+      <p class="expl">Экономические возможности — внешний ограничитель свободы выбора.</p>
+    </div>
+    <div class="unit q" data-answer="0">
+      <p class="q-text"><span class="q-num">7</span>Ответственность — это:</p>
+      <label><input type="radio">способность и готовность принять последствия своих поступков</label>
+      <label><input type="radio">страх перед наказанием</label>
+      <label><input type="radio">обязанность всегда подчиняться старшим</label>
+      <label><input type="radio">отказ от любых решений, чтобы не ошибиться</label>
+      <p class="expl">Ответственность — не страх, а готовность отвечать. Отказ от решений — это отказ и от свободы, и от ответственности.</p>
+    </div>
+    <div class="unit q" data-answer="3">
+      <p class="q-text"><span class="q-num">8</span>Играя в футбол во дворе, Дима разбил мячом окно соседки. Никто не видел, но он сам позвонил в дверь, признался и предложил помочь оплатить стекло. Какое качество он проявил?</p>
+      <label><input type="radio">самоограничение</label>
+      <label><input type="radio">произвол</label>
+      <label><input type="radio">плюрализм</label>
+      <label><input type="radio">ответственность</label>
+      <p class="expl">Дима принял последствия своего поступка, хотя мог их избежать.</p>
+    </div>
+    <div class="unit q" data-answer="2">
+      <p class="q-text"><span class="q-num">9</span>Свобода вероисповедания и свобода творчества проявляются в сфере общества:</p>
+      <label><input type="radio">экономической</label>
+      <label><input type="radio">социальной</label>
+      <label><input type="radio">духовной</label>
+      <label><input type="radio">политической</label>
+      <p class="expl">Вера и творчество относятся к духовной жизни общества.</p>
+    </div>
+    <div class="unit q" data-answer="0">
+      <p class="q-text"><span class="q-num">10</span>Выпускница открыла собственную пекарню, сама выбрала, что печь и по какой цене продавать. Это проявление свободы в сфере:</p>
+      <label><input type="radio">экономической</label>
+      <label><input type="radio">социальной</label>
+      <label><input type="radio">духовной</label>
+      <label><input type="radio">политической</label>
+      <p class="expl">Свобода предпринимательства — проявление свободы в экономической сфере.</p>
+    </div>
+    <div class="unit q" data-answer="1">
+      <p class="q-text"><span class="q-num">11</span>Сын рабочего из небольшого посёлка стал известным хирургом и возглавил клинику. Какое проявление свободы в обществе здесь иллюстрируется?</p>
+      <label><input type="radio">политический плюрализм</label>
+      <label><input type="radio">высокая социальная мобильность</label>
+      <label><input type="radio">свобода вероисповедания</label>
+      <label><input type="radio">свобода предпринимательства</label>
+      <p class="expl">Социальная мобильность — возможность изменить своё положение в обществе. Высокая мобильность — признак свободы в социальной сфере.</p>
+    </div>
+    <div class="unit q" data-answer="3">
+      <p class="q-text"><span class="q-num">12</span>В стране свободно действуют десятки партий с разными программами, а в парламенте есть и сторонники, и противники правительства. Это проявление свободы в сфере:</p>
+      <label><input type="radio">экономической</label>
+      <label><input type="radio">социальной</label>
+      <label><input type="radio">духовной</label>
+      <label><input type="radio">политической</label>
+      <p class="expl">Плюрализм, демократия, свобода политических партий — проявления свободы в политической сфере.</p>
+    </div>
+    <div class="unit q" data-answer="2">
+      <p class="q-text"><span class="q-num">13</span>Какое утверждение лучше всего выражает связь свободы и ответственности?</p>
+      <label><input type="radio">чем меньше свободы, тем больше ответственности</label>
+      <label><input type="radio">свободный человек ни за что не отвечает</label>
+      <label><input type="radio">чем шире свобода выбора, тем больше ответственность за его последствия</label>
+      <label><input type="radio">ответственность есть только у тех, кто несвободен</label>
+      <p class="expl">Кто выбирает — тот и отвечает. Если человека принудили, ответственность за поступок отчасти лежит на принуждающем.</p>
+    </div>
+    <div class="unit q" data-answer="1">
+      <p class="q-text"><span class="q-num">14</span>Подросток включает музыку на полную громкость в два часа ночи: «Это моя свобода!» С точки зрения обществознания его поведение — это:</p>
+      <label><input type="radio">проявление подлинной свободы</label>
+      <label><input type="radio">произвол (вседозволенность), а не свобода</label>
+      <label><input type="radio">проявление политического плюрализма</label>
+      <label><input type="radio">ответственное поведение</label>
+      <p class="expl">Свобода, которая нарушает права и покой других, превращается в произвол. Классическая формула: свобода одного человека заканчивается там, где начинается свобода другого.</p>
+    </div>
+    <div class="unit q" data-answer="0">
+      <p class="q-text"><span class="q-num">15</span>В философии известна формула: «Свобода есть осознанная необходимость». Какой пример лучше её иллюстрирует?</p>
+      <label><input type="radio">моряк не может отменить ветер, но, понимая законы ветра, ставит паруса и плывёт куда нужно</label>
+      <label><input type="radio">человек делает только то, что ему приказывают</label>
+      <label><input type="radio">человек делает всё, что хочет, не думая о последствиях</label>
+      <label><input type="radio">человек отказывается что-либо делать, потому что всё предопределено</label>
+      <p class="expl">Смысл формулы: свобода — не отмена законов природы и общества, а умение действовать с их учётом. Кто понимает необходимость, тот способен использовать её в своих целях.</p>
+    </div>
+    <div class="unit q" data-answer="0">
+      <p class="q-text"><span class="q-num">16</span>Верны ли суждения? <b>А.</b> Самоограничение и чувство долга относятся к ограничителям свободы человека. <b>Б.</b> Свобода человека в обществе не зависит от структуры этого общества.</p>
+      <label><input type="radio">верно только А</label>
+      <label><input type="radio">верно только Б</label>
+      <label><input type="radio">верны оба суждения</label>
+      <label><input type="radio">оба суждения неверны</label>
+      <p class="expl">Определённая структура общества — один из ограничителей свободы: например, в сословном обществе человек почти не мог сменить своё положение.</p>
+    </div>
+    <div class="block-foot"><button class="btn primary" onclick="checkBlock('b7t')">Проверить тест</button><button class="btn ghost" onclick="resetBlock('b7t')">Сбросить</button><span class="result"></span></div>
+  </div>
+
+  <h3 id="t7-ege" class="fmt-ege">Формат ЕГЭ<small>Часть 1 — краткий ответ. Часть 2 — развёрнутые ответы.</small></h3>
+  <h5>Часть 1</h5>
+  <div class="block" id="b7e">
+    <div class="unit multi" data-answer="124">
+      <p class="q-text"><span class="q-num">1</span>Выберите верные суждения о свободе и ответственности.</p>
+      <p class="instr">Отметьте все верные варианты.</p>
+      <label><input type="checkbox">Ответственность — это способность и готовность принять последствия своих поступков.</label>
+      <label><input type="checkbox">Чувство долга и самоограничение выступают ограничителями свободы человека.</label>
+      <label><input type="checkbox">Свобода человека в обществе абсолютна.</label>
+      <label><input type="checkbox">Свобода вероисповедания является проявлением свободы в духовной сфере.</label>
+      <label><input type="checkbox">Природные факторы не влияют на свободу человека.</label>
+      <p class="expl">Верны 1, 2, 4. Свобода не абсолютна; природные факторы — один из ограничителей свободы.</p>
+    </div>
+    <div class="unit match" data-options="1|2" data-labels="внешние|внутренние">
+      <p class="q-text"><span class="q-num">2</span>Установите соответствие между примерами и группами ограничителей свободы.</p>
+      <p class="instr">Группы: 1) внешние ограничители; 2) внутренние ограничители.</p>
+      <div class="rows">
+        <div class="row" data-answer="2"><span>А) Олег отказался списывать, потому что считает это нечестным</span></div>
+        <div class="row" data-answer="1"><span>Б) из-за урагана отменили все рейсы</span></div>
+        <div class="row" data-answer="2"><span>В) Марина отказалась от поездки, чтобы ухаживать за больной бабушкой: она считает это своим долгом</span></div>
+        <div class="row" data-answer="1"><span>Г) закон запрещает продавать энергетические напитки несовершеннолетним</span></div>
+        <div class="row" data-answer="1"><span>Д) соседи осудили бы шумную вечеринку ночью</span></div>
+      </div>
+      <p class="expl">Ответ: 21211. Внутренние — ценностные ориентации, долг, самоограничение. Внешние — природа, закон, общественное мнение.</p>
+    </div>
+    <div class="unit match" data-options="1|2|3|4" data-labels="экономическая|политическая|духовная|социальная">
+      <p class="q-text"><span class="q-num">3</span>Установите соответствие между проявлениями свободы и сферами общественной жизни.</p>
+      <p class="instr">Сферы: 1) экономическая; 2) политическая; 3) духовная; 4) социальная.</p>
+      <div class="rows">
+        <div class="row" data-answer="2"><span>А) граждане создают новую политическую партию</span></div>
+        <div class="row" data-answer="3"><span>Б) писатель публикует роман на любую тему, которую выбрал сам</span></div>
+        <div class="row" data-answer="1"><span>В) предприниматель открывает собственное кафе</span></div>
+        <div class="row" data-answer="4"><span>Г) выпускник сельской школы становится директором крупного завода</span></div>
+        <div class="row" data-answer="3"><span>Д) каждый сам решает, исповедовать ли ему какую-либо религию</span></div>
+      </div>
+      <p class="expl">Ответ: 23143.</p>
+    </div>
+    <div class="unit multi" data-answer="36">
+      <p class="q-text"><span class="q-num">4</span>Все термины ряда, за исключением двух, относятся к ограничителям свободы человека. Найдите два термина, «выпадающих» из общего ряда.</p>
+      <label><input type="checkbox">природные факторы</label>
+      <label><input type="checkbox">социальные нормы</label>
+      <label><input type="checkbox">произвол</label>
+      <label><input type="checkbox">чувство долга</label>
+      <label><input type="checkbox">общественное мнение</label>
+      <label><input type="checkbox">плюрализм</label>
+      <p class="expl">Произвол — злоупотребление свободой, плюрализм — проявление свободы в политической сфере. Ни то, ни другое свободу не ограничивает.</p>
+    </div>
+    <div class="unit match" data-options="1|2|3|4|5|6|7|8|9" data-labels="ответственность|нормы|произвол|свобода|абсолютна|долг|необходимость|плюрализм|мобильность">
+      <p class="q-text"><span class="q-num">5</span>Прочитайте текст с пропусками и выберите из списка слова для каждого пропуска.</p>
+      <div class="wordlist"><span>1) ответственность</span><span>2) нормы</span><span>3) произвол</span><span>4) свобода</span><span>5) абсолютна</span><span>6) долг</span><span>7) необходимость</span><span>8) плюрализм</span><span>9) мобильность</span></div>
+      <div class="gaptext">
+        <span class="row frag" data-answer="4">(А)</span> — это возможность выбора видов деятельности в соответствии со своими желаниями, интересами и целями. Она не <span class="row frag" data-answer="5">(Б)</span>: её ограничивают природные факторы, социальные <span class="row frag" data-answer="2">(В)</span>, общественное мнение. Важный внутренний ограничитель — чувство, которое называют <span class="row frag" data-answer="6">(Г)</span>. Способность и готовность принять последствия своих поступков — это <span class="row frag" data-answer="1">(Д)</span>. Действия человека, который не считается ни с правилами, ни с интересами других, называют не свободой, а <span class="row frag" data-answer="3">(Е)</span>.
+      </div>
+      <p class="expl">Ответ: А4, Б5, В2, Г6, Д1, Е3.</p>
+    </div>
+    <div class="block-foot"><button class="btn primary" onclick="checkBlock('b7e')">Проверить часть 1</button><button class="btn ghost" onclick="resetBlock('b7e')">Сбросить</button><span class="result"></span></div>
+  </div>
+
+  <h5>Часть 2</h5>
+  <div class="task">
+    <div class="meta"><h4>Задание 6. Смысл понятия</h4><span class="lvl ege">ЕГЭ · 3 балла</span></div>
+    <p>Раскройте смысл понятия <mark>«свобода»</mark>. Составьте два предложения: одно, раскрывающее ограничители свободы, и одно, раскрывающее связь свободы и ответственности.</p>
+    <textarea placeholder="Смысл понятия и два предложения…"></textarea>
+    <details class="key"><summary>Образец</summary><div class="d-body">
+      <p>Смысл: «Свобода — возможность выбора видов деятельности в соответствии со своими желаниями, интересами и целями в рамках общечеловеческих ценностей». Предложения: «Свободу человека ограничивают природные факторы, социальные нормы, общественное мнение, а также его собственные ценности и чувство долга». «Чем шире свобода выбора человека, тем больше его ответственность за последствия принятых решений».</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 7. Три примера</h4><span class="lvl ege">ЕГЭ · 3 балла</span></div>
+    <p>Приведите три примера ограничителей свободы человека, причём два из них должны быть внешними, один — внутренним. Каждый пример сформулируйте развёрнуто.</p>
+    <textarea placeholder="Ограничитель — пример…"></textarea>
+    <details class="key"><summary>Образец</summary><div class="d-body">
+      <ul>
+        <li><b>Внешний, природный:</b> из-за ледохода на реке жители острова неделю не могли добраться до города.</li>
+        <li><b>Внешний, правовой:</b> пятнадцатилетний Кирилл хотел сесть за руль машины отца, но закон не позволяет управлять автомобилем без водительского удостоверения.</li>
+        <li><b>Внутренний:</b> Таня могла скрыть, что получила лишнюю сдачу в магазине, но вернула деньги, потому что так велит совесть.</li>
+      </ul>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 8. Задача</h4><span class="lvl ege">ЕГЭ · 3 балла</span></div>
+    <p>Восьмиклассник Ян заявил на классном часе: «Настоящая свобода — это когда никто не указывает, что делать. Правила придумали, чтобы держать нас в клетке».</p>
+    <ol>
+      <li>Какое понимание свободы выражает Ян? Как его называют в обществознании?</li>
+      <li>Приведите два аргумента, показывающих, почему правила не только ограничивают, но и защищают свободу человека.</li>
+      <li>Какое понятие, без которого свобода невозможна, Ян не учёл?</li>
+    </ol>
+    <textarea placeholder="Ответы на три вопроса…"></textarea>
+    <details class="key"><summary>Ключ</summary><div class="d-body">
+      <p>1. Свобода как отсутствие ограничений; в обществознании это называют произволом, вседозволенностью.</p>
+      <p>2. Например: правила дорожного движения позволяют всем безопасно передвигаться; законы защищают имущество и личность человека от чужого произвола; школьные правила гарантируют право на учёбу без помех.</p>
+      <p>3. Ответственность.</p>
+      <p>По 1 баллу за каждый пункт.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 9. План</h4><span class="lvl ege">ЕГЭ · 4 балла</span></div>
+    <p>Составьте сложный план по теме <mark>«Свобода и ответственность человека»</mark>: не менее трёх пунктов, из которых два или более детализированы в подпунктах.</p>
+    <textarea placeholder="1. …&#10;   а) …" style="min-height:160px"></textarea>
+    <details class="key"><summary>Образец плана</summary><div class="d-body">
+      <ol>
+        <li>Понятие свободы человека.</li>
+        <li>Свобода и необходимость: свобода не абсолютна.</li>
+        <li>Ограничители свободы:
+          <br>а) внешние: природные факторы, политические и экономические реалии, структура общества, социальные нормы и общественное мнение;
+          <br>б) внутренние: ценностные ориентации, чувство долга и ответственности, самоограничение.</li>
+        <li>Проявления свободы в сферах общества:
+          <br>а) экономической; б) политической; в) социальной; г) духовной.</li>
+        <li>Ответственность:
+          <br>а) понятие; б) связь свободы и ответственности; в) отличие свободы от произвола.</li>
+      </ol>
+    </div></details>
+  </div>
+
+  <h3 id="t7-ol" class="fmt-olymp">Формат олимпиады<small>Необитаемый остров, философские формулы и ряды понятий.</small></h3>
+  <div class="block" id="b7o">
+    <div class="task">
+      <div class="meta"><h4>Задание 1. «Да» или «нет»</h4><span class="lvl olymp">по 1 баллу · 6 баллов</span></div>
+      <div class="unit match" data-mode="each" data-options="да|нет" data-labels="да|нет">
+        <div class="rows">
+          <div class="row" data-answer="нет"><span>1. Человек, живущий в одиночестве на необитаемом острове, абсолютно свободен.</span></div>
+          <div class="row" data-answer="да"><span>2. Самоограничение — это ограничение свободы, которое человек устанавливает себе сам.</span></div>
+          <div class="row" data-answer="да"><span>3. Человека, которого принудили к поступку, нельзя считать полностью ответственным за него.</span></div>
+          <div class="row" data-answer="нет"><span>4. Чем меньше у человека выбора, тем больше его ответственность.</span></div>
+          <div class="row" data-answer="да"><span>5. Высокая социальная мобильность — проявление свободы в социальной сфере.</span></div>
+          <div class="row" data-answer="нет"><span>6. Произвол — высшая форма свободы.</span></div>
+        </div>
+        <p class="expl">1 — нет: остаются природные факторы, собственные ценности. 3 — да: ответственность предполагает свободный выбор. 4 — нет: наоборот. 6 — нет: произвол — злоупотребление свободой.</p>
+      </div>
+    </div>
+
+    <div class="task">
+      <div class="meta"><h4>Задание 2. Найдите лишнее</h4><span class="lvl olymp">по 1 баллу · 4 балла</span></div>
+      <p>В каждом ряду запишите лишнее понятие. Принцип ряда объясните в поле ниже.</p>
+      <div class="unit textans" data-answer="предприним">
+        <p class="q-text"><span class="q-num">а</span>Свобода вероисповедания, свобода творчества, свобода научного поиска, свобода предпринимательства.</p>
+        <div class="ans-line"><input type="text" aria-label="Лишнее"><span class="ans-show">ответ: свобода предпринимательства</span></div>
+      </div>
+      <div class="unit textans" data-answer="долг">
+        <p class="q-text"><span class="q-num">б</span>Природные факторы, общественное мнение, социальные нормы, чувство долга.</p>
+        <div class="ans-line"><input type="text" aria-label="Лишнее"><span class="ans-show">ответ: чувство долга</span></div>
+      </div>
+      <div class="unit textans" data-answer="мобильн">
+        <p class="q-text"><span class="q-num">в</span>Плюрализм, демократия, свобода политических партий, социальная мобильность.</p>
+        <div class="ans-line"><input type="text" aria-label="Лишнее"><span class="ans-show">ответ: социальная мобильность</span></div>
+      </div>
+      <div class="unit textans" data-answer="произвол">
+        <p class="q-text"><span class="q-num">г</span>Ответственность, долг, совесть, произвол.</p>
+        <div class="ans-line"><input type="text" aria-label="Лишнее"><span class="ans-show">ответ: произвол</span></div>
+      </div>
+      <textarea placeholder="Принцип каждого ряда…" style="min-height:90px"></textarea>
+      <details class="key"><summary>Ключ к объяснениям</summary><div class="d-body">
+        <p>а) свободы в духовной сфере; предпринимательство — экономическая. б) внешние ограничители; долг — внутренний. в) проявления свободы в политической сфере; мобильность — социальная. г) нравственные категории и качества, связанные с ответственностью; произвол — их противоположность.</p>
+      </div></details>
+    </div>
+    <div class="block-foot"><button class="btn primary" onclick="checkBlock('b7o')">Проверить олимпиадные задания 1–2</button><button class="btn ghost" onclick="resetBlock('b7o')">Сбросить</button><span class="result"></span></div>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 3. Кейс «Остров»</h4><span class="lvl olymp">до 10 баллов</span></div>
+    <p>Двенадцать подростков после кораблекрушения оказались на необитаемом острове. Взрослых нет, правил нет. В первый же день самый сильный забрал себе все консервы. На второй день двое ушли купаться, забыв поддерживать сигнальный костёр, — и мимо прошёл корабль, не заметив их. На третий день ребята собрались у костра и решили договориться.</p>
+    <ol>
+      <li>Стали ли подростки на острове свободнее, чем дома? Какие ограничители свободы исчезли, а какие остались или стали даже сильнее?</li>
+      <li>Как в ситуации с консервами и костром проявились произвол и безответственность? Чем пострадали остальные?</li>
+      <li>Предложите три первых правила для жителей острова. Объясните, как каждое ограничивает и одновременно расширяет свободу.</li>
+      <li>Кто будет отвечать за нарушение правил и как? Без чего правила не будут работать?</li>
+    </ol>
+    <textarea placeholder="Развёрнутый ответ…" style="min-height:180px"></textarea>
+    <details class="key"><summary>Ключ</summary><div class="d-body">
+      <p>1. Исчезли внешние ограничители, установленные обществом: законы, школьные правила, контроль взрослых. Остались природные факторы, и они стали сильнее (голод, погода, опасность). Остались внутренние: ценности, совесть (3 балла).</p>
+      <p>2. Сильный поступил произвольно, лишив других свободы удовлетворять базовые потребности; дежурные проявили безответственность — и все лишились шанса на спасение. Вывод: свобода без ответственности одного ограничивает свободу всех (2 балла).</p>
+      <p>3. Например: «Еду делим поровну» (ограничивает сильного, но гарантирует каждому возможность выжить); «Костёр поддерживаем по графику» (каждый жертвует временем, но все получают шанс на спасение); «Решения принимаем на общем совете» (никто не решает за других) — 3 балла.</p>
+      <p>4. Нужны санкции и механизм контроля, а главное — внутреннее принятие правил, ответственность каждого. Ценятся упоминания о том, что так возникают социальные нормы и институты (2 балла).</p>
+      <p>Учителю: кейс перекликается с романом Уильяма Голдинга «Повелитель мух» — его можно предложить сильным ученикам для внеклассного чтения и сравнения.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 4. Три формулы свободы</h4><span class="lvl olymp">до 9 баллов</span></div>
+    <p>Перед вами три известные мысли о свободе:</p>
+    <ol type="A">
+      <li>«Свобода одного человека заканчивается там, где начинается свобода другого».</li>
+      <li>«Свобода есть осознанная необходимость». <i>(Формула, которую связывают с именами Спинозы и Гегеля)</i></li>
+      <li>«Человек обречён быть свободным». <i>(Жан-Поль Сартр)</i></li>
+    </ol>
+    <ol>
+      <li>Для каждой мысли объясните её смысл одним-двумя предложениями.</li>
+      <li>Какая из них делает главный акцент на ответственности? Какая — на ограничителях? Какая — на отношениях с другими людьми?</li>
+      <li>Какая из трёх кажется вам самой глубокой? Почему? Подтвердите примером.</li>
+    </ol>
+    <textarea placeholder="Развёрнутый ответ…"></textarea>
+    <details class="key"><summary>Ключ</summary><div class="d-body">
+      <p>А — свобода ограничена правами других; без этого она превращается в произвол (акцент на отношениях с людьми). Б — свободен тот, кто понимает законы природы и общества и действует с их учётом (акцент на ограничителях, необходимости). В — человек не может уйти от выбора: даже отказ выбирать — выбор, за который он отвечает (акцент на ответственности). По 1 баллу за смысл каждой (3), по 1 баллу за верное распределение акцентов (3), до 3 баллов за обоснованный выбор с примером.</p>
+    </div></details>
+  </div>
+
+  <div class="task">
+    <div class="meta"><h4>Задание 5. Мини-эссе</h4><span class="lvl olymp">до 10 баллов</span></div>
+    <p>Выберите высказывание и напишите мини-эссе (150–200 слов).</p>
+    <ol>
+      <li>«Свобода — это право делать всё, что дозволено законами». <i>(Шарль Монтескьё)</i></li>
+      <li>«Свобода не в том, чтобы не сдерживать себя, а в том, чтобы владеть собой». <i>(Ф. М. Достоевский)</i></li>
+      <li>«Мы в ответе за тех, кого приручили». <i>(Антуан де Сент-Экзюпери)</i></li>
+    </ol>
+    <textarea placeholder="Эссе…" style="min-height:220px"></textarea>
+    <details class="key"><summary>Критерии оценки</summary><div class="d-body">
+      <p>Смысл высказывания — 0–2; теоретические аргументы (понятия свободы, ответственности, ограничителей свободы, произвола) — 0–3; два примера из разных источников (история, литература, общественная жизнь, личный опыт) — 0–3; вывод — 0–2.</p>
+      <p>По первому высказыванию сильная работа замечает спорность: законы бывают несправедливыми, и тогда свобода может требовать их изменения законным путём; кроме того, свободу ограничивают не только законы, но и мораль.</p>
+    </div></details>
+  </div>
+</section>
+
+</main>
+</div>
+
+<script>
+function show(id, btn){
+  document.querySelectorAll('section.topic').forEach(s=>s.classList.toggle('on', s.id===id));
+  document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('on', b===btn));
+  window.scrollTo({top:0});
+}
+document.querySelectorAll('.jump a').forEach(a=>a.addEventListener('click',e=>{
+  e.preventDefault(); const t=document.querySelector(a.getAttribute('href')); if(t) t.scrollIntoView({behavior:'smooth'});
+}));
+
+function norm(s){return (s||'').toLowerCase().replace(/ё/g,'е').replace(/[^a-zа-я0-9]/g,'');}
+function plural(n){const a=n%10,b=n%100; if(a===1&&b!==11) return 'балл'; if(a>=2&&a<=4&&(b<10||b>=20)) return 'балла'; return 'баллов';}
+
+let uid=0;
+function build(){
+  document.querySelectorAll('.unit').forEach(u=>{
+    uid++;
+    if(u.classList.contains('q')||u.classList.contains('multi')){
+      const isMulti=u.classList.contains('multi');
+      u.querySelectorAll('label').forEach((l,i)=>{
+        const inp=l.querySelector('input'); inp.name='u'+uid; inp.value=isMulti?String(i+1):String(i);
+        if(isMulti){ const s=document.createElement('b'); s.textContent=(i+1)+') '; s.style.fontWeight='600'; inp.after(s); }
+      });
+    }
+    if(u.classList.contains('match')){
+      const opts=u.dataset.options.split('|');
+      const labels=(u.dataset.labels||u.dataset.options).split('|');
+      const numeric=/^\d+$/.test(opts[0]);
+      u.querySelectorAll('.row').forEach(r=>{
+        const sel=document.createElement('select'); sel.setAttribute('aria-label','Выберите ответ');
+        const o0=document.createElement('option'); o0.value=''; o0.textContent=r.classList.contains('frag')?'?':'выбери…'; sel.appendChild(o0);
+        opts.forEach((o,i)=>{const op=document.createElement('option'); op.value=o; op.textContent=numeric?(o+') '+labels[i]):labels[i]; sel.appendChild(op);});
+        r.appendChild(sel);
+        const idx=opts.indexOf(r.dataset.answer);
+        r.dataset.show=numeric?(r.dataset.answer+') '+labels[idx]):labels[idx];
+      });
+    }
+    // подпись баллов
+    let max=unitMax(u);
+    if(!u.classList.contains('q') && !u.closest('.task')?.querySelector('.lvl.olymp')){
+      const qt=u.querySelector('.q-text');
+      if(qt){const p=document.createElement('span'); p.className='pts'; p.textContent=max+' '+plural(max); qt.appendChild(p);}
+    }
+  });
+}
+function unitMax(u){
+  if(u.classList.contains('q')) return 1;
+  if(u.classList.contains('textans')) return +(u.dataset.max||1);
+  if(u.classList.contains('multi')) return 2;
+  if(u.classList.contains('match')) return u.dataset.mode==='each'?u.querySelectorAll('.row').length:2;
+  return 0;
+}
+function scoreUnit(u){
+  u.classList.add('done');
+  if(u.classList.contains('q')){
+    const ans=u.dataset.answer, ch=u.querySelector('input:checked');
+    u.querySelectorAll('label').forEach(l=>{l.classList.remove('right','wrong','missed'); if(l.querySelector('input').value===ans) l.classList.add('right');});
+    if(ch && ch.value!==ans) ch.closest('label').classList.add('wrong');
+    return [ch&&ch.value===ans?1:0,1];
+  }
+  if(u.classList.contains('multi')){
+    const ans=new Set(u.dataset.answer.split('')); let err=0;
+    u.querySelectorAll('label').forEach(l=>{
+      const inp=l.querySelector('input'); l.classList.remove('right','wrong','missed');
+      const good=ans.has(inp.value);
+      if(inp.checked&&good) l.classList.add('right');
+      else if(inp.checked&&!good){l.classList.add('wrong');err++;}
+      else if(!inp.checked&&good){l.classList.add('missed');err++;}
+    });
+    return [err===0?2:err===1?1:0,2];
+  }
+  if(u.classList.contains('match')){
+    const rows=u.querySelectorAll('.row'); let wrong=0;
+    rows.forEach(r=>{const v=r.querySelector('select').value; r.classList.remove('right','wrong');
+      if(v===r.dataset.answer) r.classList.add('right'); else {r.classList.add('wrong'); wrong++;}});
+    if(u.dataset.mode==='each') return [rows.length-wrong,rows.length];
+    return [wrong===0?2:wrong===1?1:0,2];
+  }
+  if(u.classList.contains('textans')){
+    const v=norm(u.querySelector('input').value); const max=+(u.dataset.max||1);
+    const variants=u.dataset.answer.split('|').map(norm);
+    const ok= v && (u.dataset.exact ? variants.includes(v) : variants.some(a=>v.includes(a)));
+    u.classList.remove('right','wrong'); u.classList.add(ok?'right':'wrong');
+    return [ok?max:0,max];
+  }
+  return [0,0];
+}
+function checkBlock(id){
+  const b=document.getElementById(id); let got=0,max=0;
+  b.querySelectorAll('.unit').forEach(u=>{const [g,m]=scoreUnit(u); got+=g; max+=m;});
+  const res=b.querySelector(':scope > .block-foot .result');
+  const share=got/max;
+  const isTest=id.endsWith('t');
+  let text=isTest?`${got} из ${max} верно`:`${got} из ${max} ${plural(max)}`;
+  let cls='low';
+  if(share>=0.85){cls='good'; text+=' — отлично';}
+  else if(share>=0.6){cls='mid'; text+=' — хорошо, разбери ошибки';}
+  else text+=' — вернись к теме и попробуй ещё раз';
+  res.className='result '+cls; res.textContent=text;
+  const s=document.getElementById('s-'+id); if(s) s.textContent=got+'/'+max;
+}
+function resetBlock(id){
+  const b=document.getElementById(id);
+  b.querySelectorAll('input[type=radio],input[type=checkbox]').forEach(i=>i.checked=false);
+  b.querySelectorAll('input[type=text]').forEach(i=>i.value='');
+  b.querySelectorAll('select').forEach(s=>s.value='');
+  b.querySelectorAll('.unit').forEach(u=>u.classList.remove('done','right','wrong'));
+  b.querySelectorAll('label,.row').forEach(x=>x.classList.remove('right','wrong','missed'));
+  b.querySelector(':scope > .block-foot .result').textContent='';
+  const s=document.getElementById('s-'+id); if(s) s.textContent='—';
+}
+function setTeacher(on){
+  document.body.classList.toggle('teacher',on);
+  document.getElementById('teachBtn').textContent='Режим учителя: '+(on?'вкл':'выкл');
+  document.querySelectorAll('details').forEach(d=>d.open=on);
+  document.querySelectorAll('.unit.q').forEach(u=>u.querySelectorAll('label').forEach(l=>l.classList.toggle('answer',on&&l.querySelector('input').value===u.dataset.answer)));
+  document.querySelectorAll('.unit.multi').forEach(u=>{const a=u.dataset.answer; u.querySelectorAll('label').forEach(l=>l.classList.toggle('answer',on&&a.includes(l.querySelector('input').value)));});
+}
+build();
+</script>
+
+<dialog class="pass" id="passDlg" aria-labelledby="passTitle">
+  <form method="dialog" onsubmit="return tryPass(event)">
+    <h4 id="passTitle">Режим учителя</h4>
+    <p>Введите пароль, чтобы открыть ключи и правильные ответы.</p>
+    <input type="password" id="passInput" autocomplete="off" inputmode="numeric" aria-label="Пароль">
+    <div class="err" id="passErr" role="alert"></div>
+    <div class="row-b">
+      <button type="button" class="btn ghost" onclick="document.getElementById('passDlg').close()">Отмена</button>
+      <button type="submit" class="btn primary">Открыть</button>
+    </div>
+  </form>
+</dialog>
+<script>
+function passHash(s){let h=5381;for(const c of s)h=((h<<5)+h+c.charCodeAt(0))>>>0;return h;}
+function toggleTeacher(){
+  if(document.body.classList.contains('teacher')){setTeacher(false);return;}
+  const d=document.getElementById('passDlg');
+  document.getElementById('passInput').value='';
+  document.getElementById('passErr').textContent='';
+  if(d.showModal){d.showModal();}else{const v=prompt('Пароль учителя:'); if(v!==null) checkPass(v);} 
+  setTimeout(()=>document.getElementById('passInput').focus(),30);
+}
+function checkPass(v){
+  if(passHash(v.trim())===2189075505){setTeacher(true);return true;}
+  return false;
+}
+function tryPass(e){
+  e.preventDefault();
+  const ok=checkPass(document.getElementById('passInput').value);
+  if(ok){document.getElementById('passDlg').close();}
+  else{document.getElementById('passErr').textContent='Неверный пароль'; document.getElementById('passInput').select();}
+  return false;
+}
+</script>
+</body>
+</html>
